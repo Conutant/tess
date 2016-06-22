@@ -240,6 +240,24 @@ function tesseract_scripts() {
 	list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
 	$header_bckColor = "rgb($r, $g, $b)";
 	$header_bckColor_home = "rgba($r, $g, $b, $header_bckOpacity)";
+	
+	/* footer bck opacity */
+	$header_bckRGB1 = get_theme_mod('tesseract_footer_colors_bck_color') ? get_theme_mod('tesseract_footer_colors_bck_color') : '#59bcd9';
+	
+	$opValue1 = get_theme_mod('tesseract_footer_colors_bck_color_opacity');
+	$footer_bckOpacity = is_numeric($opValue1) ? $opValue1 : 100;
+
+	$hex = $header_bckRGB1;
+	$footer_bckOpacity = $footer_bckOpacity / 100;
+
+	preg_match("/\s*(rgba\(\s*[0-9]+\s*,\s*[0-9]+\s*,\s*[0-9]+\s*,\d+\d*\.\d+\))/", $hex, $match);
+	$rgba = $match ? true : false;
+
+	list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
+	$footer_bckColor = "rgb($r, $g, $b)";
+	$footer_bckColor_home = "rgba($r, $g, $b, $footer_bckOpacity)";
+	/* footer bck opacity ends */
+	
 
 	//HEADER and FOOTER
 	$header_textColor = get_theme_mod('tesseract_header_colors_text_color') ? get_theme_mod('tesseract_header_colors_text_color') : '#ffffff';
@@ -555,10 +573,16 @@ function tesseract_scripts() {
 	$footerHeightInit = get_theme_mod('tesseract_footer_height');
 	$footerHeight = is_numeric($footerHeightInit) ? $footerHeightInit : 10;
 
-	$dynamic_styles_footer = "#colophon {
+	$dynamic_styles_footer = ".site-footer {
 		background-color: " . $footer_bckColor . ";
 		color: " . $footer_textColor . "
 	}
+	
+	.site-footer { background-color: " . $footer_bckColor . "; }
+
+	.home .site-footer,
+	.home .site-footer { background-color: " . $footer_bckColor_home . "; }
+	
 
 	#colophon .search-field { color: " . $footer_textColor . "; }
 	#colophon .search-field.watermark { color: #ccc; }

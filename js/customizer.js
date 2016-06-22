@@ -78,6 +78,43 @@
 
 		});
 	});
+	
+	
+	
+	wp.customize('tesseract_footer_colors_bck_color_opacity', function(value){
+		value.bind(function( to ){
+
+			var bg = $('.site-footer').css('background-color');
+			if (bg.indexOf('a') == -1){
+				var result = bg.replace(')', ', ' + to/100 + ')').replace('rgb', 'rgba');
+			} else if( bg.indexOf('a') > 0 ) {
+
+				var colorString = bg,
+					colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/),
+					red = colorsOnly[0],
+					green = colorsOnly[1],
+					blue = colorsOnly[2],
+					opacity = colorsOnly[3];
+
+				var result = 'rgba(' + colorsOnly[0] + ', ' + colorsOnly[1] + ', ' + colorsOnly[2] + ', ' + to/100 + ')';
+			}
+			$('.site-footer').css( 'background-color', result);
+
+			if ( ( $('body.home').length > 0 ) && ( to < 100 ) ) {
+				$( 'body' ).addClass( 'transparent-footer' );
+			} else {
+				$( 'body' ).removeClass( 'transparent-footer' );
+			}
+
+		});
+	});
+	
+	
+	
+	
+	
+	
+	
 
 	wp.customize( 'tesseract_header_colors_text_color', function( value ) {
 		value.bind( function( to ) {

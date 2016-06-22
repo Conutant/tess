@@ -41,6 +41,7 @@
 	<?php endif; ?>
 	color: #<?php echo $settings->text_color; ?>;
 	font-size: <?php echo $settings->font_size; ?>px;
+	font-weight: <?php echo $settings->weight; ?>;
 	<?php if ( $settings->border !== 'none' ): ?>
 	border: <?php echo $settings->border_width; ?>px <?php echo $settings->border; ?> #<?php echo $settings->border_color; ?>;
 	border-radius: <?php echo $settings->border_radius; ?>px;

@@ -26,7 +26,32 @@
 					'priority'   => 1
 				) ) 						
 			);
-			
+		
+		$wp_customize->add_setting( 'tesseract_footer_colors_bck_color_opacity', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_html',
+				'default' 			=> 100
+		) );
+
+			$wp_customize->add_control( 'tesseract_footer_colors_bck_color_opacity_control', array(
+				'type'        => 'range',
+				'priority'    => 2,
+				'section'     => 'tesseract_footer_colors',
+				'settings'     => 'tesseract_footer_colors_bck_color_opacity',
+				'label'       => 'Homepage Footer Opacity',
+				'description' => 'Use this range slider to set background opacity',
+				'input_attrs' => array(
+					'min'   => 0,
+					'max'   => 100,
+					'step'  => 5,
+					'class' => 'tesseract-tho-header-colors-bck-opacity',
+					'style' => 'color: #0a0',
+				),
+				'active_callback' => 'tesseract_show_header_opacity_control'
+			) );
+
+
+		
 		$wp_customize->add_setting( 'tesseract_footer_colors_text_color', array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_hex_color',

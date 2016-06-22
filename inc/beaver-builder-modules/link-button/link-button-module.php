@@ -75,6 +75,16 @@ FLBuilder::register_module( 'TesseractLinkButtonModule', array(
 						'maxlength'     => '4',
 						'size'          => '5'
 					),
+					'weight'     => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Font weight', 'fl-builder' ),
+						'default'       => '400',
+						'options'    => array(
+							'100' => 'Light',
+							'400' => 'Normal',
+							'600' => 'Bold',
+						),
+					),
                     'href'     => array(
                         'type'          => 'link',
                         'label'         => __( 'Button Link', 'fl-builder' ),

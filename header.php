@@ -43,6 +43,16 @@ $header_bckOpacity = is_numeric($opValue) ? TRUE : FALSE;
 
 if ( is_front_page() && ( $header_bckOpacity && ( intval($opValue) < 100 ) ) ) $bodyClass .= ' transparent-header';
 
+
+$opValue1 = get_theme_mod('tesseract_footer_colors_bck_color_opacity');
+
+$footer_bckOpacity = is_numeric($opValue1) ? TRUE : FALSE;
+
+if ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 100 ) ) ) $bodyClass .= ' transparent-footer';
+
+
+
+
 if ( is_search() ) {
 	if ( $slayout == 'fullwidth' ) $bodyClass .= ' fullwidth';
 	if ( $slayout == 'sidebar-right' ) $bodyClass .= ' sidebar-right';
@@ -65,6 +75,8 @@ if ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) {
 
 
 $headpos = ( is_front_page() && ( $header_bckOpacity && ( intval($opValue) < 100 ) ) ) ? 'pos-absolute' : 'pos-relative';
+
+$footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 100 ) ) ) ? 'pos-absolute' : 'pos-relative';
 ?>
 
 <div id="page" class="hfeed site">

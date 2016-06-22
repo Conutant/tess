@@ -58,12 +58,17 @@
 
 				var wheight = $(window).height(),
 				hheight = parseInt( $('#masthead').not('.pos-absolute').height() ),
-				fheight = parseInt( $('#colophon').height() );
+				fheight = parseInt( $('#colophon').not('.pos-absolute').height() );
 
 				hpad = tesseract_vars.hpad ? tesseract_vars.hpad : 10;
 				fpad = tesseract_vars.fpad ? tesseract_vars.fpad : 10;
 
 				if ( $('body').hasClass('transparent-header') ) {
+					var offset = parseInt( wheight - ( fheight + 2*fpad ) );
+				} else {
+					var offset = parseInt( wheight - ( (hheight + 2*hpad) + (fheight + 2*fpad) ) );
+				}
+				if ( $('body').hasClass('transparent-footer') ) {
 					var offset = parseInt( wheight - ( fheight + 2*fpad ) );
 				} else {
 					var offset = parseInt( wheight - ( (hheight + 2*hpad) + (fheight + 2*fpad) ) );

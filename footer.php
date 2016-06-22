@@ -7,10 +7,19 @@
  * @package Tesseract
  */
 ?>
+    <?php 
+	$bodyClass = ( version_compare($wp_version, '4.0.0', '>') && is_customize_preview() ) ? 'backend' : 'frontend';
+	
+	$opValue1 = get_theme_mod('tesseract_footer_colors_bck_color_opacity');
+    $footer_bckOpacity = is_numeric($opValue1) ? TRUE : FALSE;
+    if ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 100 ) ) ) $bodyClass .= ' transparent-footer';
 
+
+	$footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 100 ) ) ) ? 'pos-absolute' : 'pos-relative'; 
+	?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer <?php echo $footpos; ?>" role="contentinfo">
 
 		<?php $additional = get_theme_mod('tesseract_footer_additional_content') ? true : false;
 

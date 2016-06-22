@@ -147,3 +147,6 @@ add_action( 'customize_controls_print_styles', 'tesseract_customize_controls_sty
 function tesseract_show_header_opacity_control() {
 	return is_front_page();
 }
+function tesseract_show_footer_opacity_control() {
+	return is_front_page();
+}

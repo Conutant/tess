@@ -1,12 +1,18 @@
 /* WIDHTS */
 
 .site-header { background-color: rgba(0, 0, 0, 0.2); z-index: 2; }
+.site-footer { background-color: rgba(0, 0, 0, 0.2); z-index: 2; }
 
 .home.transparent-header .site-header {
 	position: absolute;
 	top: 0;
 	left: 0;
 	}
+.home.transparent-footer .site-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	}	
 
 #site-banner-main,
 .banner-right {
