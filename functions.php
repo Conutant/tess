@@ -666,6 +666,18 @@ function tesseract_footer_branding_output() {
 	
 	echo '<div id="'.$str_foobid.'" class="'.$str_foobclass.'"><div class="table"><div class="table'.'-cell"><strong>';
 	
+	
+	//if(stristr(__(),'%s') === false){
+	
+	//	echo '<a href="http://'.$str_foobturl.'">'.sprintf( __(),$str_foobtdis).'</a>';
+		
+	//}else{
+		
+		// if changes in language file
+	//	echo '<a href="http://'.$str_foobturl.'">'.sprintf( $str_foobtby,$str_foobtdis).'</a>';
+		
+	//}
+
 	if(stristr(__( $str_foobtby, 'tesseract' ),'%s') === false){
 	
 		echo '<a href="http://'.$str_foobturl.'">'.sprintf( __( $str_foobtby, 'tesseract' ),$str_foobtdis).'</a>';

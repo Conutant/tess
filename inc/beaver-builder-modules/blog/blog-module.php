@@ -129,14 +129,14 @@ FLBuilder::register_module( 'TesseractBlogModule', array(
 						'label' => __( 'Order', 'tesseract' ),
 						'default' => 'DESC',
 						'options' => array(
-							'DESC' => __( 'Descending' ),
-							'ASC' => __( 'Ascending' )
+							'DESC' => __( 'Descending', 'tesseract' ),
+							'ASC' => __( 'Ascending', 'tesseract' )
 						)
 					),
 					'ids' => array(
 						'type' => 'text',
 						'label' => 'Specific IDs',
-						'description' => __( 'List the IDs separated by comma that will be displayed (leave blank to disable)' )
+						'description' => 'List the IDs separated by comma that will be displayed (leave blank to disable)'
 					)
 				)
 			),

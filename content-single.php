@@ -9,6 +9,12 @@
 	<?php if ( my_theme_show_page_header() ) : ?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php if ( 'post' == get_post_type() ) : ?>
+				<div class="entry-meta">
+					<?php tesseract_posted_on(); ?>
+					<?php the_tags(); ?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 

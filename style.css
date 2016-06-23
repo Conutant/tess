@@ -1,15 +1,15 @@
 /*
 
-Theme Name: Tesseract
-Theme URI: http://tesseracttheme.com/
+Theme Name: TESSERACT
+Theme URI: http://tesseracttheme.com
 Author: Tesseract Theme
-Author URI: http://tesseracttheme.com/
+Author URI: http://tesseract.com/
 Description: Tesseract is a beautiful theme from the fourth dimension. Tesseract makes it easy to create a website that you are proud to show off to the world. It is responsive, has simple and useful navigation, an amazing featured image with buttons and is simple to use.
 Version: 2.5.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tesseract
-Tags: responsive-layout, custom-background, custom-header, custom-menu, editor-style, one-column, two-columns, featured-images, full-width-template, left-sidebar, threaded-comments, translation-ready, microformats, dark, white, light
+Tags: custom-background, custom-header, custom-menu, editor-style, one-column, two-columns, featured-images, full-width-template, left-sidebar, threaded-comments, translation-ready, microformats
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 Tesseract is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
@@ -2338,9 +2338,6 @@ h2, h3 {
 .woocommerce-checkout p span.select2-arrow {
 	width: 18px !important;
 }
-/*.woocommerce-checkout span {
-	width: auto !important;
-}*/
 .shop_table span {
 	width: auto !important;
 }
@@ -2348,6 +2345,18 @@ h2, h3 {
 	border-radius: 50% !important;
 	padding: 0px !important;
 }
+/*============================== Additional CSS 22.06.2016 ==============================*/
 button, .button, input[type="reset"], input[type="submit"], input[type="button"] {
 	text-transform: none !important;
+}
+/*============================== Additional CSS 23.06.2016 ==============================*/
+.top-navigation ul li a {
+	padding-top: 12px !important;
+	padding-bottom: 12px !important;
+}
+.top-navigation ul ul li:first-child a {
+	box-shadow: none !important;
+}
+.top-navigation ul ul li:last-child a {
+	border-radius: 0px 0px 3px 3px !important;
 }

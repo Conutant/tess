@@ -7,7 +7,9 @@
 		$account_number = sprintf( '%02d', $i );
 		$is_used = is_string( get_theme_mod( "tesseract_social_account{$account_number}_name" ) );
 
-		$sectionName = ( $is_used ) ? get_theme_mod( "tesseract_social_account{$account_number}_name" ) . ' Account ' . __( 'Settings', 'tesseract' ) : __( "Social Account {$account_number} Settings", 'tesseract' );
+		//$sectionName = ( $is_used ) ? get_theme_mod( "tesseract_social_account{$account_number}_name" ) . ' Account ' . __( 'Settings', 'tesseract' ) : __( "Social Account {$account_number} Settings", 'tesseract' );
+		$sectionName = ( $is_used ) ? get_theme_mod( "tesseract_social_account{$account_number}_name" ) . ' Account ' . __() : __( "Social Account {$account_number} Settings", 'tesseract' );
+		
 		$sectionPriority = ( $is_used ) ? $i : $i + 10;
 		$networkName = ( $is_used ) ? get_theme_mod( "tesseract_social_account{$account_number}_name" ) : __( 'Social Network Name', 'tesseract' );
 		$accountUrl = ( $is_used ) ? get_theme_mod( "tesseract_social_account{$account_number}_name" ) . ' Account ' . __( 'URL', 'tesseract' ) : __( 'Social Network URL', 'tesseract' );
