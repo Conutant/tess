@@ -5,6 +5,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php $featImg_pos = get_theme_mod('tesseract_blog_featimg_pos'); 
+	
+	if ( has_post_thumbnail() && ( !$featImg_pos || ( $featImg_pos == 'above' ) ) ) 
+		tesseract_output_featimg_blog(); ?>
 
 	<?php if ( my_theme_show_page_header() ) : ?>
 		<header class="entry-header">
@@ -17,12 +21,26 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
-
+    <?php if ( has_post_thumbnail() && ( $featImg_pos == 'below' ) ) 
+		tesseract_output_featimg_blog(); ?>
 	<div class="entry-content">
         <div class="entry-meta">
 	        <?php tesseract_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php if ( has_post_thumbnail() && ( $featImg_pos == 'left' ) ) { ?>
+		<div class="myleft">
+		<?php tesseract_output_featimg_blog(); ?>
 		<?php the_content(); ?>
+		</div>
+		<?php } elseif ( has_post_thumbnail() && ( $featImg_pos == 'right' ) ){ ?>
+		<div class="myright">
+		<?php  tesseract_output_featimg_blog(); ?> 
+		<?php the_content(); ?>
+        </div>
+		<?php } else { ?>
+		<?php the_content(); ?>
+		<?php } ?>
+		
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'tesseract' ),

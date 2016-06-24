@@ -10,7 +10,8 @@
 get_header(); ?>
 
 	<div id="primary" class="full-width-page">
-		<main id="main" class="site-main" role="main">
+    <div class="leftSidebar"><?php get_sidebar(); ?></div>
+    <div class="rightSidebar"><main id="main" class="site-main" role="main">
         
         <h1 class="page-title"><?php the_archive_title(); ?></h1>
         
@@ -41,9 +42,11 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+		</main></div>
+    
+		<!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>

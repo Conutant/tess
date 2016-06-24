@@ -25,34 +25,61 @@
 		tesseract_output_featimg_blog(); ?>
 
 	<div class="entry-content">
-		<?php
-		
-		    if ( is_home() || is_archive() ) {
+		<?php if ( has_post_thumbnail() && ( $featImg_pos == 'left' ) ) { ?>
+			<div class="myleft">
+				<?php tesseract_output_featimg_blog(); ?>
+				<?php
 				
-				$contentType = get_theme_mod('tesseract_blog_content');
-                if ( $contentType == 'content' ) {
-					the_content();
-				} else {
-					the_excerpt();
-				}
-				
-            } else {
-				 
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'tesseract' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-			
-			 }
-		?>
+					if ( is_home() || is_archive() ) {
+						
+						$contentType = get_theme_mod('tesseract_blog_content');
+						if ( $contentType == 'content' ) {
+							the_content();
+						} else {
+							the_excerpt();
+						}
+						
+					} else {
 
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'tesseract' ),
-				'after'  => '</div>',
-			) );
-		?>
+					the_content( sprintf(
+						__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'tesseract' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					) );
+					
+					 }
+				?>
+			
+			</div>
+		<?php } elseif ( has_post_thumbnail() && ( $featImg_pos == 'right' ) ){ ?>
+			<div class="myright">
+				<?php  tesseract_output_featimg_blog(); ?> 
+				<?php //the_content(); ?>
+				<?php
+				
+					if ( is_home() || is_archive() ) {
+						
+						$contentType = get_theme_mod('tesseract_blog_content');
+						if ( $contentType == 'content' ) {
+							the_content();
+						} else {
+							the_excerpt();
+						}
+						
+					} else {
+
+					the_content( sprintf(
+						__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'tesseract' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					) );
+					
+					 }
+				?>
+			</div>
+		<?php } else { ?>
+		<?php the_content(); ?>
+		<?php } ?>
+	
+
 	</div><!-- .entry-content -->
     
 </article><!-- #post-## -->

@@ -735,8 +735,8 @@ function tesseract_output_featimg_blog() {
 
 	if ( isset($featImg_display) && ( $featImg_display == 1 ) ) { ?>
 
-    	<a class="entry-post-thumbnail <?php echo ($featImg_pos == 'below') ? 'below-title' : 'above-title'; ?>" href="<?php the_permalink(); ?>" style="background: transparent url('<?php echo esc_url( $thumbnail[0] ); ?>') no-repeat center center; width: 100%; height: <?php echo $featImg_height; ?>px; display: block; background-size: cover;"></a><!-- .entry-background -->
-
+    	<?php if ($featImg_pos == 'below'){'below-title';} elseif ($featImg_pos == 'above'){'above-title';} elseif ($featImg_pos == 'left'){'left-title';} elseif ($featImg_pos == 'right'){'right-title';}  ?>
+		<a class="entry-post-thumbnail <?php echo $featImg_pos; ?>" href="<?php the_permalink(); ?>" style="background: transparent url('<?php echo esc_url( $thumbnail[0] ); ?>') no-repeat center center; width: 100%; height: <?php echo $featImg_height; ?>px; display: block; background-size: cover;"></a>
 	<?php }
 
 }

@@ -14,7 +14,25 @@
 get_header();  
 ?>
 
-	<div id="primary" class="content-area">
+	<?php
+		$bplayout = get_theme_mod('tesseract_blog_post_layout');
+ 
+		switch ( $bplayout ) {
+			case 'fullwidth':
+				$primary_class = 'full-width-page no-sidebar';
+
+				break;
+			case 'sidebar-right':
+				$primary_class = 'content-area sidebar-right';
+
+				break;
+			default:
+				// sidebar-left
+				$primary_class = 'content-area';
+		}
+	?>
+
+	<div id="primary" class="content-area sidebar-right">
 		<main id="main" class="site-main" role="main">
         
         <?php if ( is_home() && !is_front_page() ) { ?>
@@ -23,31 +41,20 @@ get_header();
 			</header><!-- .page-header -->
 		<?php } ?>    
 
-		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
 					get_template_part( 'content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php if ( is_home() )tesseract_paging_nav(); ?>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
+		if ( !$bplayout || ( $bplayout == 'sidebar-left' ) || ( $bplayout == 'sidebar-right' ) ) get_sidebar();
+	?>
 <?php get_footer(); ?>

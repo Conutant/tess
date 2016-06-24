@@ -2360,3 +2360,71 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 .top-navigation ul ul li:last-child a {
 	border-radius: 0px 0px 3px 3px !important;
 }
+
+/*============================== Additional CSS 23.06.2016 ==============================*/
+
+@media (min-width:768px) {
+.leftSidebar {
+	width: 30%;
+	float: left;
+}
+.rightSidebar {
+	width: 70%;
+	float: left;
+}
+.leftSidebar #secondary {
+	float: none;
+	padding-right: 30px;
+	width: 100%;
+}
+}
+
+@media (max-width:767px) {
+.leftSidebar {
+	width: 100%;
+	float: none;
+	display: block;
+}
+.rightSidebar {
+	width: 100%;
+	float: none;
+	display: block;
+}
+.leftSidebar #secondary {
+	float: none;
+	padding-right: 30px;
+	width: 100%;
+}
+}
+
+@media (max-width:359px) {
+.shop_table.cart .coupon input.button {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+}
+.myleft .left {
+	width: auto !important;
+	min-width: 300px !important;
+	height: auto !important;
+	min-height: 260px;
+	float: left !important;
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.myright .right {
+	width: auto !important;
+	min-width: 300px !important;
+	height: auto;
+	min-height: 260px;
+	float: right !important;
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.rightSidebar article {
+	display: block !important;
+	clear: both;
+	width: 100%;
+}
