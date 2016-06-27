@@ -11,15 +11,21 @@
 	if ( has_post_thumbnail() && ( !$featImg_pos || ( $featImg_pos == 'above' ) ) ) 
 		tesseract_output_featimg_blog(); ?>
     
-	<header class="entry-header">
+	<!--<header class="entry-header">-->
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php tesseract_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		<?php
+		if ( is_home() || is_archive() ) {		
+			$postDate = get_theme_mod('tesseract_blog_date');
+			if ( $postDate == 'showdate' ) { ?>
+				<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j, Y'); ?></span>
+		    <?php }	?>
+						
+		
+		<?php }	
+		?>
+		
+	<!--</header>--><!-- .entry-header -->
 
 	<?php if ( has_post_thumbnail() && ( $featImg_pos == 'below' ) ) 
 		tesseract_output_featimg_blog(); ?>

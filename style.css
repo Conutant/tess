@@ -1,5 +1,4 @@
 /*
-
 Theme Name: TESSERACT
 Theme URI: http://tesseracttheme.com
 Author: Tesseract Theme
@@ -14,102 +13,50 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 Tesseract is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 */
-
-
-
 /* =Table of Contents
 -------------------------------------------------------------- */
-/*
-
-    01. CSS Reset (Normalize)
-
+/*  01. CSS Reset (Normalize)
     02. Theme Base
-
     03. Clearfix
-
     04. Global margins and paddings
-
     05. Text-level semantics
-
     06. Headings
-
     07. Forms
-
     08. Buttons
-
     09. Tables
-
     10. Links
-
     11. Header area
-
     12. Layout
-
     13. Menus
-
     14. Icons (separate folder)
-
     15. Accessibility
-
     16. Embedded content
-
     17. WordPress core styles
-
     18. Widgets
-
     19. Content
-
     20. Asides
-
     21. Comments
-
     22. Infinite scroll (Jetpack plugin)
-
     23. Footer
-
     24. Plugins
-
     25. Responsive design
-
     26. Print styles
-
 */
-
-
-
-
-
 /* =01. normalize.css v3.0.1
-
 -------------------------------------------------------------- */
-
-
-
 /**
-
  * 1. Set default font family to sans-serif.
-
  * 2. Prevent iOS text size adjust after orientation change, without disabling
-
- *    user zoom.
-
- */
-
-
-
+ * user zoom.
+*/
 html {
 	font-family: sans-serif; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 3 */
 }
 /**
-
  * Remove default margin.
-
  */
-
-
-
 body {
 	margin: 0;
 }
@@ -117,117 +64,63 @@ body {
 	position: relative;
 }
 /* =HTML5 display definitions
-
 -------------------------------------------------------------- */
-
-
-
 /**
-
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
-
  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
-
  * Correct `block` display not defined for `main` in IE 11.
-
- */
-
-
-
+*/
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
 }
 /**
-
  * 1. Correct `inline-block` display not defined in IE 8/9.
-
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-
- */
-
-
-
+*/
 audio, canvas, progress, video {
 	display: inline-block; /* 1 */
 	vertical-align: baseline; /* 2 */
 }
 /**
-
  * Prevent modern browsers from displaying `audio` without controls.
-
  * Remove excess height in iOS 5 devices.
-
- */
-
-
-
+*/
 audio:not([controls]) {
 	display: none;
 	height: 0;
 }
 /**
-
  * Address `[hidden]` styling not present in IE 8/9/10.
-
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-
  */
-
-
-
 [hidden], template {
 	display: none;
 }
 /* =Links
-
 -------------------------------------------------------------- */
-
-
-
 /**
-
  * Remove the gray background color from active links in IE 10.
-
- */
-
-
-
+*/
 a {
 	background: transparent;
 }
 /**
-
  * Improve readability when focused and also mouse hovered in all browsers.
-
  */
-
-
-
 a:active, a:hover {
 	outline: 0;
 }
 /* =Text-level semantics
-
 -------------------------------------------------------------- */
-
-
-
 /**
-
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-
- */
-
-
-
+*/
 abbr[title] {
 	border-bottom: 1px dotted;
 }
 /**
-
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-
- */
+*/
 
 
 
@@ -676,15 +569,8 @@ td, th {
  *zoom: 1;
 }
 /* =02. Theme base
-
 -------------------------------------------------------------- */
-
-
-
 /* Apply a natural box layout model to all elements */
-
-
-
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -697,11 +583,7 @@ body {
 	color: #757575;
 	position: relative;
 }
-
-
-
 /* =03. Clearfix
-
 -------------------------------------------------------------- */
 
 
@@ -1903,7 +1785,7 @@ figure {
 }
 /*.single #primary,*/
 
-.blog #primary, .page-template-full-width-page #primary, .page-template-full-width-page-php #primary, .page-template-blog-php #primary, .error404 #primary, #primary.full-width-page {
+/*.blog #primary, */.page-template-full-width-page #primary, .page-template-full-width-page-php #primary, .page-template-blog-php #primary, .error404 #primary, #primary.full-width-page {
 	width: 100%;
 }
 .page-template-page-rightsidebar #primary {
@@ -1919,9 +1801,9 @@ figure {
 .post-edit-link {
 	float: right;
 }
-.page-template-blog #content, .blog #content {
+/*.page-template-blog #content, .blog #content {
 	max-width: 720px;
-}
+}*/
 .fl-builder.page-template-blog #content, .fl-builder.blog #content {
 	max-width: none;
 }
@@ -2427,4 +2309,42 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	display: block !important;
 	clear: both;
 	width: 100%;
+}
+/*============================== Additional CSS 27.06.2016 ==============================*/
+.right-only .site-content .sidebar-default {
+	padding-left: 60px !important;
+	padding-right: 0 !important;
+}
+.sidebar-right .sidebar-default {
+	padding-left: 60px !important;
+	padding-right: 0px !important;
+}
+.wpcf7-form input.wpcf7-form-control {
+	width: 100% !important;
+}
+.wpcf7-form input.wpcf7-form-control.wpcf7-submit {
+	width: auto !important;
+}
+.sidebar-right h1.entry-title {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+.sidebar-right h2.entry-title {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+.sidebar-right .entry-content {
+	margin-top: 15px !important;
+}
+.sidebar-right article {
+	margin-top: 45px;
+}
+.sidebar-right article span {
+	color: #a5a5a5;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.sidebar-right article span .fa {
+	margin-right: 5px;
 }

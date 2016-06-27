@@ -92,14 +92,85 @@
 						'type'           => 'radio',
 						'choices'        => array(
 							'above'  	=> 'Above the post title',
-							'below' 	=> 'Below the post title',														'left'      =>  'left of the content',							'right'      =>  'right of the content'
+							'below' 	=> 'Below the post title',								
+							'left'      =>  'left of the content',						
+							'right'     =>  'right of the content'
 						),
 						'priority' 		 => 4,
 						'active_callback' 	=> 'tesseract_blog_featimg_sizes_enable'										
 					)
 				)
 			);				
-	
+	    
+		$wp_customize->add_setting( 'tesseract_blog_date', array(
+				'sanitize_callback' => 'tesseract_blog_sanitize_date',
+				'default'			=> 'showdate'				
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_blog_date_control',
+					array(
+						'label'          => __( 'Choose to Show or Hide Date', 'tesseract' ),
+						'section'        => 'tesseract_blog',
+						'settings'       => 'tesseract_blog_date',
+						'type'           => 'radio',
+						'choices'        => array(
+							'showdate'  	=> 'Show Date',
+							'hidedate' 	=> 'Hide Date'
+						),
+						'priority' 		 => 5										
+					)
+				)
+			);
+			
+		/* $wp_customize->add_setting( 'tesseract_blog_author', array(
+				'sanitize_callback' => 'tesseract_blog_sanitize_author',
+				'default'			=> 'showauthor'				
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_blog_author',
+					array(
+						'label'          => __( 'Choose to Show or Hide Author', 'tesseract' ),
+						'section'        => 'tesseract_blog',
+						'settings'       => 'tesseract_blog_author',
+						'type'           => 'radio',
+						'choices'        => array(
+							'showauthor'  	=> 'Show Author',
+							'hideauthor' 	=> 'Hide Author'
+						),
+						'priority' 		 => 6										
+					)
+				)
+			); */	
+
+		/*$wp_customize->add_setting( 'tesseract_blog_comments', array(
+				'sanitize_callback' => 'tesseract_blog_sanitize_comments',
+				'default'			=> 'showcomment'				
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_blog_comments',
+					array(
+						'label'          => __( 'Choose to Show or Hide Comments', 'tesseract' ),
+						'section'        => 'tesseract_blog',
+						'settings'       => 'tesseract_blog_comments',
+						'type'           => 'radio',
+						'choices'        => array(
+							'showcomment'  	=> 'Show Comments',
+							'hidecomment' 	=> 'Hide Comments'
+						),
+						'priority' 		 => 7										
+					)
+				)
+			);	*/	
+			
 		/*$wp_customize->add_setting( 'tesseract_blog_featimg_size', array(
 			'sanitize_callback' => 'tesseract_blog_sanitize_featimg_size',
 			'default' 			=> 'default'

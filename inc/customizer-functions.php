@@ -260,6 +260,24 @@ function tesseract_blog_sanitize_content( $value ) {if ( ! in_array( $value, arr
 	endif;
 	return $value;
 	}
+	
+function tesseract_blog_sanitize_date( $value ) {if ( ! in_array( $value, array( 'showdate', 'hidedate' ) ) ):
+		$value = 'showdate';
+	endif;
+	return $value;
+	}	
+	
+function tesseract_blog_sanitize_author( $value ) {if ( ! in_array( $value, array( 'showauthor', 'hideauthor' ) ) ):
+		$value = 'showauthor';
+	endif;
+	return $value;
+	}
+	
+function tesseract_blog_sanitize_comments( $value ) {if ( ! in_array( $value, array( 'showcomment', 'hidecomment' ) ) ):
+		$value = 'showcomment';
+	endif;
+	return $value;
+	}	
 
 function tesseract_blog_sanitize_featimg_pos( $value ) {
 	if ( ! in_array( $value, array( 'above', 'below', 'left', 'right' ) ) ):
@@ -273,7 +291,29 @@ function tesseract_blog_sanitize_featimg_size( $value ) {if ( ! in_array( $value
 	endif;
     return $value;
 	}
-/*  bloglist */function tesseract_bloglist_sanitize_content( $value ) {if ( ! in_array( $value, array( 'excerpt', 'content' ) ) ):		$value = 'excerpt';	endif;	return $value;	}function tesseract_bloglist_sanitize_featimg_pos( $value ) {	if ( ! in_array( $value, array( 'above', 'below', 'left', 'right' ) ) ):		$value = 'above';	endif;	return $value;	}function tesseract_bloglist_sanitize_featimg_size( $value ) {if ( ! in_array( $value, array( 'default', 'tv', 'hdtv', 'theater1', 'theater2', 'pixel' ) ) ) :        $value = 'default';	endif;    return $value;	}						
+	
+	
+	
+/*  bloglist */
+function tesseract_bloglist_sanitize_content( $value ) {if ( ! in_array( $value, array( 'excerpt', 'content' ) ) ):		
+		$value = 'excerpt';
+	endif;	
+	return $value;	}
+
+function tesseract_bloglist_sanitize_featimg_pos( $value ) {	if ( ! in_array( $value, array( 'above', 'below', 'left', 'right' ) ) ):
+		$value = 'above';	
+	endif;	
+	return $value;	}
+
+function tesseract_bloglist_sanitize_featimg_size( $value ) {if ( ! in_array( $value, array( 'default', 'tv', 'hdtv', 'theater1', 'theater2', 'pixel' ) ) ) :  
+        $value = 'default';	
+	endif;    
+	return $value;	}	
+
+
+
+
+					
 function tesseract_sanitize_radio_menuPos( $value ) {
 
 	if ( ! in_array( $value, array( 'left', 'center' ) ) ) :

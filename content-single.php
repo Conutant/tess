@@ -10,17 +10,18 @@
 	if ( has_post_thumbnail() && ( !$featImg_pos || ( $featImg_pos == 'above' ) ) ) 
 		tesseract_output_featimg_blog(); ?>
 
-	<?php if ( my_theme_show_page_header() ) : ?>
+	<?php //if ( my_theme_show_page_header() ) : ?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php if ( 'post' == get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php tesseract_posted_on(); ?>
-					<?php the_tags(); ?>
-				</div><!-- .entry-meta -->
-			<?php endif; ?>
+			<?php
+			$postDate = get_theme_mod('tesseract_blog_date');
+			if ( $postDate == 'showdate' ) { ?>
+				<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j, Y'); ?></span>
+			<?php } ?>
+			
+			
 		</header><!-- .entry-header -->
-	<?php endif; ?>
+	<?php //endif; ?>
     <?php if ( has_post_thumbnail() && ( $featImg_pos == 'below' ) ) 
 		tesseract_output_featimg_blog(); ?>
 	<div class="entry-content">

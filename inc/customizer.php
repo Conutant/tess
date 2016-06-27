@@ -79,6 +79,7 @@ function tesseract_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/sections/social-accounts.php';
 
 	require get_template_directory() . '/inc/sections/blog.php';
+	//require get_template_directory() . '/inc/sections/bloglist.php';
 	require get_template_directory() . '/inc/sections/search-results.php';
 
 	require get_template_directory() . '/inc/sections/footer-colors.php';

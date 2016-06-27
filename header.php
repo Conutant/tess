@@ -59,6 +59,9 @@ if ( is_search() ) {
 }elseif( is_single() ) {
 	if ( $bplayout == 'fullwidth' ) $bodyClass .= ' fullwidth';
 	if ( $bplayout == 'sidebar-right' ) $bodyClass .= ' sidebar-right';
+}elseif( is_home() ) {
+	if ( $bplayout == 'fullwidth' ) $bodyClass .= ' fullwidth';
+	if ( $bplayout == 'sidebar-right' ) $bodyClass .= ' sidebar-right';
 }
  
 ?>

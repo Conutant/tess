@@ -19,25 +19,25 @@ get_header();
  
 		switch ( $bplayout ) {
 			case 'fullwidth':
-				$primary_class = 'full-width-page no-sidebar';
+				$primary_classnw = 'full-width-page no-sidebar';
 
 				break;
 			case 'sidebar-right':
-				$primary_class = 'content-area sidebar-right';
+				$primary_classnw = 'content-area sidebar-right';
 
 				break;
 			default:
 				// sidebar-left
-				$primary_class = 'content-area';
+				$primary_classnw = 'content-area';
 		}
 	?>
 
-	<div id="primary" class="content-area sidebar-right">
+	<div id="primary" class="<?php echo $primary_classnw; ?>">
 		<main id="main" class="site-main" role="main">
         
-        <?php if ( is_home() && !is_front_page() ) { ?>
+        <?php if ( is_home() && !is_front_page() &&is_single() ) { ?>
 			<header class="page-header">
-				</br></br>
+				</br>
 			</header><!-- .page-header -->
 		<?php } ?>    
 
