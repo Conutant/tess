@@ -12,8 +12,10 @@
 		tesseract_output_featimg_blog(); ?>
     
 	<!--<header class="entry-header">-->
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
+	    <div id="bloglist_title">
+		<h2 class="entry-title"><?php the_title(); ?></h2>
+        </div>
+		
 		<?php
 		if ( is_home() || is_archive() ) {		
 			$postDate = get_theme_mod('tesseract_blog_date');
@@ -21,8 +23,17 @@
 				<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j, Y'); ?></span>
 		    <?php }	?>
 						
+		<?php $postAuthor = get_theme_mod('tesseract_blog_author');
+			if ( $postAuthor == 'showauthor' ) { ?>
+				<span><i class="fa fa-user" aria-hidden="true"></i><?php the_author(); ?></span>
+		<?php } ?>
 		
-		<?php }	
+        <?php		
+			$mypostComment = get_theme_mod('tesseract_blog_comments');
+			if ( ( $mypostComment == 'showcomment' ) && ( comments_open() ) ) { ?>
+				<span><i class="fa fa-comments-o" aria-hidden="true"></i><?php comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?></span>
+		<?php }
+		}	
 		?>
 		
 	<!--</header>--><!-- .entry-header -->
@@ -42,8 +53,27 @@
 						if ( $contentType == 'content' ) {
 							the_content();
 						} else {
-							the_excerpt();
-						}
+							the_excerpt(); ?>
+							<!--<?php $blbutton_pos = get_theme_mod('tesseract_blog_button_pos'); 
+							switch ( $blbutton_pos ) {
+								case 'center':
+									$button_classnw = 'rmbutton-center';
+
+									break;
+								case 'right':
+									$button_classnw = 'rmbutton-right';
+
+									break;
+								default:
+									// sidebar-left
+									$button_classnw = 'rmbutton-left';
+							}
+							?>
+							
+							<div id="bloglist_morebutton">
+							<div class="blmore <?php echo $button_classnw; ?>"><a href="<?php the_permalink(); ?>">Read more</a></div>
+							</div>-->	
+						<?php }
 						
 					} else {
 
@@ -87,5 +117,6 @@
 	
 
 	</div><!-- .entry-content -->
+	<div style="clear:both"></div>
     
 </article><!-- #post-## -->

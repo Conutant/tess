@@ -19,7 +19,18 @@
 				<span><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j, Y'); ?></span>
 			<?php } ?>
 			
+			<?php
+			$postAuthor = get_theme_mod('tesseract_blog_author');
+			if ( $postAuthor == 'showauthor' ) { ?>
+				<span><i class="fa fa-user" aria-hidden="true"></i><?php the_author(); ?></span>
+			<?php } ?>
 			
+			<?php
+			$mypostComment = get_theme_mod('tesseract_blog_comments');
+			if ( ( $mypostComment == 'showcomment' ) && ( comments_open() ) ) { ?>
+			    <span><i class="fa fa-comments-o" aria-hidden="true"></i><?php comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?></span>
+			<?php }
+			?>
 		</header><!-- .entry-header -->
 	<?php //endif; ?>
     <?php if ( has_post_thumbnail() && ( $featImg_pos == 'below' ) ) 

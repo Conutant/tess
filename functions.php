@@ -275,6 +275,12 @@ function tesseract_scripts() {
 	$footer_linkColor = get_theme_mod('tesseract_footer_colors_link_color') ? get_theme_mod('tesseract_footer_colors_link_color') : '#ffffff';
 
 	$footer_linkHoverColor = get_theme_mod('tesseract_footer_colors_link_hover_color') ? get_theme_mod('tesseract_footer_colors_link_hover_color') : '#d1ecff';
+	
+	// BLOGLIST TEXT COLOR
+	$bloglist_textColor = get_theme_mod('tesseract_blog_titlecolor') ? get_theme_mod('tesseract_blog_titlecolor') : '#ffffff';
+	
+	// BLOGLIST BUTTON COLOR
+	$bloglist_buttonColor = get_theme_mod('tesseract_blog_buttoncolor') ? get_theme_mod('tesseract_blog_buttoncolor') : '#ffffff';
 
 	$add_content_borderColor_array = tesseract_hex2rgb( $footer_linkColor );
 	$add_content_borderColor = implode( ', ', $add_content_borderColor_array );
@@ -593,6 +599,20 @@ function tesseract_scripts() {
 	#colophon h4,
 	#colophon h5,
 	#colophon h6 { color: " . $footer_headingColor . "; }
+	
+	
+	#bloglist_title h1.entry-title,
+	#bloglist_title h2.entry-title,
+	#bloglist_title h3.entry-title,
+	#bloglist_title h4.entry-title,
+	#bloglist_title h5.entry-title,
+	#bloglist_title h6.entry-title { color: " . $bloglist_textColor . "; }
+	
+
+	#bloglist_morebutton .blmore,
+	#bloglist_morebutton .blmore a,
+	#bloglist_morebutton .blmore a:hover{ color: " . $bloglist_buttonColor . "; }
+	
 
 	#colophon a { color: " . $footer_linkColor . "; }
 
@@ -932,13 +952,13 @@ function tesseract_set_menu_location_customizerupdate() {
 add_action('customize_save_after', 'tesseract_set_menu_location_customizerupdate', 77);
 add_action('init', 'tesseract_set_menu_location_menuupdate', 77);
 
-function tesseract_new_excerpt_more($more) {
+/*function tesseract_new_excerpt_more($more) {
 	global $post;
 
 	return ' ' . '<a class="moretag" href="'. get_permalink($post->ID) . '">' . __( 'Read More ...', 'tesseract' ) . '</a>';
 }
 add_filter('excerpt_more', 'tesseract_new_excerpt_more');
-
+*/
 /*
  * Beaver Builder - remove page title
  */

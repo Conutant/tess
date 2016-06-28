@@ -216,6 +216,18 @@
 			)
 		} );
 	} );
+	
+	wp.customize( 'tesseract_blog_titlecolor', function( value ) {
+		value.bind( function( to ) {
+			$( '#bloglist_title h2 ).css('color', to);
+		} );
+	} );
+	
+	wp.customize( 'tesseract_blog_buttoncolor', function( value ) {
+		value.bind( function( to ) {
+			$( '#bloglist_morebutton ).css('color', to);
+		} );
+	} );
 
 	wp.customize( 'tesseract_mobmenu_background_color', function( value ) {
 		value.bind( function( to ) {

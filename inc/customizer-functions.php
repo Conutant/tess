@@ -292,6 +292,13 @@ function tesseract_blog_sanitize_featimg_size( $value ) {if ( ! in_array( $value
     return $value;
 	}
 	
+//BLOGLIST BUTTON POSITION
+function tesseract_blog_sanitize_button_pos( $value ) {
+	if ( ! in_array( $value, array( 'left', 'right', 'center' ) ) ):
+		$value = 'left';
+	endif;
+	return $value;
+	}
 	
 	
 /*  bloglist */

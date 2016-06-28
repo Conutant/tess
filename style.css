@@ -459,17 +459,13 @@ input[type="search"] {
 .entry-content select {
 	width: calc( 60% - 20px );
 }
-#content form span {
+/*#content form span {
 	width: 100%;
-}
+}*/
+
 /**
-
- * Define consistent border, margin, and padding.
-
- */
-
-
-
+* Define consistent border, margin, and padding.
+*/
 fieldset {
 	border: 1px solid rgba(0, 0, 0 ,0.1);
 	margin: 0 2px;
@@ -483,20 +479,13 @@ fieldset {
 
  */
 
-
-
 legend {
 	border: 0; /* 1 */
 	padding: 0; /* 2 */
 }
 /**
-
- * Remove default vertical scrollbar in IE 8/9/10/11.
-
- */
-
-
-
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
 textarea {
 	overflow: auto;
 }
@@ -2259,6 +2248,10 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	padding-right: 30px;
 	width: 100%;
 }
+#secondary {
+	padding: 0 !important;
+	width: auto !important;
+}
 }
 
 @media (max-width:767px) {
@@ -2277,6 +2270,14 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	padding-right: 30px;
 	width: 100%;
 }
+.content-area {
+	display: block !important;
+	float: none !important;
+	width: 100% !important;
+}
+#site-banner-right {
+	margin-top: -30px !important;
+}
 }
 
 @media (max-width:359px) {
@@ -2284,10 +2285,32 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	padding-left: 12px !important;
 	padding-right: 12px !important;
 }
+.featured-image img {
+	width: 100%;
+	height: auto;
+}
+.search-wrapper {
+	width: 100%;
+}
+.search-wrapper .search-form {
+	width: 100%;
+	margin: auto;
+	max-width: 100%;
+}
+.search-wrapper .search-form label {
+	display: block;
+	width: 100%;
+}
+.search-wrapper .search-form label input.search-field {
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 92%;
+	display: block;
+}
 }
 .myleft .left {
 	width: auto !important;
-	min-width: 300px !important;
+	min-width: 278px !important;
 	height: auto !important;
 	min-height: 260px;
 	float: left !important;
@@ -2339,6 +2362,7 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 .sidebar-right article {
 	margin-top: 45px;
 }
+/*============================== Additional CSS 28.06.2016 ==============================*/
 .sidebar-right article span {
 	color: #a5a5a5;
 	font-size: 13px;
@@ -2347,4 +2371,69 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 }
 .sidebar-right article span .fa {
 	margin-right: 5px;
+}
+article header.entry-header span {
+	color: #a5a5a5;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+article header.entry-header span .fa {
+	margin-right: 5px;
+}
+.blog .content-area article span {
+	color: #a5a5a5;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.blog .content-area article span .fa {
+	margin-right: 5px;
+}
+.blog .full-width-page article span {
+	color: #a5a5a5;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.blog .full-width-page article span .fa {
+	margin-right: 5px;
+}
+.content-area.with-sidebar .woocommerce-breadcrumb {
+	position: relative;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.content-area.with-sidebar h1.page-title {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.content-area.no-sidebar .woocommerce-breadcrumb {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.content-area.no-sidebar h1.page-title {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/*====== ReadMore ======*/
+.blmore.rmbutton-right {
+	text-align: right;
+}
+.blmore.rmbutton-left {
+	text-align: left;
+}
+.blmore.rmbutton-center {
+	text-align: center;
+}
+.blmore a {
+	font-weight: 400;
+}
+#bloglist_title h2.entry-title {
+	margin-top: 45px !important;
+	margin-bottom: 10px !important;
+}
+.single-post article .entry-header h1.entry-title {
+	margin-top: 45px !important;
+	margin-bottom: 10px !important;
 }

@@ -125,7 +125,7 @@
 				)
 			);
 			
-		/* $wp_customize->add_setting( 'tesseract_blog_author', array(
+		$wp_customize->add_setting( 'tesseract_blog_author', array(
 				'sanitize_callback' => 'tesseract_blog_sanitize_author',
 				'default'			=> 'showauthor'				
 		) );
@@ -146,9 +146,9 @@
 						'priority' 		 => 6										
 					)
 				)
-			); */	
+			);
 
-		/*$wp_customize->add_setting( 'tesseract_blog_comments', array(
+		$wp_customize->add_setting( 'tesseract_blog_comments', array(
 				'sanitize_callback' => 'tesseract_blog_sanitize_comments',
 				'default'			=> 'showcomment'				
 		) );
@@ -169,8 +169,69 @@
 						'priority' 		 => 7										
 					)
 				)
-			);	*/	
-			
+			);
+		
+		$wp_customize->add_setting( 'tesseract_blog_titlecolor', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'default' 			=> '#ffffff'
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+			$wp_customize,
+			'tesseract_blog_titlecolor_control',
+			array(
+				'label'      => __( 'BlogList Page Title Color', 'tesseract' ),
+				'section'    => 'tesseract_blog',
+				'settings'   => 'tesseract_blog_titlecolor',
+				'priority'   => 8
+			) )
+		);
+		
+		/*$wp_customize->add_setting( 'tesseract_blog_buttoncolor', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'default' 			=> '#ffffff'
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+			$wp_customize,
+			'tesseract_blog_buttoncolor_control',
+			array(
+				'label'      => __( 'BlogList Page Button Color', 'tesseract' ),
+				'section'    => 'tesseract_blog',
+				'settings'   => 'tesseract_blog_buttoncolor',
+				'priority'   => 9
+			) )
+		);
+		
+		
+		$wp_customize->add_setting( 'tesseract_blog_button_pos', array(
+			'sanitize_callback' => 'tesseract_blog_sanitize_button_pos',
+			'default' 			=> 'left'
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_blog_button_pos_control',
+					array(
+						'label'          => __( 'Choose the Bloglist Read More Button position', 'tesseract' ),
+						'section'        => 'tesseract_blog',
+						'settings'       => 'tesseract_blog_button_pos',
+						'type'           => 'radio',
+						'choices'        => array(							
+							'left'      =>  'left of the content',						
+							'right'     =>  'right of the content',
+							'center'     =>  'center of the content'
+						),
+						'priority' 		 => 10,
+						//'active_callback' 	=> 'tesseract_blog_featimg_sizes_enable'										
+					)
+				)
+			);	*/
 		/*$wp_customize->add_setting( 'tesseract_blog_featimg_size', array(
 			'sanitize_callback' => 'tesseract_blog_sanitize_featimg_size',
 			'default' 			=> 'default'
