@@ -277,7 +277,7 @@ function tesseract_blog_sanitize_comments( $value ) {if ( ! in_array( $value, ar
 		$value = 'showcomment';
 	endif;
 	return $value;
-	}	
+	}		
 
 function tesseract_blog_sanitize_featimg_pos( $value ) {
 	if ( ! in_array( $value, array( 'above', 'below', 'left', 'right' ) ) ):
@@ -293,6 +293,12 @@ function tesseract_blog_sanitize_featimg_size( $value ) {if ( ! in_array( $value
 	}
 	
 //BLOGLIST BUTTON POSITION
+function tesseract_blog_sanitize_button_size( $value ) {if ( ! in_array( $value, array( 'small', 'medium', 'large' ) ) ):
+		$value = 'medium';
+	endif;
+	return $value;
+	}
+
 function tesseract_blog_sanitize_button_pos( $value ) {
 	if ( ! in_array( $value, array( 'left', 'right', 'center' ) ) ):
 		$value = 'left';
