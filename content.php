@@ -54,7 +54,7 @@
 							the_content();
 						} else {
 							the_excerpt(); ?>
-							<!--<?php $blbutton_pos = get_theme_mod('tesseract_blog_button_pos'); 
+							<?php $blbutton_pos = get_theme_mod('tesseract_blog_button_pos'); 
 							switch ( $blbutton_pos ) {
 								case 'center':
 									$button_classnw = 'rmbutton-center';
@@ -65,14 +65,32 @@
 
 									break;
 								default:
-									// sidebar-left
+									// left button
 									$button_classnw = 'rmbutton-left';
 							}
 							?>
 							
+							<?php $blbutton_size = get_theme_mod('tesseract_blog_button_size'); 
+							switch ( $blbutton_size ) {
+								case 'small':
+									$button_classsize = 'rmbutton-small';
+
+									break;
+								case 'large':
+									$button_classsize = 'rmbutton-large';
+
+									break;
+								default:
+									// medium
+									$button_classsize = 'rmbutton-medium';
+							}
+							?>
+							
 							<div id="bloglist_morebutton">
-							<div class="blmore <?php echo $button_classnw; ?>"><a href="<?php the_permalink(); ?>">Read more</a></div>
-							</div>-->	
+							<?php $blbutton_txt = get_theme_mod('tesseract_blog_button_txt'); ?>
+							<?php $blbutton_radius = get_theme_mod('tesseract_blog_button_radius'); ?>
+							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a style="border-radius: <?php echo $blbutton_radius; ?>px;" href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
+							</div>	
 						<?php }
 						
 					} else {

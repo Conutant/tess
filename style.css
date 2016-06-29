@@ -2437,3 +2437,37 @@ article header.entry-header span .fa {
 	margin-top: 45px !important;
 	margin-bottom: 10px !important;
 }
+/*============================== CSS FOR BUTTON ==============================*/
+.rmbutton-large a {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 5px 20px;
+	font-size: 20px;
+}
+.rmbutton-medium a {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 5px 20px;
+	font-size: 16px;
+}
+.rmbutton-small a {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 5px 20px;
+	font-size: 13px;
+}
+.archive .full-width-page article span {
+	color: #a5a5a5;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+.archive .full-width-page article span .fa {
+	margin-right: 5px;
+}
+.archive h1.page-title {
+	margin-bottom: 0px !important;
+}
+.archive .rightSidebar article {
+	padding-top: 0px !important;
+}

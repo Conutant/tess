@@ -228,6 +228,12 @@
 			$( '#bloglist_morebutton ).css('color', to);
 		} );
 	} );
+	
+	wp.customize( 'tesseract_blog_buttonbgcolor', function( value ) {
+		value.bind( function( to ) {
+			$( '.blmore a' ).css('background-color', to);
+		} );
+	} );
 
 	wp.customize( 'tesseract_mobmenu_background_color', function( value ) {
 		value.bind( function( to ) {

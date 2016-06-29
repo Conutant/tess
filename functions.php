@@ -279,8 +279,10 @@ function tesseract_scripts() {
 	// BLOGLIST TEXT COLOR
 	$bloglist_textColor = get_theme_mod('tesseract_blog_titlecolor') ? get_theme_mod('tesseract_blog_titlecolor') : '#ffffff';
 	
-	// BLOGLIST BUTTON COLOR
+	// BLOGLIST BUTTON and TEXT COLOR
 	$bloglist_buttonColor = get_theme_mod('tesseract_blog_buttoncolor') ? get_theme_mod('tesseract_blog_buttoncolor') : '#ffffff';
+	
+	$bloglist_buttonbgColor = get_theme_mod('tesseract_blog_buttonbgcolor') ? get_theme_mod('tesseract_blog_buttonbgcolor') : '#ffffff';
 
 	$add_content_borderColor_array = tesseract_hex2rgb( $footer_linkColor );
 	$add_content_borderColor = implode( ', ', $add_content_borderColor_array );
@@ -612,6 +614,9 @@ function tesseract_scripts() {
 	#bloglist_morebutton .blmore,
 	#bloglist_morebutton .blmore a,
 	#bloglist_morebutton .blmore a:hover{ color: " . $bloglist_buttonColor . "; }
+	
+
+	.blmore a{ background-color: " . $bloglist_buttonbgColor . "; }
 	
 
 	#colophon a { color: " . $footer_linkColor . "; }
