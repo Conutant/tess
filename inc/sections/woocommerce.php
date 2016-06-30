@@ -76,7 +76,54 @@
 					)
 				)
 			);
-
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_product_breadcrumb', array(
+				'sanitize_callback' => 'tesseract_woocommerce_product_sanitize_breadcrumb',
+				'default'			=> 'showbreadcrumb'				
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_woocommerce_product_breadcrumb_control',
+				array(
+					'label'          => __( 'Choose to Show or Hide Breadcrumb', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_product_breadcrumb',
+					'type'           => 'radio',
+					'choices'        => array(
+						'showbreadcrumb'  	=> 'Show Breadcrumb',
+					    'hidebreadcrumb' 	=> 'Hide Breadcrumb'
+					),
+					'priority' 		 => 3										
+				)
+			)
+		);
+		
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_product_ratings', array(
+				'sanitize_callback' => 'tesseract_woocommerce_product_sanitize_ratings',
+				'default'			=> 'showratings'				
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_woocommerce_product_ratings_control',
+				array(
+					'label'          => __( 'Choose to Show or Hide Ratings', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_product_ratings',
+					'type'           => 'radio',
+					'choices'        => array(
+						'showratings'  	=> 'Show Ratings',
+					    'hideratings' 	=> 'Hide Ratings'
+					),
+					'priority' 		 => 3										
+				)
+			)
+		);
+		
 		$wp_customize->add_setting( 'tesseract_woocommerce_product_layout', array(
 				'sanitize_callback' => 'tesseract_sanitize_select_woocommerce_layout_types',
 				'default' 			=> 'fullwidth'

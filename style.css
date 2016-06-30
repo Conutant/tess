@@ -2320,8 +2320,8 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 }
 .myright .right {
 	width: auto !important;
-	min-width: 300px !important;
-	height: auto;
+	min-width: 278px !important;
+	height: auto !important;
 	min-height: 260px;
 	float: right !important;
 	margin-left: 15px;
@@ -2470,4 +2470,30 @@ article header.entry-header span .fa {
 }
 .archive .rightSidebar article {
 	padding-top: 0px !important;
+}
+/*============================== Additional CSS 30.06.2016 ==============================*/
+#site-banner-right {
+	width: 10% !important;
+}
+#bloglist_title.onlytitle h2.entry-title {
+	padding: 0px 10px 10px 0px;
+	border-bottom: 1px dotted #B3B3B3;
+}
+#bloglist_title.onlytitle {
+	position: relative;
+}
+#bloglist_title.onlytitle h2.entry-title::after {
+	left: auto;
+	top: auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(122, 122, 122, 0);
+	border-left-color: #7a7a7a;
+	border-width: 6px;
+	margin-top: 8px;
+	margin-left: 15px;
 }

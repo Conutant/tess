@@ -255,7 +255,7 @@ function tesseract_sanitize_radio( $value ) {
 	endif;
 }
 
-function tesseract_blog_sanitize_content( $value ) {if ( ! in_array( $value, array( 'excerpt', 'content' ) ) ):
+function tesseract_blog_sanitize_content( $value ) {if ( ! in_array( $value, array( 'excerpt', 'content', 'titleonly' ) ) ):
 		$value = 'excerpt';
 	endif;
 	return $value;
@@ -292,12 +292,18 @@ function tesseract_blog_sanitize_featimg_size( $value ) {if ( ! in_array( $value
     return $value;
 	}
 	
-//BLOGLIST BUTTON POSITION
+//BLOGLIST BUTTON POSITION SIZE AND TEXTONLY
 function tesseract_blog_sanitize_button_size( $value ) {if ( ! in_array( $value, array( 'small', 'medium', 'large' ) ) ):
 		$value = 'medium';
 	endif;
 	return $value;
 	}
+	
+function tesseract_blog_sanitize_button_textonly( $value ) {if ( ! in_array( $value, array( 'textonly', 'textbutton' ) ) ):
+		$value = 'textbutton';
+	endif;
+	return $value;
+	}	
 
 function tesseract_blog_sanitize_button_pos( $value ) {
 	if ( ! in_array( $value, array( 'left', 'right', 'center' ) ) ):
@@ -324,7 +330,11 @@ function tesseract_bloglist_sanitize_featimg_size( $value ) {if ( ! in_array( $v
 	return $value;	}	
 
 
-
+// WOOCOMMERCE BREADCRUMB OPTION//
+function tesseract_woocommerce_product_sanitize_breadcrumb( $value ) {	if ( ! in_array( $value, array( 'showbreadcrumb','hidebreadcrumb' ) ) ):
+		$value = 'showbreadcrumb';	
+	endif;	
+	return $value;	}
 
 					
 function tesseract_sanitize_radio_menuPos( $value ) {

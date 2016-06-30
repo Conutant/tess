@@ -608,15 +608,14 @@ function tesseract_scripts() {
 	#bloglist_title h3.entry-title,
 	#bloglist_title h4.entry-title,
 	#bloglist_title h5.entry-title,
-	#bloglist_title h6.entry-title { color: " . $bloglist_textColor . "; }
+	#bloglist_title h6.entry-title, 
+	#bloglist_title h2.entry-title a{ color: " . $bloglist_textColor . "; }
 	
 
 	#bloglist_morebutton .blmore,
 	#bloglist_morebutton .blmore a,
 	#bloglist_morebutton .blmore a:hover{ color: " . $bloglist_buttonColor . "; }
 	
-
-	.blmore a{ background-color: " . $bloglist_buttonbgColor . "; }
 	
 
 	#colophon a { color: " . $footer_linkColor . "; }
@@ -1153,3 +1152,12 @@ function disable_wp_emojicons() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 add_action( 'init', 'disable_wp_emojicons' );
+
+// Remove ... from excerpt //
+//This should remove the 3 dots at the end of the excerpt
+function new_excerpt_more($more) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+// My woocommerce customization //

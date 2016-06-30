@@ -25,7 +25,8 @@
 						'type'           => 'radio',
 						'choices'        => array(
 							'excerpt'  	=> 'Excerpt',
-							'content' 	=> 'Full Content'
+							'content' 	=> 'Full Content',
+							'titleonly' 	=> 'Title Only'
 						),
 						'priority' 		 => 1										
 					)
@@ -269,6 +270,29 @@
 			)
 		);
 		
+		$wp_customize->add_setting( 'tesseract_blog_button_textonly', array(
+			'sanitize_callback' => 'tesseract_blog_sanitize_button_textonly',
+			'default' 			=> 'textbutton'
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_blog_button_textonly_control',
+				array(
+					'label'          => __( 'Text Only Button', 'tesseract' ),
+					'section'        => 'tesseract_blog',
+					'settings'       => 'tesseract_blog_button_textonly',
+					'type'           => 'radio',
+					'choices'        => array(							
+						'textonly'      =>  'Show Only Button Text',						
+						'textbutton'     =>  'Show Text with Button'
+					),
+					'priority' 		 => 13,										
+				)
+			)
+		);
+		
 		
 		$wp_customize->add_setting( "tesseract_blog_button_radius", array(
 				'transport'         => 'postMessage',
@@ -284,7 +308,7 @@
 					'section'        => 'tesseract_blog',
 					'settings'       => 'tesseract_blog_button_radius',
 					'type'           => 'text',
-					'priority' 		 => 13
+					'priority' 		 => 14
 				)
 			)
 		);
@@ -310,7 +334,7 @@
 						'right'     =>  'right of the content',
 						'center'     =>  'center of the content'
 					),
-					'priority' 		 => 14,
+					'priority' 		 => 15,
 					//'active_callback' 	=> 'tesseract_blog_featimg_sizes_enable'										
 				)
 			)
