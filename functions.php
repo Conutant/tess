@@ -286,6 +286,11 @@ function tesseract_scripts() {
 
 	$add_content_borderColor_array = tesseract_hex2rgb( $footer_linkColor );
 	$add_content_borderColor = implode( ', ', $add_content_borderColor_array );
+	
+	
+	// WOOCOMMERCE OPTION //
+	$wooproduct_buttonbgColor = get_theme_mod('tesseract_woocommerce_buttonbgcolor') ? get_theme_mod('tesseract_woocommerce_buttonbgcolor') : '#ffffff';
+	
 
 	//MOBMENU
 	$mobmenu_bckColor = get_theme_mod('tesseract_mobmenu_background_color') ? get_theme_mod('tesseract_mobmenu_background_color') : '#336ca6';
@@ -491,7 +496,8 @@ function tesseract_scripts() {
 	.site-header h3,
 	.site-header h4,
 	.site-header h5,
-	.site-header h6 { color: " . $header_textColor . "!important; }
+	.site-header h6,
+    .site-header h2 a{ color: " . $header_textColor . "!important; }
 
 	#masthead .search-field { color: " . $header_textColor . "; }
 	#masthead .search-field.watermark { color: #ccc; }

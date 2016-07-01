@@ -83,8 +83,9 @@ if ( ! comments_open() ) {
 					if ( $account_page_url = wc_get_page_permalink( 'myaccount' ) ) {
 						$comment_form['must_log_in'] = '<p class="must-log-in">' .  sprintf( __( 'You must be <a href="%s">logged in</a> to post a review.', 'woocommerce' ), esc_url( $account_page_url ) ) . '</p>';
 					}
-
+                    $wooFormratings = get_theme_mod('tesseract_woocommerce_product_ratings');
 					if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
+						if( $wooFormratings == 'showratings' ) {
 						$comment_form['comment_field'] = '<p class="comment-form-rating"><label for="rating">' . __( 'Your Rating', 'woocommerce' ) .'</label><select name="rating" id="rating" aria-required="true" required>
 							<option value="">' . __( 'Rate&hellip;', 'woocommerce' ) . '</option>
 							<option value="5">' . __( 'Perfect', 'woocommerce' ) . '</option>
@@ -93,6 +94,7 @@ if ( ! comments_open() ) {
 							<option value="2">' . __( 'Not that bad', 'woocommerce' ) . '</option>
 							<option value="1">' . __( 'Very Poor', 'woocommerce' ) . '</option>
 						</select></p>';
+						}
 					}
 
 					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', 'woocommerce' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';

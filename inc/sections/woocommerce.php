@@ -119,10 +119,11 @@
 						'showratings'  	=> 'Show Ratings',
 					    'hideratings' 	=> 'Hide Ratings'
 					),
-					'priority' 		 => 3										
+					'priority' 		 => 4										
 				)
 			)
 		);
+		
 		
 		$wp_customize->add_setting( 'tesseract_woocommerce_product_layout', array(
 				'sanitize_callback' => 'tesseract_sanitize_select_woocommerce_layout_types',
@@ -143,7 +144,7 @@
 							'sidebar-right'  	=> 	'Right Sidebar',
 							'fullwidth'			=>  'Full Width'
 						),
-						'priority' 		=> 4
+						'priority' 		=> 5
 					)
 				)
 			);
@@ -163,7 +164,7 @@
 					'label' =>  __('Checkout, Account and Cart pages ', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout_header',
-					'priority' => 5
+					'priority' => 6
 					)
 				)
 			);
@@ -183,7 +184,7 @@
 					'label' =>  __('You can set the layout type for the Checkout, Account and Cart pages by using the default page template dropdown on the appropriate page\'s edit screen.', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout',
-					'priority' => 5
+					'priority' => 6
 					)
 				)
 			);

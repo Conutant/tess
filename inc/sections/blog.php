@@ -262,7 +262,8 @@
 					'choices'        => array(							
 						'small'      =>  'Small size Button',						
 						'medium'     =>  'Medium size Button',
-						'large'     =>  'Large size Button'
+						'large'      =>  'Large size Button',
+						'textonly'   =>  'Show Only Button Text',
 					),
 					'priority' 		 => 12,
 					//'active_callback' 	=> 'tesseract_blog_featimg_sizes_enable'										
@@ -270,7 +271,7 @@
 			)
 		);
 		
-		$wp_customize->add_setting( 'tesseract_blog_button_textonly', array(
+		/*$wp_customize->add_setting( 'tesseract_blog_button_textonly', array(
 			'sanitize_callback' => 'tesseract_blog_sanitize_button_textonly',
 			'default' 			=> 'textbutton'
 		) );
@@ -291,7 +292,7 @@
 					'priority' 		 => 13,										
 				)
 			)
-		);
+		);*/
 		
 		
 		$wp_customize->add_setting( "tesseract_blog_button_radius", array(

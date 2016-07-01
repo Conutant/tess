@@ -2497,3 +2497,27 @@ article header.entry-header span .fa {
 	margin-top: 8px;
 	margin-left: 15px;
 }
+/*============================== Additional CSS 01.07.2016 ==============================*/
+.sidebar-right article span a {
+	color: #a5a5a5;
+}
+article header.entry-header span a {
+	color: #a5a5a5;
+}
+.blog .content-area article span a {
+	color: #a5a5a5;
+}
+.blog .full-width-page article span a {
+	color: #a5a5a5;
+}
+.price del {
+	color: #ffb8b8 !important;
+	opacity: 1 !important;
+	margin-right: 15px;
+}
+.price del span {
+	text-decoration: #b7d0ae line-through;
+}
+.single-product .woocommerce-breadcrumb {
+	position: relative !important;
+}

@@ -28,7 +28,8 @@
 			<?php
 			$mypostComment = get_theme_mod('tesseract_blog_comments');
 			if ( ( $mypostComment == 'showcomment' ) && ( comments_open() ) ) { ?>
-			    <span><i class="fa fa-comments-o" aria-hidden="true"></i><?php comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?></span>
+			    <span><i class="fa fa-comments-o" aria-hidden="true"></i><?php //comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?><?php comments_popup_link(
+    'No comments exist',  '1 comment', '% comments'); ?></span>
 			<?php }
 			?>
 		</header><!-- .entry-header -->

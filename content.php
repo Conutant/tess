@@ -19,7 +19,7 @@
     
 	<!--<header class="entry-header">-->
 	    <div id="bloglist_title">
-		<h2 class="entry-title"><?php the_title(); ?></h2>
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </div>
 		
 		<?php
@@ -37,7 +37,8 @@
         <?php		
 			$mypostComment = get_theme_mod('tesseract_blog_comments');
 			if ( ( $mypostComment == 'showcomment' ) && ( comments_open() ) ) { ?>
-				<span><i class="fa fa-comments-o" aria-hidden="true"></i><?php comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?></span>
+				<span><i class="fa fa-comments-o" aria-hidden="true"></i><?php //comments_number('(No Comments)', '(1 Comment)', '(% Comments)' );?><?php comments_popup_link(
+    'No comments exist',  '1 comment', '% comments'); ?></span>
 		<?php }
 		}	
 		?>
@@ -57,7 +58,6 @@
 							the_content();
 						} else {
 							the_excerpt(); 
-							//excerpt_abooze();
 							?>
 							<?php $blbutton_pos = get_theme_mod('tesseract_blog_button_pos'); 
 							switch ( $blbutton_pos ) {
@@ -70,7 +70,6 @@
 
 									break;
 								default:
-									// left button
 									$button_classnw = 'rmbutton-left';
 							}
 							?>
@@ -86,21 +85,20 @@
 
 									break;
 								default:
-									// medium
 									$button_classsize = 'rmbutton-medium';
 							}
 							?>
 							<?php $blbutton_txt = get_theme_mod('tesseract_blog_button_txt'); ?>
 							<?php $blbutton_radius = get_theme_mod('tesseract_blog_button_radius'); ?>
 							<?php $blbutton_bgcolor = get_theme_mod('tesseract_blog_buttonbgcolor'); ?>
-							<?php $blbutton_txtonly = get_theme_mod('tesseract_blog_button_textonly'); ?>
-							<?php if( $blbutton_txtonly == 'textbutton') { ?>
+						<?php //$blbutton_txtonly = get_theme_mod('tesseract_blog_button_textonly'); ?>
+							<?php if( $blbutton_size == 'textonly') { ?>
 							<div id="bloglist_morebutton">
-							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a style="background-color: <?php echo $blbutton_bgcolor; ?>; border-radius: <?php echo $blbutton_radius; ?>px;" href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
+							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
 							</div>
 							<?php } else { ?> 
 							<div id="bloglist_morebutton">
-							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
+							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a style="background-color: <?php echo $blbutton_bgcolor; ?>; border-radius: <?php echo $blbutton_radius; ?>px;" href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
 							</div>	
 							<?php } ?>
 
@@ -124,7 +122,6 @@
 							the_content();
 						} else {
 							the_excerpt(); 
-							//excerpt_abooze();
 							?>
 							
 							<?php $blbutton_pos = get_theme_mod('tesseract_blog_button_pos'); 
@@ -138,7 +135,6 @@
 
 									break;
 								default:
-									// left button
 									$button_classnw = 'rmbutton-left';
 							}
 							?>
@@ -154,22 +150,21 @@
 
 									break;
 								default:
-									// medium
 									$button_classsize = 'rmbutton-medium';
 							}
 							?>
 							<?php $blbutton_txt = get_theme_mod('tesseract_blog_button_txt'); ?>
 							<?php $blbutton_radius = get_theme_mod('tesseract_blog_button_radius'); ?>
 							<?php $blbutton_bgcolor = get_theme_mod('tesseract_blog_buttonbgcolor'); ?>
-							<?php $blbutton_txtonly = get_theme_mod('tesseract_blog_button_textonly'); ?>
+						<?php //$blbutton_txtonly = get_theme_mod('tesseract_blog_button_textonly'); ?>
 							
-							<?php if( $blbutton_txtonly == 'textbutton') { ?>
+							<?php if( $blbutton_size == 'textonly') { ?>
 							<div id="bloglist_morebutton">
-							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a style="background-color: <?php echo $blbutton_bgcolor; ?>; border-radius: <?php echo $blbutton_radius; ?>px;" href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
+							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
 							</div>
 							<?php } else { ?> 
 							<div id="bloglist_morebutton">
-							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
+							<div class="blmore <?php echo $button_classnw; ?> <?php echo $button_classsize; ?>"><a style="background-color: <?php echo $blbutton_bgcolor; ?>; border-radius: <?php echo $blbutton_radius; ?>px;" href="<?php the_permalink(); ?>"><?php echo $blbutton_txt; ?></a></div>
 							</div>	
 							<?php } ?>
 							
