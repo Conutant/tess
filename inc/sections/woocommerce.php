@@ -56,7 +56,49 @@
 					)
 				)
 			);
+        
+		$wp_customize->add_setting( 'tesseract_woocommerce_titlecolor', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'default' 			=> '#ffffff'
+		) );
 
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+				$wp_customize,
+				'tesseract_woocommerce_titlecolor_control',
+				array(
+					'label'      => __( 'Product Title Color', 'tesseract' ),
+					'section'    => 'tesseract_woocommerce',
+					'settings'   => 'tesseract_woocommerce_titlecolor',
+					'priority'   => 3
+				) )
+			);
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_product_morebutton', array(
+				'sanitize_callback' => 'tesseract_woocommerce_product_sanitize_morebutton',
+				'default'			=> 'showcartbutton'				
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_woocommerce_product_morebutton_control',
+					array(
+						'label'          => __( 'Choose to Show or Hide Cart Button', 'tesseract' ),
+						'section'        => 'tesseract_woocommerce',
+						'settings'       => 'tesseract_woocommerce_product_morebutton',
+						'type'           => 'radio',
+						'choices'        => array(
+							'showcartbutton'  	=> 'Show Add to Cart Button',
+							'hidecartbutton' 	=> 'Hide Add to Cart Button',
+							'showmorebutton' 	=> 'Show More Details Button'
+						),
+						'priority' 		 => 3										
+					)
+				)
+			);
+		
 		$wp_customize->add_setting( 'tesseract_woocommerce_product_layout_header', array(
 			'type'           	=> 'option',
 			'transport'         => 'refresh',
@@ -72,7 +114,7 @@
 					'label' =>  __('Single Product Pages', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_product_layout_header',
-					'priority' => 3
+					'priority' => 4
 					)
 				)
 			);
@@ -95,7 +137,7 @@
 						'showbreadcrumb'  	=> 'Show Breadcrumb',
 					    'hidebreadcrumb' 	=> 'Hide Breadcrumb'
 					),
-					'priority' 		 => 3										
+					'priority' 		 => 5										
 				)
 			)
 		);
@@ -119,11 +161,71 @@
 						'showratings'  	=> 'Show Ratings',
 					    'hideratings' 	=> 'Hide Ratings'
 					),
-					'priority' 		 => 4										
+					'priority' 		 => 5										
 				)
 			)
 		);
 		
+		$wp_customize->add_setting( 'tesseract_woocommerce_buttonbgcolor', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'tesseract_sanitize_rgba',
+				'default' 			=> '#fffff'
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+			$wp_customize,
+			'tesseract_woocommerce_buttonbgcolor_control',
+			array(
+				'label'      => __( 'Add to Cart Button Color', 'tesseract' ),
+				'section'    => 'tesseract_woocommerce',
+				'settings'   => 'tesseract_woocommerce_buttonbgcolor',
+				'priority'   => 6
+			) )
+		);
+		
+		$wp_customize->add_setting( "tesseract_woocommerce_button_radius", array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_html'
+		));
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				"tesseract_woocommerce_button_radius_control",
+				array(
+					'label'          => __( 'Add to Cart Button radius for Rounded Corner', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_button_radius',
+					'type'           => 'text',
+					'priority' 		 => 7
+				)
+			)
+		);
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_button_size', array(
+			'sanitize_callback' => 'tesseract_woocommerce_sanitize_button_size',
+			'default' 			=> 'woomedium'
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_woocommerce_button_control',
+				array(
+					'label'          => __( 'Choose the Read More Button size', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_button_size',
+					'type'           => 'radio',
+					'choices'        => array(							
+						'small'      =>  'Small size Button',						
+						'medium'     =>  'Medium size Button',
+						'large'      =>  'Large size Button',
+					),
+					'priority' 		 => 8										
+				)
+			)
+		);
 		
 		$wp_customize->add_setting( 'tesseract_woocommerce_product_layout', array(
 				'sanitize_callback' => 'tesseract_sanitize_select_woocommerce_layout_types',
@@ -144,7 +246,7 @@
 							'sidebar-right'  	=> 	'Right Sidebar',
 							'fullwidth'			=>  'Full Width'
 						),
-						'priority' 		=> 5
+						'priority' 		=> 9
 					)
 				)
 			);
@@ -164,7 +266,7 @@
 					'label' =>  __('Checkout, Account and Cart pages ', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout_header',
-					'priority' => 6
+					'priority' => 10
 					)
 				)
 			);
@@ -184,7 +286,7 @@
 					'label' =>  __('You can set the layout type for the Checkout, Account and Cart pages by using the default page template dropdown on the appropriate page\'s edit screen.', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout',
-					'priority' => 6
+					'priority' => 10
 					)
 				)
 			);
@@ -204,7 +306,7 @@
 					'label' =>  __('Header Cart', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_headercart_header',
-					'priority' => 	7
+					'priority' => 	10
 					)
 				)
 			);
@@ -223,7 +325,7 @@
 					'section'        => 'tesseract_woocommerce',
 					'settings'       => 'tesseract_woocommerce_headercart',
 					'type'           => 'checkbox',
-					'priority' 		 => 8
+					'priority' 		 => 11
 				)
 			)
 		);

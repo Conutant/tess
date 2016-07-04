@@ -229,6 +229,12 @@
 		} );
 	} );
 	
+	wp.customize( 'tesseract_woocommerce_titlecolor', function( value ) {
+		value.bind( function( to ) {
+			$( '#prodlist_title h3 ).css('color', to);
+		} );
+	} );
+	
 	/*wp.customize( 'tesseract_blog_buttonbgcolor', function( value ) {
 		value.bind( function( to ) {
 			$( '.blmore a' ).css('background-color', to);

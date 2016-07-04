@@ -94,8 +94,20 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php if ( $quantites_required ) : ?>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+		
         <?php $woobutton_bgcolor = get_theme_mod('tesseract_woocommerce_buttonbgcolor'); ?>
-		<button style="background-color: <?php echo $woobutton_bgcolor; ?>" type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<?php $woobutton_brderradius = get_theme_mod('tesseract_woocommerce_button_radius'); ?>
+		<?php $woobutton_size = get_theme_mod('tesseract_woocommerce_button_size'); ?>
+		<?php $woobutclass = ''; ?>
+			<?php if($woobutton_size == 'small' ) { 
+				$woobutclass = 'woobutton-small';
+			} elseif ($woobutton_size == 'large' ) { 
+				$woobutclass = 'woobutton-large'; 
+			} else {
+				$woobutclass = 'woobutton-medium';
+			} ?>
+		
+		<button style="background-color: <?php echo $woobutton_bgcolor; ?>; border-radius: <?php echo $woobutton_brderradius; ?>px;" type="submit" class="<?php echo $woobutclass; ?> single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

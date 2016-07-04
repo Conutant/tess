@@ -2516,8 +2516,51 @@ article header.entry-header span a {
 	margin-right: 15px;
 }
 .price del span {
-	text-decoration: #b7d0ae line-through;
+	text-decoration: #ffb8b8 line-through;
 }
 .single-product .woocommerce-breadcrumb {
 	position: relative !important;
+}
+/*============================== Additional CSS 04.07.2016 ==============================*/
+.woobutton-large {
+	display: inline-block !important;
+	margin-top: 15px !important;
+	/*padding: 5px 20px !important;*/
+	font-size: 20px !important;
+	margin-left: 15px !important;
+	margin-top: 0 !important;
+}
+.woobutton-medium {
+	display: inline-block !important;
+	margin-top: 15px !important;
+	/*padding: 5px 20px !important;*/
+	font-size: 16px !important;
+	margin-left: 15px !important;
+	margin-top: 0 !important;
+}
+.woobutton-small {
+	display: inline-block !important;
+	margin-top: 15px !important;
+	/*padding: 5px 20px !important;*/
+	font-size: 13px !important;
+	margin-left: 15px !important;
+	margin-top: 0 !important;
+}
+.woocommerce .quantity .qty {
+	width: 4.5em !important;
+	text-align: left !important;
+}
+.products .shop_moredetails {
+	background-color: #199cd8;
+	border-radius: 4px;
+	display: inline-block !important;
+	margin-top: 15px !important;
+	padding: 0px 20px !important;
+	font-size: 12px !important;
+	color: #fff;
+	line-height: 40px;
+	font-weight: normal;
+}
+.products .shop_moredetails:hover {
+	color: #fff !important;
 }

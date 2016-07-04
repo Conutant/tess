@@ -291,6 +291,9 @@ function tesseract_scripts() {
 	// WOOCOMMERCE OPTION //
 	$wooproduct_buttonbgColor = get_theme_mod('tesseract_woocommerce_buttonbgcolor') ? get_theme_mod('tesseract_woocommerce_buttonbgcolor') : '#ffffff';
 	
+	// WOOCOMMERCE PRODUCT TEXT COLOR
+	$productlist_textColor = get_theme_mod('tesseract_woocommerce_titlecolor') ? get_theme_mod('tesseract_woocommerce_titlecolor') : '#ffffff';
+	
 
 	//MOBMENU
 	$mobmenu_bckColor = get_theme_mod('tesseract_mobmenu_background_color') ? get_theme_mod('tesseract_mobmenu_background_color') : '#336ca6';
@@ -621,6 +624,10 @@ function tesseract_scripts() {
 	#bloglist_morebutton .blmore,
 	#bloglist_morebutton .blmore a,
 	#bloglist_morebutton .blmore a:hover{ color: " . $bloglist_buttonColor . "; }
+	
+	
+	#prodlist_title h3, 
+	#prodlist_title h2 a{ color: " . $productlist_textColor . "; }
 	
 	
 

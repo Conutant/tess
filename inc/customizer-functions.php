@@ -330,7 +330,7 @@ function tesseract_bloglist_sanitize_featimg_size( $value ) {if ( ! in_array( $v
 	return $value;	}	
 
 
-// WOOCOMMERCE BREADCRUMB AND RATINGS OPTION//
+// WOOCOMMERCE BREADCRUMB RATINGS AND SINGLE BUTTON SIZE OPTION//
 function tesseract_woocommerce_product_sanitize_breadcrumb( $value ) {	if ( ! in_array( $value, array( 'showbreadcrumb','hidebreadcrumb' ) ) ):
 		$value = 'showbreadcrumb';	
 	endif;	
@@ -339,8 +339,21 @@ function tesseract_woocommerce_product_sanitize_breadcrumb( $value ) {	if ( ! in
 function tesseract_woocommerce_product_sanitize_ratings( $value ) {	if ( ! in_array( $value, array( 'showratings','hideratings' ) ) ):
 		$value = 'showratings';	
 	endif;	
-	return $value;	}	
-					
+	return $value;	}
+
+function tesseract_woocommerce_sanitize_button_size( $value ) {if ( ! in_array( $value, array( 'small', 'medium', 'large' ) ) ):
+		$value = 'medium';
+	endif;
+	return $value;
+	}	
+
+// WOOCOMMERCE RED MORE BUTTON OPTION//
+function tesseract_woocommerce_product_sanitize_morebutton( $value ) {	if ( ! in_array( $value, array( 'showcartbutton','hidecartbutton', 'showmorebutton' ) ) ):
+		$value = 'showcartbutton';	
+	endif;	
+	return $value;	}
+
+	
 function tesseract_sanitize_radio_menuPos( $value ) {
 
 	if ( ! in_array( $value, array( 'left', 'center' ) ) ) :

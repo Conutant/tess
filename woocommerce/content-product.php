@@ -49,8 +49,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
-
+	//do_action( 'woocommerce_shop_loop_item_title' );
+	?>
+	<div id="prodlist_title">
+	<a href ="<?php echo get_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
+	</div>
+	<?php
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
 	 *
@@ -65,6 +69,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+	<div class="product-rating">
+	<?php add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 ); ?>
+	</div>
+	<?php $wooaddbutton = get_theme_mod('tesseract_woocommerce_product_morebutton'); ?>
+			<?php if($wooaddbutton == 'showcartbutton' ) { 
+				do_action( 'woocommerce_after_shop_loop_item' );
+			} elseif ($wooaddbutton == 'showmorebutton' ) { ?>
+				<a class="shop_moredetails" href ="<?php echo get_permalink(); ?>">Show More Details</a>
+		    <?php } elseif ($wooaddbutton == 'hidecartbutton' ) {	
+			} ?>
 </li>
