@@ -674,11 +674,10 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-weight: 400;
 	line-height: 1.2;
-	padding: 0px;
-	margin-bottom: 6px;
+	padding: 0px;/*margin-bottom: 6px;
 	margin-top: 0px;
 	margin-left: 0px;
-	margin-right: 0px;
+	margin-right: 0px;*/
 }
 h1 a, h2 a, h3 a, h4 a {
 	color: #121212;
@@ -2307,6 +2306,9 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	width: 92%;
 	display: block;
 }
+.products .shop_moredetails {
+	padding: 10px 12px !important;
+}
 }
 .myleft .left {
 	width: auto !important;
@@ -2518,6 +2520,9 @@ article header.entry-header span a {
 .price del span {
 	text-decoration: #ffb8b8 line-through;
 }
+.price del span {
+	text-decoration: line-through;
+}
 .single-product .woocommerce-breadcrumb {
 	position: relative !important;
 }
@@ -2555,12 +2560,30 @@ article header.entry-header span a {
 	border-radius: 4px;
 	display: inline-block !important;
 	margin-top: 15px !important;
-	padding: 0px 20px !important;
 	font-size: 12px !important;
 	color: #fff;
-	line-height: 40px;
+	line-height: 22px;
 	font-weight: normal;
+	text-align: center;
 }
 .products .shop_moredetails:hover {
 	color: #fff !important;
+}
+/*============================== Additional CSS 05.07.2016 ==============================*/
+.home .site-content h4 {
+	margin-top: 10px;
+}
+.archive .site-content article span a {
+	color: #a5a5a5;
+}
+
+@media (min-width:360px) {
+.products .shop_moredetails {
+	padding: 10px 20px !important;
+}
+}
+
+/* Safari 5+ ONLY */
+    ::i-block-chrome, .fl-col-group-equal-height, .fl-col-group-equal-height .fl-col, .fl-col-group-equal-height .fl-col-content {
+ display: inline-block !important;
 }
