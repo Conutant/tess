@@ -347,12 +347,34 @@ function tesseract_woocommerce_sanitize_button_size( $value ) {if ( ! in_array( 
 	return $value;
 	}	
 
-// WOOCOMMERCE RED MORE BUTTON OPTION//
+// WOOCOMMERCE READ MORE BUTTON OPTION TITLE SIZE AND UNDERLINE AND PRICE BOLD AND RATINGS //
 function tesseract_woocommerce_product_sanitize_morebutton( $value ) {	if ( ! in_array( $value, array( 'showcartbutton','hidecartbutton', 'showmorebutton' ) ) ):
 		$value = 'showcartbutton';	
 	endif;	
 	return $value;	}
 
+function tesseract_woocommerce_sanitize_title_size( $value ) {if ( ! in_array( $value, array( 'small', 'medium', 'large' ) ) ):
+		$value = 'medium';
+	endif;
+	return $value;
+	}	
+	
+function tesseract_woocommerce_sanitize_title_underline( $value ) {if ( ! in_array( $value, array( 'underline', 'notunderline' ) ) ):
+		$value = 'notunderline';
+	endif;
+	return $value;
+	}	
+	
+function tesseract_woocommerce_sanitize_price_weight( $value ) {if ( ! in_array( $value, array( 'bold', 'nonbold' ) ) ):
+		$value = 'nonbold';
+	endif;
+	return $value;
+	}
+	
+function tesseract_woocommerce_shop_sanitize_ratings( $value ) {	if ( ! in_array( $value, array( 'showratings','hideratings' ) ) ):
+		$value = 'hideratings';	
+	endif;	
+	return $value;	}
 	
 function tesseract_sanitize_radio_menuPos( $value ) {
 

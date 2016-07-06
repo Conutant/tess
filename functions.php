@@ -294,6 +294,9 @@ function tesseract_scripts() {
 	// WOOCOMMERCE PRODUCT TEXT COLOR
 	$productlist_textColor = get_theme_mod('tesseract_woocommerce_titlecolor') ? get_theme_mod('tesseract_woocommerce_titlecolor') : '#ffffff';
 	
+	// WOOCOMMERCE SHOP PRICE COLOR
+	$shopprice_textColor = get_theme_mod('tesseract_woocommerce_pricecolor') ? get_theme_mod('tesseract_woocommerce_pricecolor') : '#ffffff';
+	
 
 	//MOBMENU
 	$mobmenu_bckColor = get_theme_mod('tesseract_mobmenu_background_color') ? get_theme_mod('tesseract_mobmenu_background_color') : '#336ca6';
@@ -628,6 +631,9 @@ function tesseract_scripts() {
 	
 	#prodlist_title h3, 
 	#prodlist_title h2 a{ color: " . $productlist_textColor . "; }
+	
+	.wooshop-price .sales-price{ color: " . $shopprice_textColor . "; }
+	
 	
 	
 

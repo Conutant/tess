@@ -2078,6 +2078,17 @@ article.comment-body {
 
 
 
+/*Added CSS 06072016*/
+.wootitle-small h3{ font-size:15px !important;}
+.wootitle-underline h3{ text-decoration:underline !important;}
+.wootitle-large h3{ font-size:19px !important;}
+.regular-price{ color:#ffb9bf; text-decoration:line-through; display:block; line-height:30px;}
+.sales-price{ display:block; line-height:30px;}
+.wooprice-bold .regular-price, .wooprice-bold .sales-price{ font-weight:700 !important;}
+/*Added CSS 06072016*/
+
+
+
 @media screen and (max-width: 980px) {
 #sidebar-footer, #content {
 	padding: 0 20px;

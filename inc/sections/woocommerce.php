@@ -57,6 +57,30 @@
 				)
 			);
         
+		$wp_customize->add_setting( 'tesseract_woocommerce_title_size', array(
+			'sanitize_callback' => 'tesseract_woocommerce_sanitize_title_size',
+			'default' 			=> 'medium'
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_woocommerce_title_size_control',
+					array(
+						'label'          => __( 'Choose the Title size', 'tesseract' ),
+						'section'        => 'tesseract_woocommerce',
+						'settings'       => 'tesseract_woocommerce_title_size',
+						'type'           => 'radio',
+						'choices'        => array(							
+							'small'      =>  'Small size Title',						
+							'medium'     =>  'Medium size Title',
+							'large'      =>  'Large size Title'
+						),
+						'priority' 		 => 3									
+					)
+				)
+			);
+		
 		$wp_customize->add_setting( 'tesseract_woocommerce_titlecolor', array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -71,9 +95,116 @@
 					'label'      => __( 'Product Title Color', 'tesseract' ),
 					'section'    => 'tesseract_woocommerce',
 					'settings'   => 'tesseract_woocommerce_titlecolor',
-					'priority'   => 3
+					'priority'   => 4
 				) )
 			);
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_title_underline', array(
+			'sanitize_callback' => 'tesseract_woocommerce_sanitize_title_underline',
+			'default' 			=> 'notunderline'
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_woocommerce_title_underline_control',
+					array(
+						'label'          => __( 'Choose the Title with Underline', 'tesseract' ),
+						'section'        => 'tesseract_woocommerce',
+						'settings'       => 'tesseract_woocommerce_title_underline',
+						'type'           => 'radio',
+						'choices'        => array(							
+							'underline'      =>  'Title with Underline',						
+							'notunderline'     =>  'Title without Underline'
+						),
+						'priority' 		 => 5									
+					)
+				)
+			);
+		
+		$wp_customize->add_setting( "tesseract_woocommerce_price_size", array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'esc_html'
+		));
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				"tesseract_woocommerce_price_size_control",
+				array(
+					'label'          => __( 'Shop page Price size ', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_price_size',
+					'type'           => 'text',
+					'priority' 		 => 6
+				)
+			)
+		);
+			
+		$wp_customize->add_setting( 'tesseract_woocommerce_pricecolor', array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'default' 			=> '#ffffff'
+		) );
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+				$wp_customize,
+				'tesseract_woocommerce_pricecolor_control',
+				array(
+					'label'      => __( 'Product Price Color', 'tesseract' ),
+					'section'    => 'tesseract_woocommerce',
+					'settings'   => 'tesseract_woocommerce_pricecolor',
+					'priority'   => 7
+				) )
+			);
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_price_weight', array(
+			'sanitize_callback' => 'tesseract_woocommerce_sanitize_price_weight',
+			'default' 			=> 'nonbold'
+		) );
+		
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_woocommerce_price_weight_control',
+					array(
+						'label'          => __( 'Choose the Price with Bold Option', 'tesseract' ),
+						'section'        => 'tesseract_woocommerce',
+						'settings'       => 'tesseract_woocommerce_price_weight',
+						'type'           => 'radio',
+						'choices'        => array(							
+							'bold'      =>  'Price with Bold',						
+							'nonbold'     =>  'Price without Bold'
+						),
+						'priority' 		 => 8									
+					)
+				)
+			);
+		
+		$wp_customize->add_setting( 'tesseract_woocommerce_shop_ratings', array(
+				'sanitize_callback' => 'tesseract_woocommerce_shop_sanitize_ratings',
+				'default'			=> 'hideratings'				
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_woocommerce_shop_ratings_control',
+				array(
+					'label'          => __( 'Choose to Show or Hide Ratings on shop page', 'tesseract' ),
+					'section'        => 'tesseract_woocommerce',
+					'settings'       => 'tesseract_woocommerce_shop_ratings',
+					'type'           => 'radio',
+					'choices'        => array(
+						'showratings'  	=> 'Show Ratings',
+					    'hideratings' 	=> 'Hide Ratings'
+					),
+					'priority' 		 => 9										
+				)
+			)
+		);
+		
 		
 		$wp_customize->add_setting( 'tesseract_woocommerce_product_morebutton', array(
 				'sanitize_callback' => 'tesseract_woocommerce_product_sanitize_morebutton',
@@ -94,7 +225,7 @@
 							'hidecartbutton' 	=> 'Hide Add to Cart Button',
 							'showmorebutton' 	=> 'Show More Details Button'
 						),
-						'priority' 		 => 3										
+						'priority' 		 => 10										
 					)
 				)
 			);
@@ -114,7 +245,7 @@
 					'label' =>  __('Single Product Pages', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_product_layout_header',
-					'priority' => 4
+					'priority' => 11
 					)
 				)
 			);
@@ -137,7 +268,7 @@
 						'showbreadcrumb'  	=> 'Show Breadcrumb',
 					    'hidebreadcrumb' 	=> 'Hide Breadcrumb'
 					),
-					'priority' 		 => 5										
+					'priority' 		 => 12										
 				)
 			)
 		);
@@ -161,7 +292,7 @@
 						'showratings'  	=> 'Show Ratings',
 					    'hideratings' 	=> 'Hide Ratings'
 					),
-					'priority' 		 => 5										
+					'priority' 		 => 13										
 				)
 			)
 		);
@@ -180,7 +311,7 @@
 				'label'      => __( 'Add to Cart Button Color', 'tesseract' ),
 				'section'    => 'tesseract_woocommerce',
 				'settings'   => 'tesseract_woocommerce_buttonbgcolor',
-				'priority'   => 6
+				'priority'   => 14
 			) )
 		);
 		
@@ -198,7 +329,7 @@
 					'section'        => 'tesseract_woocommerce',
 					'settings'       => 'tesseract_woocommerce_button_radius',
 					'type'           => 'text',
-					'priority' 		 => 7
+					'priority' 		 => 15
 				)
 			)
 		);
@@ -222,7 +353,7 @@
 						'medium'     =>  'Medium size Button',
 						'large'      =>  'Large size Button',
 					),
-					'priority' 		 => 8										
+					'priority' 		 => 16										
 				)
 			)
 		);
@@ -246,7 +377,7 @@
 							'sidebar-right'  	=> 	'Right Sidebar',
 							'fullwidth'			=>  'Full Width'
 						),
-						'priority' 		=> 9
+						'priority' 		=> 17
 					)
 				)
 			);
@@ -266,7 +397,7 @@
 					'label' =>  __('Checkout, Account and Cart pages ', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout_header',
-					'priority' => 10
+					'priority' => 18
 					)
 				)
 			);
@@ -286,7 +417,7 @@
 					'label' =>  __('You can set the layout type for the Checkout, Account and Cart pages by using the default page template dropdown on the appropriate page\'s edit screen.', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_default_layout',
-					'priority' => 10
+					'priority' => 18
 					)
 				)
 			);
@@ -306,7 +437,7 @@
 					'label' =>  __('Header Cart', 'tesseract' ),
 					'section' => 'tesseract_woocommerce',
 					'settings' => 'tesseract_woocommerce_headercart_header',
-					'priority' => 	10
+					'priority' => 	18
 					)
 				)
 			);
@@ -325,7 +456,7 @@
 					'section'        => 'tesseract_woocommerce',
 					'settings'       => 'tesseract_woocommerce_headercart',
 					'type'           => 'checkbox',
-					'priority' 		 => 11
+					'priority' 		 => 19
 				)
 			)
 		);
