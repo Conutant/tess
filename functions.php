@@ -826,7 +826,8 @@ function tesseract_output_menu( $cont, $contClass, $location, $depth ) {
 
         if ( !$custSet && $locReserved ) { //no setting in customizer OR dropdown is set to blank value, location SET in Menus section => display menu associated with this location in Appearance ->
             wp_nav_menu( array(
-                'menu' => $menuSlug,
+               // 'menu' => $menuSlug,
+				'menu' => $menu_slug, 
                 'theme_location' => $location,
                 'menu_class' => 'nav-menu',
 				'container_class' => $contClass,

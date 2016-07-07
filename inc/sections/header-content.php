@@ -79,7 +79,7 @@
 
 		$header_content_menu_selector_menus = get_terms( 'nav_menu' );
 
-		if ( $header_content_menu_selector_menus ) :
+		/*if ( $header_content_menu_selector_menus ) :
 
 			$header_content_menu_selector_items = array();
 			$item_keys = array( 'none' ); $item_values = array( '' );
@@ -112,3 +112,4 @@
 				);
 
 		endif;
+		*/

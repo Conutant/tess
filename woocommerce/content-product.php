@@ -146,9 +146,33 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	?>
 	
 	<?php $wooaddbutton = get_theme_mod('tesseract_woocommerce_product_morebutton'); ?>
-			<?php if($wooaddbutton == 'showcartbutton' ) { 
-				do_action( 'woocommerce_after_shop_loop_item' );
-			} elseif ($wooaddbutton == 'showmorebutton' ) { ?>
+			<?php if($wooaddbutton == 'showcartbutton' ) { ?>
+				<?php //do_action( 'woocommerce_after_shop_loop_item' ); ?>
+				<?php $woobutton_bgcolor = get_theme_mod('tesseract_woocommerce_buttonbgcolor'); ?>
+				<?php $woobutton_brderradius = get_theme_mod('tesseract_woocommerce_button_radius'); ?>
+				<?php $woobutton_size = get_theme_mod('tesseract_woocommerce_button_size'); ?>
+				<?php $woobutclass = ''; ?>
+				<?php if($woobutton_size == 'small' ) { 
+					$woobutclass = 'woobutton-small';
+				} elseif ($woobutton_size == 'large' ) { 
+					$woobutclass = 'woobutton-large'; 
+				} else {
+					$woobutclass = 'woobutton-medium';
+				} ?>
+				<?php
+				global $product;
+				echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+					sprintf( '<a style="background-color: '.$woobutton_bgcolor.'; border-radius: '.$woobutton_brderradius.'px;" href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="button '.$woobutclass.' %s product_type_%s">%s</a>',
+						esc_url( $product->add_to_cart_url() ),
+						esc_attr( $product->id ),
+						esc_attr( $product->get_sku() ),
+						$product->is_purchasable() ? 'add_to_cart_button' : '',
+						esc_attr( $product->product_type ),
+						esc_html( $product->add_to_cart_text() )
+					),
+				$product );
+				?>
+			<?php } elseif ($wooaddbutton == 'showmorebutton' ) { ?>
 				<a class="shop_moredetails" href ="<?php echo get_permalink(); ?>">Show More Details</a>
 		    <?php } elseif ($wooaddbutton == 'hidecartbutton' ) {	
 			} ?>

@@ -2072,19 +2072,35 @@ article.comment-body {
 .wpcf7-form-control-wrap {
 	width: 100%;
 }
-
 /* =25. Responsive design
 -------------------------------------------------------------- */
 
 
 
 /*Added CSS 06072016*/
-.wootitle-small h3{ font-size:15px !important;}
-.wootitle-underline h3{ text-decoration:underline !important;}
-.wootitle-large h3{ font-size:19px !important;}
-.regular-price{ color:#ffb9bf; text-decoration:line-through; display:block; line-height:30px;}
-.sales-price{ display:block; line-height:30px;}
-.wooprice-bold .regular-price, .wooprice-bold .sales-price{ font-weight:700 !important;}
+.wootitle-small h3 {
+	font-size: 15px !important;
+}
+.wootitle-underline h3 {
+	text-decoration: underline !important;
+}
+.wootitle-large h3 {
+	font-size: 19px !important;
+}
+.regular-price {
+	color: #ffb9bf;
+	text-decoration: line-through;
+	display: block;
+	line-height: 30px;
+}
+.sales-price {
+	display: block;
+	line-height: 30px;
+}
+.wooprice-bold .regular-price, .wooprice-bold .sales-price {
+	font-weight: 700 !important;
+}
+
 /*Added CSS 06072016*/
 
 
@@ -2562,6 +2578,15 @@ article header.entry-header span a {
 	margin-left: 15px !important;
 	margin-top: 0 !important;
 }
+ul.products .woobutton-large {
+	margin-left: 0px !important;
+}
+ul.products .woobutton-medium {
+	margin-left: 0px !important;
+}
+ul.products .woobutton-small {
+	margin-left: 0px !important;
+}
 .woocommerce .quantity .qty {
 	width: 4.5em !important;
 	text-align: left !important;
@@ -2593,8 +2618,7 @@ article header.entry-header span a {
 	padding: 10px 20px !important;
 }
 }
-
-/* Safari 5+ ONLY */
+/*========== Safari 5+ ONLY ==========*/
     ::i-block-chrome, .fl-col-group-equal-height, .fl-col-group-equal-height .fl-col, .fl-col-group-equal-height .fl-col-content {
  display: inline-block !important;
 }

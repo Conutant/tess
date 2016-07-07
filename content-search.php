@@ -9,8 +9,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<?php if ( has_post_thumbnail() && ( !$featImg_pos || ( $featImg_pos == 'above' ) ) ) 
+	<?php $featImg_pos = get_theme_mod('tesseract_blog_featimg_pos'); ?>
+	<?php if ( has_post_thumbnail() && ( !$featImg_pos || ( $featImg_pos == 'above' ) || ( $featImg_pos == 'below' ) || ( $featImg_pos == 'left' ) || ( $featImg_pos == 'right' )) ) 
 		tesseract_output_featimg_blog(); ?>    
     
     <header class="entry-header">
