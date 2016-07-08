@@ -19,12 +19,43 @@ function tesseract_woocommerce_wrapper_start() {
 	$layout_product = get_theme_mod('tesseract_woocommerce_product_layout');
 
 	if ( function_exists( 'WC' ) && (is_shop() || is_product_category() || is_product_tag()) ) {
-		if ( ( $layout_loop == 'sidebar-left' ) || ( $layout_loop == 'sidebar-right' ) ) {
-			$primclass = 'with-sidebar';
-			$primclass .= ( $layout_loop == 'sidebar-left' ) ? ' sidebar-left' : ' sidebar-right';
+		if ( ( $layout_loop == 'sidebar-left' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar sidebar-left';
+		} else if ( ( $layout_loop == 'sidebar-right' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar sidebar-right';
+		} else if ( ( $layout_loop == 'one-columnlistleft' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar one-columnlistleft';
+		} else if ( ( $layout_loop == 'one-columnlistright' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar one-columnlistright';
+		} else if ( ( $layout_loop == 'two-columnlistleft' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar two-columnlistleft';
+		} else if ( ( $layout_loop == 'two-columnlistright' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar two-columnlistright';
+		} else if ( ( $layout_loop == 'three-columnlistleft' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar three-columnlistleft';
+		} else if ( ( $layout_loop == 'three-columnlistright' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar three-columnlistright';
+		} else if ( ( $layout_loop == 'four-columnlistleft' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar four-columnlistleft';
+        } else if ( ( $layout_loop == 'four-columnlistright' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar four-columnlistright';
+		} else if ( ( $layout_loop == 'five-columnlistleft' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar five-columnlistleft';
+		} else if ( ( $layout_loop == 'five-columnlistright' ) || ( !$layout_loop ) ) {
+			$primclass = 'with-sidebar five-columnlistright';	
 		} else if ( ( $layout_loop == 'fullwidth' ) || ( !$layout_loop ) ) {
 			$primclass = 'no-sidebar';
-		}
+		} else if ( ( $layout_loop == 'one-columnlist' ) || ( !$layout_loop ) ) {
+			$primclass = 'onecolumnlist';
+		} else if ( ( $layout_loop == 'two-columnlist' ) || ( !$layout_loop ) ) {
+			$primclass = 'twocolumnlist';	
+		} else if ( ( $layout_loop == 'three-column' ) || ( !$layout_loop ) ) {
+			$primclass = 'threecolumn';
+		} else if ( ( $layout_loop == 'four-column' ) || ( !$layout_loop ) ) {
+			$primclass = 'fourcolumn';
+		} else if ( ( $layout_loop == 'five-column' ) || ( !$layout_loop ) ) {
+			$primclass = 'fivecolumn';
+		}	
 	} else if ( is_product() ) {
 		if ( ( $layout_product == 'sidebar-left' ) || ( $layout_product == 'sidebar-right' ) ) {
 			$primclass = 'with-sidebar';
@@ -34,7 +65,7 @@ function tesseract_woocommerce_wrapper_start() {
 		}
 	} else { $primclass = 'sidebar-default'; }
 
-  echo '<div id="primary" class="content-area ' . $primclass . '">';
+  echo '<div id="primary" class="content-area woo-cont ' . $primclass . '">';
 
 }
 
@@ -43,7 +74,7 @@ function tesseract_woocommerce_wrapper_end() {
   echo '</div>';
 }
 
-if ( ( !function_exists('loop_shop_columns') ) &&
+/*if ( ( !function_exists('loop_shop_columns') ) &&
    ( ( $layout_loop == 'sidebar-left' ) || ( $layout_loop == 'sidebar-right' ) ) ) {
 
 		// Change number or products per row to 2
@@ -53,7 +84,7 @@ if ( ( !function_exists('loop_shop_columns') ) &&
 			return 2; // 3 products per row
 		}
 
-}
+}*/
 
 
 // Ensure cart contents update when products are added to the cart via AJAX
@@ -184,7 +215,7 @@ function tesseract_wc_version_number() {
 
 function tesseract_sanitize_select_woocommerce_layout_types( $value ) {
 
-	if ( ! in_array( $value, array( 'sidebar-left', 'sidebar-right', 'fullwidth' ) ) ) :
+	if ( ! in_array( $value, array( 'sidebar-left', 'sidebar-right', 'fullwidth', 'one-columnlist', 'one-columnlistleft', 'one-columnlistright', 'two-columnlist', 'two-columnlistleft', 'two-columnlistright', 'three-column', 'three-columnlistleft', 'three-columnlistright', 'four-column', 'four-columnlistleft', 'four-columnlistright', 'five-column', 'five-columnlistleft', 'five-columnlistright', ) ) ) :
         $value = 'sidebar-left';
 	endif;
 

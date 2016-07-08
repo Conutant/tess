@@ -87,7 +87,7 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
-		if ( ( $layout == 'sidebar-left' ) || ( $layout == 'sidebar-right' ) )
+		if ( ( $layout == 'sidebar-left' ) || ( $layout == 'sidebar-right' ) || ( $layout == 'one-columnlistleft' ) || ( $layout == 'one-columnlistright' ) || ( $layout == 'two-columnlistleft' ) || ( $layout == 'two-columnlistright' ) || ( $layout == 'three-columnlistleft' ) || ( $layout == 'three-columnlistright' ) || ( $layout == 'four-columnlistleft' ) || ( $layout == 'four-columnlistright' ) || ( $layout == 'five-columnlistleft' ) || ( $layout == 'five-columnlistright' ) )
 			do_action( 'woocommerce_sidebar' );
 	?>
 

@@ -48,13 +48,24 @@
 						'settings'      => 'tesseract_woocommerce_loop_layout',
 						'type'          => 'select',
 						'choices'		=> array(
-							'sidebar-left'  	=> 	'Left Sidebar',
-							'sidebar-right'  	=> 	'Right Sidebar',
-							'fullwidth'			=>  'Full Width',
-							'one-columnlist'  	=> 	'One Column',
-							'three-column'  	=> 	'Three Column',
-							'four-column'		=>  'Four Column',
-							'five-column'		=>  'Five Column'
+							//'sidebar-left'  	    => 	'Left Sidebar',
+							//'sidebar-right'  	    => 	'Right Sidebar',
+							'fullwidth'			    =>  'Full Width',
+							'one-columnlist'    	=> 	'One Column',
+							'one-columnlistleft'  	=> 	'One Column with left Sidebar',
+							'one-columnlistright'  	=> 	'One Column with Right Sidebar',
+							'two-columnlist'  	    => 	'Two Column',
+							'two-columnlistleft'  	=> 	'Two Column with left Sidebar',
+							'two-columnlistright'  	=> 	'Two Column with Right Sidebar',
+							'three-column'  	    => 	'Three Column',
+							'three-columnlistleft'  => 	'Three Column with left Sidebar',
+							'three-columnlistright' => 	'Three Column with Right Sidebar',
+							'four-column'		    =>  'Four Column',
+							'four-columnlistleft'  	=> 	'Four Column with left Sidebar',
+							'four-columnlistright'  => 	'Four Column with Right Sidebar',
+							'five-column'		    =>  'Five Column',
+							'five-columnlistleft'  	=> 	'Five Column with left Sidebar',
+							'five-columnlistright'  => 	'Five Column with Right Sidebar'
 						),
 						'priority' 		=> 2
 					)
