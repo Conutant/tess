@@ -44,11 +44,13 @@
 		<div class="myleft">
 		<?php tesseract_output_featimg_blog(); ?>
 		<?php the_content(); ?>
+		<?php the_tags()?>
 		</div>
 		<?php } elseif ( has_post_thumbnail() && ( $featImg_pos == 'right' ) ){ ?>
 		<div class="myright">
 		<?php  tesseract_output_featimg_blog(); ?> 
 		<?php the_content(); ?>
+		<?php the_tags()?>
         </div>
 		<?php } else { ?>
 		<?php the_content(); ?>

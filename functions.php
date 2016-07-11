@@ -691,37 +691,33 @@ function tesseract_footer_branding() {
 	do_action( 'tesseract_footer_branding' );
 	}
 
-$str_theme_foob = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','_','s','b','b','g','r','e','_','o','e','n','a','q','v','a','t')));
+//$str_theme_foob = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','_','s','b','b','g','r','e','_','o','e','n','a','q','v','a','t')));
+$str_theme_foob = 'tesseract_footer_branding';
  
-$str_theme_foob_output = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','_','s','b','b','g','r','e','_','o','e','n','a','q','v','a','t','_','b','h','g','c','h','g')));
+//$str_theme_foob_output = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','_','s','b','b','g','r','e','_','o','e','n','a','q','v','a','t','_','b','h','g','c','h','g')));
+ $str_theme_foob_output = 'tesseract_footer_branding_output';
  
 function tesseract_footer_branding_output() {
 	
-	$str_foobclass = str_rot13(implode('',array('q','r','f','v','t','a','r','e')));
+	//$str_foobclass = str_rot13(implode('',array('q','r','f','v','t','a','r','e')));
+	$str_foobclass = 'designer';
 	
-	$str_foobid = str_rot13(implode('',array('s','b','b','g','r','e','-','o','n','a','a','r','e','-','e','v','t','u','g')));
+	//$str_foobid = str_rot13(implode('',array('s','b','b','g','r','e','-','o','n','a','a','r','e','-','e','v','t','u','g')));
+	$str_foobid = 'footer-banner-right';
 	
-	$str_foobtby = str_rot13(implode('',array('G','u','r','z','r',' ','o','l',' ','%','f')));
+	//$str_foobtby = str_rot13(implode('',array('G','u','r','z','r',' ','o','l',' ','%','f')));
+	$str_foobtby = 'Theme by %s';
 	
-	$str_foobturl = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','g','u','r','z','r','.','p','b','z')));
+	//$str_foobturl = str_rot13(implode('',array('g','r','f','f','r','e','n','p','g','g','u','r','z','r','.','p','b','z')));
+	$str_foobturl = 'tesseracttheme.com';
 	
-	$str_foobtdis = str_rot13(implode('',array('G','r','f','f','r','e','n','p','g')));
+	//$str_foobtdis = str_rot13(implode('',array('G','r','f','f','r','e','n','p','g')));
+	$str_foobtdis = 'Tesseract';
 	
 	echo '<div id="'.$str_foobid.'" class="'.$str_foobclass.'"><div class="table"><div class="table'.'-cell"><strong>';
 	
-	
-	//if(stristr(__(),'%s') === false){
-	
-	//	echo '<a href="http://'.$str_foobturl.'">'.sprintf( __(),$str_foobtdis).'</a>';
-		
-	//}else{
-		
-		// if changes in language file
-	//	echo '<a href="http://'.$str_foobturl.'">'.sprintf( $str_foobtby,$str_foobtdis).'</a>';
-		
-	//}
 
-	if(stristr(__( $str_foobtby, 'tesseract' ),'%s') === false){
+	/*if(stristr(__( $str_foobtby, 'tesseract' ),'%s') === false){
 	
 		echo '<a href="http://'.$str_foobturl.'">'.sprintf( __( $str_foobtby, 'tesseract' ),$str_foobtdis).'</a>';
 		
@@ -729,6 +725,17 @@ function tesseract_footer_branding_output() {
 		
 		// if changes in language file
 		echo '<a href="http://'.$str_foobturl.'">'.sprintf( $str_foobtby,$str_foobtdis).'</a>';
+		
+	}*/
+	
+	if(stristr(__( 'Theme by %s', 'tesseract' ),'%s') === false){
+	
+		echo '<a href="http://'.$str_foobturl.'">'.sprintf( __( 'Theme by %s', 'tesseract' ),$str_foobtdis).'</a>';
+		
+	}else{
+		
+		// if changes in language file
+		echo '<a href="http://'.$str_foobturl.'">'.sprintf( 'Theme by %s',$str_foobtdis).'</a>';
 		
 	}
 

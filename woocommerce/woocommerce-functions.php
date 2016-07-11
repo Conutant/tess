@@ -24,25 +24,25 @@ function tesseract_woocommerce_wrapper_start() {
 		} else if ( ( $layout_loop == 'sidebar-right' ) || ( !$layout_loop ) ) {
 			$primclass = 'with-sidebar sidebar-right';
 		} else if ( ( $layout_loop == 'one-columnlistleft' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar one-columnlistleft';
+			$primclass = 'with-sidebar onecolumnlist columnlistleft';
 		} else if ( ( $layout_loop == 'one-columnlistright' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar one-columnlistright';
+			$primclass = 'with-sidebar onecolumnlist columnlistright';
 		} else if ( ( $layout_loop == 'two-columnlistleft' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar two-columnlistleft';
+			$primclass = 'with-sidebar twocolumnlist columnlistleft';
 		} else if ( ( $layout_loop == 'two-columnlistright' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar two-columnlistright';
+			$primclass = 'with-sidebar twocolumnlist columnlistright';
 		} else if ( ( $layout_loop == 'three-columnlistleft' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar three-columnlistleft';
+			$primclass = 'with-sidebar threecolumn columnlistleft';
 		} else if ( ( $layout_loop == 'three-columnlistright' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar three-columnlistright';
+			$primclass = 'with-sidebar threecolumn columnlistright';
 		} else if ( ( $layout_loop == 'four-columnlistleft' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar four-columnlistleft';
+			$primclass = 'with-sidebar fourcolumn columnlistleft';
         } else if ( ( $layout_loop == 'four-columnlistright' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar four-columnlistright';
+			$primclass = 'with-sidebar fourcolumn columnlistright';
 		} else if ( ( $layout_loop == 'five-columnlistleft' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar five-columnlistleft';
+			$primclass = 'with-sidebar fivecolumn columnlistleft';
 		} else if ( ( $layout_loop == 'five-columnlistright' ) || ( !$layout_loop ) ) {
-			$primclass = 'with-sidebar five-columnlistright';	
+			$primclass = 'with-sidebar fivecolumn columnlistright';	
 		} else if ( ( $layout_loop == 'fullwidth' ) || ( !$layout_loop ) ) {
 			$primclass = 'no-sidebar';
 		} else if ( ( $layout_loop == 'one-columnlist' ) || ( !$layout_loop ) ) {
@@ -216,7 +216,7 @@ function tesseract_wc_version_number() {
 function tesseract_sanitize_select_woocommerce_layout_types( $value ) {
 
 	if ( ! in_array( $value, array( 'sidebar-left', 'sidebar-right', 'fullwidth', 'one-columnlist', 'one-columnlistleft', 'one-columnlistright', 'two-columnlist', 'two-columnlistleft', 'two-columnlistright', 'three-column', 'three-columnlistleft', 'three-columnlistright', 'four-column', 'four-columnlistleft', 'four-columnlistright', 'five-column', 'five-columnlistleft', 'five-columnlistright', ) ) ) :
-        $value = 'sidebar-left';
+        $value = 'one-columnlist';
 	endif;
 
     return $value;

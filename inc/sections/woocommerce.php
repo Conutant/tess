@@ -35,7 +35,7 @@
 
 		$wp_customize->add_setting( 'tesseract_woocommerce_loop_layout', array(
 				'sanitize_callback' => 'tesseract_sanitize_select_woocommerce_layout_types',
-				'default' 			=> 'fullwidth'
+				'default' 			=> 'one-columnlist'
 		) );
 
 			$wp_customize->add_control(
@@ -50,7 +50,7 @@
 						'choices'		=> array(
 							//'sidebar-left'  	    => 	'Left Sidebar',
 							//'sidebar-right'  	    => 	'Right Sidebar',
-							'fullwidth'			    =>  'Full Width',
+							//'fullwidth'			    =>  'Full Width',
 							'one-columnlist'    	=> 	'One Column',
 							'one-columnlistleft'  	=> 	'One Column with left Sidebar',
 							'one-columnlistright'  	=> 	'One Column with Right Sidebar',
