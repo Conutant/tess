@@ -51,6 +51,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	//do_action( 'woocommerce_shop_loop_item_title' );
 	?>
+	<div class="shop_descrip">
 	<?php $wootitle_size = get_theme_mod('tesseract_woocommerce_title_size'); 
 							switch ( $wootitle_size ) {
 								case 'small':
@@ -176,4 +177,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				<a class="shop_moredetails" href ="<?php echo get_permalink(); ?>">Show More Details</a>
 		    <?php } elseif ($wooaddbutton == 'hidecartbutton' ) {	
 			} ?>
+	</div>
+	<div class="oneColClear"></div>	
 </li>

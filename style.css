@@ -1820,12 +1820,6 @@ h2, h3 {
 .widget.widget_search {
 	margin-bottom: 25px;
 }
-/*footer {
-	bottom: 0;
-	opacity: 0.75;
-	position: absolute;
-	width: 100%;
-}*/
 /*============================== Additional CSS 18.06.2016 ==============================*/
 .site-content .sidebar-default {
 	margin-bottom: 60px;
@@ -2057,7 +2051,7 @@ article header.entry-header span .fa {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-/*====== ReadMore ======*/
+/*====== Read More ======*/
 .blmore.rmbutton-right {
 	text-align: right;
 }
@@ -2169,7 +2163,6 @@ article header.entry-header span a {
 .woobutton-large {
 	display: inline-block !important;
 	margin-top: 15px !important;
-	/*padding: 5px 20px !important;*/
 	font-size: 20px !important;
 	margin-left: 15px !important;
 	margin-top: 0 !important;
@@ -2177,7 +2170,6 @@ article header.entry-header span a {
 .woobutton-medium {
 	display: inline-block !important;
 	margin-top: 15px !important;
-	/*padding: 5px 20px !important;*/
 	font-size: 16px !important;
 	margin-left: 15px !important;
 	margin-top: 0 !important;
@@ -2185,7 +2177,6 @@ article header.entry-header span a {
 .woobutton-small {
 	display: inline-block !important;
 	margin-top: 15px !important;
-	/*padding: 5px 20px !important;*/
 	font-size: 13px !important;
 	margin-left: 15px !important;
 	margin-top: 0 !important;
@@ -2240,7 +2231,6 @@ ul.products .woobutton-small {
 	float: none;
 	clear: both;
 }
-/*=== One Col ===*/
 .woocommerce #primary.content-area.woo-cont.onecolumnlist ul.products li.product {
 	width: 100%;
 	display: block;
@@ -2249,16 +2239,15 @@ ul.products .woobutton-small {
 .woocommerce-page ul.products li.first {
 	clear: right !important;
 }
-/*====== One Col with sidebar ======*/
 .content-area.woo-cont.with-sidebar.fivecolumn ul.products li.product a.add_to_cart_button {
 	padding-left: 14px !important;
 	padding-right: 14px !important;
 }
+
+@media (min-width:992px) {
 .content-area.woo-cont .woocommerce-breadcrumb {
 	padding-left: 0px !important;
 }
-
-@media (min-width:992px) {
 .content-area.woo-cont.with-sidebar.columnlistleft {
 	width: 75% !important;
 	float: right !important;
@@ -2278,7 +2267,6 @@ ul.products .woobutton-small {
 .woocommerce.woocommerce-page #secondary.sidebar-default {
 	width: 25% !important;
 }
-/*=== Two Col ===*/
 .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(2), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(4), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(6), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(8), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(10), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(12), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(14), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(16), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(18), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(20), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(22), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(24), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(26), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(28), .woocommerce #primary.content-area.woo-cont.twocolumnlist ul.products li.product:nth-child(30) {
 	margin-right: 0px !important;
 }
@@ -2288,7 +2276,6 @@ ul.products .woobutton-small {
 	margin: 15px 3% 40px 0px !important;
 	position: relative;
 }
-/*=== Three Col ===*/
 .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(3), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(6), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(9), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(12), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(15), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(18), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(21), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(24), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(27), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(30), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(33), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(36), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(39), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(42), .woocommerce #primary.content-area.woo-cont.threecolumn ul.products li.product:nth-child(45) {
 	margin-right: 0px !important;
 }
@@ -2299,7 +2286,6 @@ ul.products .woobutton-small {
 	position: relative;
 	padding: 0;
 }
-/*=== Four Col ===*/
 .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(4), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(8), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(12), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(16), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(20), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(24), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(28), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(32), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(36), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(40), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(44), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(48), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(52), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(56), .woocommerce #primary.content-area.woo-cont.fourcolumn ul.products li.product:nth-child(60) {
 	margin-right: 0px !important;
 }
@@ -2310,7 +2296,6 @@ ul.products .woobutton-small {
 	position: relative;
 	padding: 0;
 }
-/*=== Five Col ===*/
 .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(5), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(10), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(15), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(20), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(25), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(30), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(35), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(40), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(45), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(50), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(55), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(60), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(65), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(70), .woocommerce #primary.content-area.woo-cont.fivecolumn ul.products li.product:nth-child(75) {
 	margin-right: 0px !important;
 }
@@ -2347,4 +2332,59 @@ ul.products .woobutton-small {
 	margin: 25px auto !important;
 	padding: 0px;
 }
+}
+.wooshop-price {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.product-rating {
+	margin-bottom: 15px;
+}
+
+/*============ Woocommerce One Column List View *============*/
+@media ( min-width:600px) {
+.onecolumnlist ul.products li.product a {
+	float: left;
+	display: inline-block;
+	margin-right: 5%;
+	position: relative;
+	width: 40%;
+}
+.onecolumnlist ul.products li.product .shop_descrip {
+	width: 55%;
+	float: left;
+}
+.woocommerce #primary.content-area.woo-cont.onecolumnlist ul.products li.product {
+	width: 100% !important;
+}
+}
+
+@media ( max-width:599px) {
+.onecolumnlist ul.products li.product a {
+	float: none;
+	display: block;
+	margin: auto;
+	position: relative;
+	width: 100%;
+}
+.onecolumnlist ul.products li.product .shop_descrip {
+	width: 100%;
+	float: none;
+	display: block;
+	margin: auto;
+	margin-bottom: 50px;
+}
+}
+.shop_descrip h3 {
+	line-height: 24px;
+}
+.onecolumnlist ul.products li.product a.add_to_cart_button {
+	width: auto !important;
+}
+.onecolumnlist ul.products li.product .oneColClear {
+	width: 100%;
+	clear: both;
+}
+.onecolumnlist ul.products li.product .shop_descrip a {
+	width: 100%;
 }

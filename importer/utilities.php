@@ -5,9 +5,9 @@
 
 function tesseract_get_packages( $filename = null ) {
 	if ( $filename ) {
-		$content = file_get_contents( $filename );
+		$content = WP_Filesystem( $filename );
 	} else {
-		$content = file_get_contents( TESSERACT_PACKAGES_FILE );
+		$content = WP_Filesystem( TESSERACT_PACKAGES_FILE );
 	}
 
 	if ( empty( $content ) ) {
