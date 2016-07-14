@@ -2388,3 +2388,10 @@ ul.products .woobutton-small {
 .onecolumnlist ul.products li.product .shop_descrip a {
 	width: 100%;
 }
+/*============================== Additional CSS 14.07.2016 ==============================*/
+html.loginpage {
+	margin-top: 0px !important;
+}
+html.loginpage .logged-in {
+	padding-top: 32px !important;
+}

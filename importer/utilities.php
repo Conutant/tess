@@ -30,11 +30,11 @@ function tesseract_get_previously_imported_packages() {
 }
 
 /* this fixes the issue where content blocks were not being updated because of the missing taxonomy */
-if ( ! taxonomy_exists( 'fl-builder-template-type' ) ) {
+/*if ( ! taxonomy_exists( 'fl-builder-template-type' ) ) {
 	register_taxonomy( 'fl-builder-template-type', array( 'fl-builder-template' ), array(
 		'label'             => _x( 'Type', 'Custom taxonomy label.', 'fl-builder' ),
 		'hierarchical'      => false,
 		'public'            => false,
 		'show_admin_column' => true
 	));
-}
+}*/
