@@ -2191,7 +2191,7 @@ ul.products .woobutton-small {
 	margin-left: 0px !important;
 }
 .woocommerce .quantity .qty {
-	width: 4.5em !important;
+	width: 5em !important;
 	text-align: left !important;
 }
 .products .shop_moredetails {
@@ -2394,4 +2394,18 @@ html.loginpage {
 }
 html.loginpage .logged-in {
 	padding-top: 32px !important;
+}
+/*============================== Additional CSS 18.07.2016 ==============================*/
+.woocommerce .quantity .plus, .woocommerce-page .quantity .plus {
+	right: 2px !important;
+}
+.woocommerce .quantity .plus, .woocommerce-page .quantity .minus {
+	right: 2px !important;
+}
+.woocommerce .quantity input.qty, .woocommerce-page .quantity input.qty {
+	padding-left: 10px !important;
+	height: 3em !important;
+}
+.woocommerce .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .plus, .woocommerce-page .quantity .minus {
+	height: 1.5em !important;
 }
