@@ -63,4 +63,5 @@ get_header(); ?>
 		if ( !$slayout || ( $slayout == 'sidebar-left' ) || ( $slayout == 'sidebar-right' ) ) get_sidebar();
 	?>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
+<?php get_footer('custes'); ?>

@@ -672,7 +672,7 @@ button:active, .button:active, input[type="reset"]:active, input[type="submit"]:
 /* === Differnt Colors and Sizes Of Primary and Secondary Buttons  === */
 /* Featured */
 .cart-contents, .cart-contents span {
-	background: none;
+	background: none !important;
 }
 .cart-contents-counter {
 	margin-left: 10px;
@@ -2408,4 +2408,18 @@ html.loginpage .logged-in {
 }
 .woocommerce .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .plus, .woocommerce-page .quantity .minus {
 	height: 1.5em !important;
+}
+/*============================== Additional CSS 20.07.2016 IE 6, 7, 8 =============================*/
+.woocommerce-page .quantity input.qty {
+	height: 36px\9 !important;
+	padding-top: 8px\9;
+}
+.cart-contents, .cart-contents span {
+	background: none\9;
+}
+.cart-contents-counter {
+	filter: none !important;
+}
+body {
+	line-height: normal\9 !important;
 }

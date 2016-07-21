@@ -43,4 +43,5 @@ get_header();
     <?php $layout_default = get_theme_mod( 'tesseract_woocommerce_default_layout' ); ?>
 <?php if ( ( is_plugin_active('woocommerce/woocommerce.php') && ( ( $layout_default == 'sidebar-left' ) || ( $layout_default == 'sidebar-right' ) ) ) ) get_sidebar(); ?>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
+<?php get_footer('custes'); ?>

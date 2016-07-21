@@ -35,4 +35,5 @@ get_header();
 
 <?php if ( !is_plugin_active('woocommerce/woocommerce.php') || ( is_plugin_active('woocommerce/woocommerce.php') && ( !isset( $layout_default ) || !$layout_default || ( $layout_default == 'sidebar-left' ) || ( $layout_default == 'sidebar-right' ) ) ) ) get_sidebar(); ?>
     
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
+<?php get_footer('custes'); ?>

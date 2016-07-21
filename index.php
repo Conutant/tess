@@ -57,4 +57,5 @@ get_header();
 <?php
 		if ( !$bplayout || ( $bplayout == 'sidebar-left' ) || ( $bplayout == 'sidebar-right' ) ) get_sidebar();
 	?>
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
+<?php get_footer('custes'); ?>
