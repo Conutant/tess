@@ -198,6 +198,10 @@ function tesseract_sanitize_textarea_html( $value ) {
 		'h4' => array(),
 		'h5' => array(),
 		'h6' => array(),
+		'br'  => array(),
+		'img' => array(
+			'src' => array(),
+		 ),
 		'div'     => array(),
 		'input'    	=> array(
 			'height'	=> array(),
@@ -405,7 +409,7 @@ function tesseract_sanitize_radio_sepChar( $value ) {
 
 function tesseract_sanitize_radio_nextToMenu_right( $value ) {
 
-	if ( ! in_array( $value, array( 'nothing', 'buttons', 'social', 'contact', 'search', 'menu' ) ) ) :
+	if ( ! in_array( $value, array( 'nothing', 'buttons', 'social', 'contact', 'search', 'html', 'menu' ) ) ) :
         $value = 'buttons';
 	endif;
 

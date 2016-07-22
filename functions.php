@@ -1198,19 +1198,21 @@ function example_admin_notice() {
         $user_id = $current_user->ID;
         /* Check that the user hasn't already clicked to ignore the message */
 	if ( ! get_user_meta($user_id, 'example_ignore_notice') ) {
-        echo '<div data-dismissible="disable-done-notice-forever" class="updated notice notice-success is-dismissible"><p>'; 
-        printf(__('<p>It looks like you have activated the Beaver Builder and the Site Origins plugins on to your website. (This creates a conflict, since they are both page builders) The new Tesseract Theme recommends you use just the Beaver Builder plugin for your site to run smoothly. Watch one of Tylers new videos for more help on this.</p>'), '?example_nag_ignore=0');
-        echo "</p></div>";
+		if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) ) {
+			echo '<div class="error notice"><p>'; 
+			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
+			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
+			echo "</p></div>";
+		} 	
 	}
 }
 
-add_action('admin_init', 'example_nag_ignore');
+/*add_action('admin_init', 'example_nag_ignore');
 
 function example_nag_ignore() {
 	global $current_user;
         $user_id = $current_user->ID;
-        /* If user clicks to ignore the notice, add that to their user meta */
         if ( isset($_GET['example_nag_ignore']) && '0' == $_GET['example_nag_ignore'] ) {
              add_user_meta($user_id, 'example_ignore_notice', 'true', true);
 	}
-}
+}*/

@@ -1,62 +1,131 @@
 /*
-Theme Name: TESSERACT
-Theme URI: http://tesseracttheme.com
+
+Theme Name: Tesseract
+
+Theme URI: http://tesseracttheme.com/
+
 Author: Tesseract Theme
+
 Author URI: http://tesseract.com/
+
 Description: Tesseract is a beautiful theme from the fourth dimension. Tesseract makes it easy to create a website that you are proud to show off to the world. It is responsive, has simple and useful navigation, an amazing featured image with buttons and is simple to use.
+
 Version: 2.5.4
+
 License: GNU General Public License v2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Text Domain: tesseract
+
 Tags: custom-background, custom-header, custom-menu, editor-style, one-column, two-columns, featured-images, full-width-template, left-sidebar, threaded-comments, translation-ready, microformats
+
+
 This theme, like WordPress, is licensed under the GPL.
+
 Use it to make something cool, have fun, and share what you've learned with others.
+
 Tesseract is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
 */
+
+
+
 /* =Table of Contents
+
 -------------------------------------------------------------- */
-/*  01. CSS Reset (Normalize)
+
+
+
+/*
+
+    01. CSS Reset (Normalize)
+
     02. Theme Base
+
     03. Clearfix
+
     04. Global margins and paddings
+
     05. Text-level semantics
+
     06. Headings
+
     07. Forms
+
     08. Buttons
+
     09. Tables
+
     10. Links
+
     11. Header area
+
     12. Layout
+
     13. Menus
+
     14. Icons (separate folder)
+
     15. Accessibility
+
     16. Embedded content
+
     17. WordPress core styles
+
     18. Widgets
+
     19. Content
+
     20. Asides
+
     21. Comments
+
     22. Infinite scroll (Jetpack plugin)
+
     23. Footer
+
     24. Plugins
+
     25. Responsive design
+
     26. Print styles
+
 */
+
+
+
+
+
 /* =01. normalize.css v3.0.1
+
 -------------------------------------------------------------- */
+
+
+
 /**
+
  * 1. Set default font family to sans-serif.
+
  * 2. Prevent iOS text size adjust after orientation change, without disabling
- * user zoom.
-*/
+
+ *    user zoom.
+
+ */
+
+
 html {
 	font-family: sans-serif; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 3 */
 }
 /**
+
  * Remove default margin.
+
  */
+
+
 body {
 	margin: 0;
 }
@@ -64,96 +133,181 @@ body {
 	position: relative;
 }
 /* =HTML5 display definitions
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Correct `block` display not defined for any HTML5 element in IE 8/9.
-* Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
-* Correct `block` display not defined for `main` in IE 11.
-*/
+
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+
+ * Correct `block` display not defined for `main` in IE 11.
+
+ */
+ 
+ 
+ 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
 }
 /**
-* 1. Correct `inline-block` display not defined in IE 8/9.
-* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-*/
+
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+
+ */
+ 
+ 
+ 
 audio, canvas, progress, video {
 	display: inline-block; /* 1 */
 	vertical-align: baseline; /* 2 */
 }
 /**
-* Prevent modern browsers from displaying `audio` without controls.
-* Remove excess height in iOS 5 devices.
-*/
+
+ * Prevent modern browsers from displaying `audio` without controls.
+
+ * Remove excess height in iOS 5 devices.
+
+ */
+
+
+
+
 audio:not([controls]) {
 	display: none;
 	height: 0;
 }
 /**
-* Address `[hidden]` styling not present in IE 8/9/10.
-* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-*/
+
+ * Address `[hidden]` styling not present in IE 8/9/10.
+
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+
+ */
+
+
+
+
 [hidden], template {
 	display: none;
 }
 /* =Links
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Remove the gray background color from active links in IE 10.
-*/
+
+ * Remove the gray background color from active links in IE 10.
+
+ */
+
+
+
 a {
 	background: transparent;
 }
 /**
-* Improve readability when focused and also mouse hovered in all browsers.
-*/
+
+ * Improve readability when focused and also mouse hovered in all browsers.
+
+ */
+
+
+
 a:active, a:hover {
 	outline: 0;
 }
 /* =Text-level semantics
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-*/
+
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+
+ */
+
+
+
 abbr[title] {
 	border-bottom: 1px dotted;
 }
 /**
-* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-*/
+
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+
+ */
+
+
+
 b, strong {
 	font-weight: bold;
 }
 /**
-* Address styling not present in Safari and Chrome.
-*/
+
+ * Address styling not present in Safari and Chrome.
+
+ */
+
+
+
 dfn {
 	font-style: italic;
 }
 /**
-* Address variable `h1` font-size and margin within `section` and `article`
-* contexts in Firefox 4+, Safari, and Chrome.
-*/
+
+ * Address variable `h1` font-size and margin within `section` and `article`
+
+ * contexts in Firefox 4+, Safari, and Chrome.
+
+ */
+
+
+
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 /**
+
  * Address styling not present in IE 8/9.
-*/
+
+ */
+
+
+
 mark {
 	background: #ff0;
 	color: #000;
 }
 /**
+
  * Address inconsistent and variable font size in all browsers.
-*/
+
+ */
+
+
+
 small {
 	font-size: 80%;
 }
 /**
+
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
-*/
+
+ */
+
+
+
 sub, sup {
 	font-size: 75%;
 	line-height: 0;
@@ -167,131 +321,252 @@ sub {
 	bottom: -0.25em;
 }
 /* =Embedded content
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Remove border when inside `a` element in IE 8/9/10.
-*/
+
+ * Remove border when inside `a` element in IE 8/9/10.
+
+ */
+
+
+
 img {
 	border: 0;
 }
 /**
-* Correct overflow not hidden in IE 9/10/11.
-*/
+
+ * Correct overflow not hidden in IE 9/10/11.
+
+ */
+
+
+
 svg:not(:root) {
 	overflow: hidden;
 }
 /* =Grouping content
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Address margin not present in IE 8/9 and Safari.
-*/
+
+ * Address margin not present in IE 8/9 and Safari.
+
+ */
+
+
+
 figure {
 	margin: 1em 40px;
 }
 /**
-* Address differences between Firefox and other browsers.
-*/
+
+ * Address differences between Firefox and other browsers.
+
+ */
+
+
+
 hr {
 	box-sizing: content-box;
 	height: 0;
 }
 /**
-* Contain overflow in all browsers.
-*/
+
+ * Contain overflow in all browsers.
+
+ */
+
+
+
 pre {
 	overflow: auto;
 }
 /**
-* Address odd `em`-unit font size rendering in all browsers.
-*/
+
+ * Address odd `em`-unit font size rendering in all browsers.
+
+ */
+
+
+
 code, kbd, pre, samp {
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
 /* =Forms
+
 -------------------------------------------------------------- */
+
+
+
 /**
-* Known limitation: by default, Chrome and Safari on OS X allow very limited
-* styling of `select`, unless a `border` property is set.
-*/
+
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+
+ * styling of `select`, unless a `border` property is set.
+
+ */
+
+
+
 /**
-* 1. Correct color not being inherited.
-*    Known issue: affects color of disabled elements.
-* 2. Correct font properties not being inherited.
-* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
-*/
+
+ * 1. Correct color not being inherited.
+
+ *    Known issue: affects color of disabled elements.
+
+ * 2. Correct font properties not being inherited.
+
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+
+ */
+
+
+
 button, input, optgroup, select, textarea {
 	color: inherit; /* 1 */
 	font: inherit; /* 2 */
 	margin: 0; /* 3 */
 }
 /**
-* Address `overflow` set to `hidden` in IE 8/9/10/11.
-*/
+
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+
+ */
+
+
+
 button {
 	overflow: visible;
 }
 /**
-* Address inconsistent `text-transform` inheritance for `button` and `select`.
-* All other form control elements do not inherit `text-transform` values.
-* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
-* Correct `select` style inheritance in Firefox.
-*/
+
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+
+ * All other form control elements do not inherit `text-transform` values.
+
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+
+ * Correct `select` style inheritance in Firefox.
+
+ */
+ 
+ 
+ 
 button, select {
 	text-transform: none;
 }
 /**
-* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-* and `video` controls.
-* 2. Correct inability to style clickable `input` types in iOS.
-*/
+
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+
+ *    and `video` controls.
+
+ * 2. Correct inability to style clickable `input` types in iOS.
+
+ */
+
+
+
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	-webkit-appearance: button; /* 1 */
 	cursor: pointer; /* 2 */
 }
 /**
-* Re-set default cursor for disabled elements.
-*/
+
+ * Re-set default cursor for disabled elements.
+
+ */
+
+
+
 button[disabled], html input[disabled] {
 	cursor: default;
 }
+
+
+
 /**
-* Remove inner padding and border in Firefox 4+.
-*/
+
+ * Remove inner padding and border in Firefox 4+.
+
+ */
+
+
 button::-moz-focus-inner, input::-moz-focus-inner {
  border: 0;
  padding: 0;
 }
 /**
-* Address Firefox 4+ setting `line-height` on `input` using `!important` in
-* the UA stylesheet.
-*/
+
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+
+ * the UA stylesheet.
+
+ */
+
+
+
 input {
 	line-height: normal;
 }
 /**
-* It's recommended that you don't attempt to style these elements.
-* Firefox's implementation doesn't respect box-sizing, padding, or width.
-* 1. Address box sizing set to `content-box` in IE 8/9/10.
-* 2. Remove excess padding in IE 8/9/10.
-*/
+
+ * It's recommended that you don't attempt to style these elements.
+
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+
+ *
+
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+
+ * 2. Remove excess padding in IE 8/9/10.
+
+ */
+
+
+
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
 }
+
+
+
 /**
-* Fix the cursor style for Chrome's increment/decrement buttons. For certain
-* Font-size` values of the `input`, it causes the cursor style of the
-* Decrement button to change from `default` to `text`.
-*/
+
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+
+ * `font-size` values of the `input`, it causes the cursor style of the
+
+ * decrement button to change from `default` to `text`.
+
+ */
+
+
+
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
  height: auto;
 }
 /**
-* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-* 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- (include `-moz` to future-proof).
-*/
+
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+
+ *    (include `-moz` to future-proof).
+
+ */
+
+
+
 input[type="search"] {
 	-webkit-appearance: textfield;
 	box-sizing: content-box;
@@ -311,38 +586,66 @@ input[type="search"] {
 /*#content form span {
 	width: 100%;
 }*/
+
 /**
-* Define consistent border, margin, and padding.
-*/
+
+ * Define consistent border, margin, and padding.
+
+ */
+
+
+
 fieldset {
 	border: 1px solid rgba(0, 0, 0 ,0.1);
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
 /**
-* 1. Correct `color` not being inherited in IE 8/9/10/11.
-* 2. Remove padding so people aren't caught out if they zero out fieldsets.
-*/
+
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+
+ */
+
+
+
 legend {
 	border: 0; /* 1 */
 	padding: 0; /* 2 */
 }
 /**
-* Remove default vertical scrollbar in IE 8/9/10/11.
-*/
+
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+
+ */
+
+
+
 textarea {
 	overflow: auto;
 }
 /**
-* Don't inherit the `font-weight` (applied by a rule above).
-* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
-*/
+
+ * Don't inherit the `font-weight` (applied by a rule above).
+
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+
+ */
+
+
+
 optgroup {
 	font-weight: bold;
 }
 /**
-* Remove most spacing between table cells.
-*/
+
+ * Remove most spacing between table cells.
+
+ */
+
+
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -351,16 +654,27 @@ td, th {
 	padding: 0;
 }
 /**
-* CLEARFIX
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-     contenteditable attribute is included anywhere else in the document.
-     Otherwise it causes space to appear at the top and bottom of elements
-     that are clearfixed.
-* 2. The use of `table` rather than `block` is only necessary if using
-    `:before` to contain the top-margins of child elements.
-*/
+
+ * CLEARFIX
+
+ *
+
+ * For modern browsers
+
+ * 1. The space content is one way to avoid an Opera bug when the
+
+ *    contenteditable attribute is included anywhere else in the document.
+
+ *    Otherwise it causes space to appear at the top and bottom of elements
+
+ *    that are clearfixed.
+
+ * 2. The use of `table` rather than `block` is only necessary if using
+
+ *    `:before` to contain the top-margins of child elements.
+
+ */
+ 
 .cf:before, .cf:after {
 	content: " "; /* 1 */
 	display: table; /* 2 */
@@ -369,15 +683,26 @@ td, th {
 	clear: both;
 }
 /**
-* For IE 6/7 only
-* Include this rule to trigger hasLayout and contain floats.
-*/
+
+ * For IE 6/7 only
+
+ * Include this rule to trigger hasLayout and contain floats.
+
+ */
+
 .cf {
  *zoom: 1;
 }
 /* =02. Theme base
+
 -------------------------------------------------------------- */
+
+
+
 /* Apply a natural box layout model to all elements */
+
+
+
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -390,8 +715,15 @@ body {
 	color: #757575;
 	position: relative;
 }
+
+
+
 /* =03. Clearfix
+
 -------------------------------------------------------------- */
+
+
+
 .clear:before, .clear:after, .gallery:before, .gallery:after .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
  content: '';
  display: table;
@@ -400,7 +732,11 @@ body {
  clear: both;
 }
 /* =04. Global margins & paddings
+
 -------------------------------------------------------------- */
+
+
+
 ul, ol, pre, table, .gallery, blockquote, .wp-caption, .entry-footer, .footer-menu, .page-links, .page-content, .entry-summary, .entry-thumbnail, .comments-title .comment-respond, .wp-caption-text, .comment-reply-title, .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
 	margin-bottom: 35px;
 }
@@ -441,7 +777,11 @@ p {
 	padding-bottom: 0;
 }
 /* =05. Text-level semantics
+
 -------------------------------------------------------------- */
+
+
+
 cite {
 	font-size: 1.1em;
 	display: block;
@@ -471,7 +811,11 @@ blockquote p {
 	padding: 0;
 }
 /* =06. Headings
+
 -------------------------------------------------------------- */
+
+
+
 h1, h2, h3, h4, h5, h6 {
 	color: #333333;
 	clear: both;
@@ -554,7 +898,11 @@ ol .children {
 	z-index: 1;
 }
 /* =07. Forms
+
 -------------------------------------------------------------- */
+
+
+
 select, textarea, input:not([type]), input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
 	background-color: #fff;
 	background-clip: padding-box;
@@ -574,14 +922,21 @@ select:disabled, textarea:disabled, input:not([type]):disabled, input[type="text
 	cursor: none;
 }
 /*
-* Reset style on iOS.
-*/
+
+ * Reset style on iOS.
+
+ */
+
+
+
 textarea, input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	-webkit-appearance: none;
 }
 /* Reset height
-* Must be after size modifiers 
-*/
+
+ * Must be after size modifiers */
+ 
+ 
 textarea, select[multiple], select[size] {
 	height: auto;
 }
@@ -597,32 +952,55 @@ textarea {
 .search-form .search-submit {
 	display: none;
 }
+
+
 /*
-* Placeholder
-* Higher specificity (!important) needed to override color in IE
-* (prefixfree.js does not include prefixes for placeholders)
-*/
+
+ * Placeholder
+
+ * Higher specificity (!important) needed to override color in IE
+
+ * (prefixfree.js does not include prefixes for placeholders)
+
+ */
+
 :-ms-input-placeholder {
  color: #9e9e9e !important;
 }
+
+
 ::-moz-placeholder {
  color: #9e9e9e;
 }
+
+
 ::-webkit-input-placeholder {
  color: #9e9e9e;
 }
+
+
 :disabled:-ms-input-placeholder {
  color: #9e9e9e !important;
 }
+
+
 :disabled::-moz-placeholder {
  color: #9e9e9e;
 }
+
+
 :disabled::-webkit-input-placeholder {
  color: #9e9e9e;
 }
+
+
+
 /*
-* Removes box-shadow for invalid controls in Firefox.
-*/
+
+ * Removes box-shadow for invalid controls in Firefox.
+
+ */
+
 :invalid {
  box-shadow: none;
 }
@@ -630,7 +1008,11 @@ label {
 	margin-bottom: 5px;
 }
 /* =08. Buttons
+
 -------------------------------------------------------------- */
+
+
+
 button, .button, input[type="reset"], input[type="submit"], input[type="button"] {
 	background: none;
 	background-color: #199cd8;
@@ -652,17 +1034,28 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	text-shadow: none;
 }
 /*
-* Hover
-* 1. Apply hover style also to focus state
-* 2. Remove default focus style
-* 3. Required for 'a' elements
-*/
+
+ * Hover
+
+ * 1. Apply hover style also to focus state
+
+ * 2. Remove default focus style
+
+ * 3. Required for 'a' elements
+
+ */
+
+
+
 button:hover, button:focus, .button:hover, .button:focus, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover {
 	background: none;
 	background-color: #1581b2;
 	color: #fff;
 }
 /* Active */
+
+
+
 button:active, .button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active {
 	background: none;
 	background-color: #199cd8;
@@ -670,7 +1063,15 @@ button:active, .button:active, input[type="reset"]:active, input[type="submit"]:
 	text-shadow: none;
 }
 /* === Differnt Colors and Sizes Of Primary and Secondary Buttons  === */
+
+
+
+
+
 /* Featured */
+
+
+
 .cart-contents, .cart-contents span {
 	background: none !important;
 }
@@ -704,18 +1105,41 @@ button:active, .button:active, input[type="reset"]:active, input[type="submit"]:
 	color: #fff;
 }
 /*#header-button-container .secondary-button {
-color: #000;
-border-color: #000;
-}
+
+    color: #000;
+
+    border-color: #000;
+
+    }
+
+
+
 .secondary-button:hover,
+
 #header-button-container .secondary-button:hover {
-background-color: #fff;
-color: #199cd8;
-}
+
+    background-color: #fff;
+
+    color: #199cd8;
+
+    }
+
+
+
 #header-button-container .secondary-button:hover {
-border-color: #199cd8;
+
+    border-color: #199cd8;
+
 }*/
+
+
+
+
+
 /* === Default Styles === */
+
+
+
 .button, .woocommerce a.button, .woocommerce-page a.button {
 	margin: 5px;
 }
@@ -723,7 +1147,11 @@ border-color: #199cd8;
 	color: #fff!important;
 }
 /* === Default Color === */
+
+
+
 /* === Brown  === */
+
 .brown, .woocommerce a.button.brown, .woocommerce-page a.button.brown {
 	background-color: #AB541A;
 }
@@ -741,6 +1169,7 @@ border-color: #199cd8;
 	border: 1px solid #823A09;
 }
 /* === Green  === */
+
 .green, .woocommerce a.button.green, .woocommerce-page a.button.green {
 	background-color: #49b70f;
 }
@@ -758,6 +1187,8 @@ border-color: #199cd8;
 	border: 1px solid #32770f;
 }
 /* === Dark Blue  === */
+
+
 .darkblue, .woocommerce a.button.darkblue, .woocommerce-page a.button.darkblue {
 	background-color: #0f5289;
 }
@@ -775,6 +1206,7 @@ border-color: #199cd8;
 	border: 1px solid #0c2b44;
 }
 /* === red  === */
+
 .red, .woocommerce a.button.red, .woocommerce-page a.button.red {
 	background-color: #cd1212;
 }
@@ -792,6 +1224,8 @@ border-color: #199cd8;
 	border: 1px solid #a90e0e;
 }
 /* === pink  === */
+
+
 .pink, .woocommerce a.button.pink, .woocommerce-page a.button.pink {
 	background-color: #ff1dfc;
 }
@@ -809,6 +1243,9 @@ border-color: #199cd8;
 	border: 1px solid #d214cf;
 }
 /* === Yellow  === */
+
+
+
 .yellow, .woocommerce a.button.yellow, .woocommerce-page a.button.yellow {
 	background-color: #F7CA18;
 }
@@ -826,6 +1263,9 @@ border-color: #199cd8;
 	border: 1px solid #f8b516;
 }
 /* === Orange  === */
+
+
+
 .orange, .woocommerce a.button.orange, .woocommerce-page a.button.orange {
 	background-color: #E87E04;
 }
@@ -843,6 +1283,9 @@ border-color: #199cd8;
 	border: 1px solid #ea7104;
 }
 /* === Black  === */
+
+
+
 .black, .woocommerce a.button.black, .woocommerce-page a.button.black {
 	background-color: #000000;
 }
@@ -860,6 +1303,9 @@ border-color: #199cd8;
 	border: 1px solid #626262;
 }
 /* === Default Size  === */
+
+
+
 .button.darktext, .button.darktext:hover, .woocommerce .site-header a.button.darktext, .woocommerce-page .site-header a.button.darktext, .woocommerce .site-header a.button.darktext:hover, .woocommerce-page .site-header a.button.darktext:hover {
 	color: #000000!important;
 }
@@ -870,6 +1316,7 @@ border-color: #199cd8;
 	color: #FFFFFF!important;
 }
 /* === Small Size  === */
+
 .small, .woocommerce .site-header a.button.small, .woocommerce-page .site-header a.button.small {
 	padding: 1px 20px;
 	font-size: 10px;
@@ -877,24 +1324,37 @@ border-color: #199cd8;
 	line-height: 24px;
 }
 /* === Large Size  === */
+
 .large, .woocommerce .site-header a.button.large, .woocommerce-page .site-header a.button.large {
 	padding: 16px 40px;
 	font-size: 16px;
 	letter-spacing: 2px;
 }
 /* === End of buttons  === */
+
+
+
 /* Disabled */
+
+
 button:disabled, .button:disabled, .site-header .button:disabled, .site-header button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
 	cursor: none;
 }
 /*
-* Vertical alignment
-* Exclude 'radio' and 'checkbox' elements because the default 'baseline' value aligns better with text
-*/
+
+ * Vertical alignment
+
+ * Exclude 'radio' and 'checkbox' elements because the default 'baseline' value aligns better with text
+
+ */
+
 button, input:not([type="radio"]):not([type="checkbox"]), select {
 	vertical-align: middle;
 }
 /* New custom styles */
+
+
+
 .no-bottom-space *, .woocommerce a.button.no-bottom-space, .woocommerce-page a.button.no-bottom-space {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
@@ -903,8 +1363,11 @@ button, input:not([type="radio"]):not([type="checkbox"]), select {
 	border-radius: .3em .3em 0 0;
 }
 /* =09. Tables
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -919,8 +1382,10 @@ th {
 	background: #fff;
 }
 /* =10. Links
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
 a {
 	color: #199cd8;
 	text-decoration: none;
@@ -928,9 +1393,17 @@ a {
 a:hover {
 	color: #adacac;
 }
+
+
+
 /*
-* Selection highlight
-*/
+
+ * Selection highlight
+
+ */
+
+
+
 ::-moz-selection {
  background: #ecf8fe;
  color: #12719d;
@@ -942,8 +1415,11 @@ a:hover {
 	text-shadow: none;
 }
 /* =11. Header area
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .site-header {
 	width: 100%;
 }
@@ -951,8 +1427,11 @@ a:hover {
 	display: none !important;
 }
 /* =12. Layout
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .site-main {
 	margin-left: auto;
 	margin-right: auto;
@@ -974,13 +1453,22 @@ a:hover {
  width: device-width;
 }
 /* =13. Menus
--------------------------------------------------------------- 
-*/
-/* Small menu */
+
+-------------------------------------------------------------- */
+
+
+
+/* Social menu */
+
+
+
 .menu-toggle, .menu-toggle.dashicons {
 	display: none;
 }
 /* Social menu */
+
+
+
 .social-menu {
 	background-color: #e8e8e8;
 	text-align: center;
@@ -1059,6 +1547,9 @@ a:hover {
 	content: "\e0db";
 }
 /* Content navigation */
+
+
+
 .navigation {
 	clear: both;
 	margin: 0 auto;
@@ -1074,12 +1565,21 @@ a:hover {
 	text-align: right;
 }
 /* =14. Icons
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 /* Reference only, see /css/typicons.css */
+
+
+
 /* =15. Accessibility
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -1107,18 +1607,31 @@ a:hover {
 	z-index: 100000; /* Above WP toolbar */
 }
 /* =16. Embedded content
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 /*
-* Responsive media.
-*/
+
+ * Responsive media.
+
+ */
+
+
+
 img, embed, object, video {
 	height: auto;
 	max-width: 100%;
 }
 /*
-* Google maps image fix.
-*/
+
+ * Google maps image fix.
+
+ */
+
+
+
 img[src*="maps.gstatic.com"], img[src*="googleapis.com"] {
 	max-width: none;
 }
@@ -1173,8 +1686,11 @@ figure {
 	padding-top: 100px;
 }
 /* =17. WordPress core
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -1292,13 +1808,17 @@ figure {
 	padding: 0;
 }
 /* =18. Widgets
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .widget-area a {
 	color: #82888a;
 	text-decoration: none;
 }
 /* === Template with Right Sidebar  === */
+
 .content-area.left {
 	float: left!important;
 }
@@ -1333,13 +1853,19 @@ figure {
 	padding-left: 20px;
 }
 /* Make sure select elements fit in widgets */
+
+
+
 .widget select {
 	max-width: 100%;
 	margin-bottom: 25px;
 }
 /* =19. Content
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .entry-content {
 }
 .headline-resize {
@@ -1386,8 +1912,8 @@ figure {
 	padding-right: 60px;
 }
 /*.single #primary,*/
-/*.blog #primary, */
-.page-template-full-width-page #primary, .page-template-full-width-page-php #primary, .page-template-blog-php #primary, .error404 #primary, #primary.full-width-page {
+
+/*.blog #primary, */ .page-template-full-width-page #primary, .page-template-full-width-page-php #primary, .page-template-blog-php #primary, .error404 #primary, #primary.full-width-page {
 	width: 100%;
 }
 .page-template-page-rightsidebar #primary {
@@ -1457,6 +1983,9 @@ span.posted-on {
 	background-color: #FFFFFF;
 }
 /* Archives + Search */
+
+
+
 .archive #primary article, .search #primary article {
 	padding: 25px 0 0 0;
 }
@@ -1511,14 +2040,20 @@ span.posted-on {
 	padding: 0 0 0 60px;
 }
 /* =20. Asides
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .blog .format-aside .entry-title, .archive .format-aside .entry-title {
 	display: none;
 }
 /* =21. Comments
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .comment-notes {
 	font-size: 12px;
 	font-style: italic;
@@ -1624,8 +2159,13 @@ article.comment-body {
 	width: 50px
 }
 /* =22. Infinite scroll (Jetpack plugin)
+
 -------------------------------------------------------------- */
+
+
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
+
 
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */ .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
@@ -1636,8 +2176,11 @@ article.comment-body {
 	display: block;
 }
 /* =23. Footer
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
+
 .site-footer {
 	background-color: #fff;
 	color: #afafaf;
@@ -1666,13 +2209,21 @@ article.comment-body {
 	line-height: 120%;
 }
 /* =24. Plugins
+
 -------------------------------------------------------------- */
+
+
+
 /*== Fixes for sitebuilder no padding on image ==*/
+
+
+
 .no-padding-bottom p, .no-padding-bottom img {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
 /* BEAVER BUILDER */
+
 .fl-row-full-width .fl-col-group {
 	max-width: 100%;
  padding:
@@ -1686,8 +2237,10 @@ article.comment-body {
 	width: 100%;
 }
 /* =25. Responsive design
--------------------------------------------------------------- 
-*/
+
+-------------------------------------------------------------- */
+
+
 /*Added CSS 06072016*/
 .wootitle-small h3 {
 	font-size: 15px !important;
@@ -1766,8 +2319,15 @@ textarea, input:not([type]), input[type="text"], input[type="password"], input[t
 }
 
 /* =26. Print styles
+
 -------------------------------------------------------------- */
+
+
+
 /* Print styles inlined to avoid extra HTTP connection */
+
+
+
 @media print {
 * {
 	background: transparent !important;
@@ -2392,7 +2952,7 @@ ul.products .woobutton-small {
 html.loginpage {
 	margin-top: 0px !important;
 }
-html.loginpage .logged-in {
+html.loginpage .logged-in.admin-bar {
 	padding-top: 32px !important;
 }
 /*============================== Additional CSS 18.07.2016 ==============================*/
@@ -2422,4 +2982,15 @@ html.loginpage .logged-in {
 }
 body {
 	line-height: normal\9 !important;
+}
+/*============================== Additional CSS 22.07.2016 =============================*/
+.site-footer {
+	width: 100%;
+}
+#footer-button-container-inner p {
+	display: block !important;
+	line-height:24px !important;
+}
+#footer-button-container-inner br {
+	display: none !important;
 }
