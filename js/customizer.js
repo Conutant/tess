@@ -219,25 +219,25 @@
 	
 	wp.customize( 'tesseract_blog_titlecolor', function( value ) {
 		value.bind( function( to ) {
-			$( '#bloglist_title h2 ).css('color', to);
+			$( '#bloglist_title h2' ).css('color', to);
 		} );
 	} );
 	
 	wp.customize( 'tesseract_blog_buttoncolor', function( value ) {
 		value.bind( function( to ) {
-			$( '#bloglist_morebutton ).css('color', to);
+			$( '#bloglist_morebutton' ).css('color', to);
 		} );
 	} );
 	
 	wp.customize( 'tesseract_woocommerce_titlecolor', function( value ) {
 		value.bind( function( to ) {
-			$( '#prodlist_title h3 ).css('color', to);
+			$( '#prodlist_title h3, .summary h1' ).css('color', to);
 		} );
 	} );
 	
 	wp.customize( 'tesseract_woocommerce_pricecolor', function( value ) {
 		value.bind( function( to ) {
-			$( '.sales-price ).css('color', to);
+			$( '.sales-price, .woocommerce div.product p.price, .woocommerce div.product span.price' ).css('color', to);
 		} );
 	} );
 	

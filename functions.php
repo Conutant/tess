@@ -629,9 +629,11 @@ function tesseract_scripts() {
 	#bloglist_morebutton .blmore a:hover{ color: " . $bloglist_buttonColor . "; }
 	
 	
+	.summary h1,
 	#prodlist_title h3, 
-	#prodlist_title h2 a{ color: " . $productlist_textColor . "; }
+	#prodlist_title h3 a{ color: " . $productlist_textColor . "; }
 	
+	.woocommerce div.product p.price, .woocommerce div.product span.price,
 	.wooshop-price .sales-price{ color: " . $shopprice_textColor . "; }
 	
 	
