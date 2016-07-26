@@ -1200,12 +1200,28 @@ function example_admin_notice() {
         $user_id = $current_user->ID;
         /* Check that the user hasn't already clicked to ignore the message */
 	if ( ! get_user_meta($user_id, 'example_ignore_notice') ) {
-		if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) ) {
+		/*if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) && is_plugin_active( 'beaver-builder-lite-version/fl-builder.php' ) ) {
 			echo '<div class="error notice"><p>'; 
+			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
+			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
+			echo "</p></div>";
+		} */
+
+		 $installedPlugins = get_plugins();
+		// echo '<pre>';
+	    // print_r($installedPlugins); 
+		// echo '</pre>';
+		foreach ($installedPlugins as $installedPlugin => $data) {
+		$arrname[]=$data['Name'];
+		}
+
+		$find = array("Page Builder by SiteOrigin", "Beaver Builder Plugin (Lite Version)");
+		if(count(array_intersect($arrname, $find)) == count($find)){
+		    echo '<div class="error notice"><p>'; 
 			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
 			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
 			echo "</p></div>";
-		} 	
+		}	
 	}
 }
 

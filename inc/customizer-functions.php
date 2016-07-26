@@ -192,6 +192,9 @@ function tesseract_sanitize_textarea_html( $value ) {
 	$allowed = array(
 		//container and button
 		'p' => array(),
+		'center' => array(),
+		'em' => array(),
+		'strong' => array(),
 		'h1' => array(),
 		'h2' => array(),
 		'h3' => array(),
@@ -199,10 +202,17 @@ function tesseract_sanitize_textarea_html( $value ) {
 		'h5' => array(),
 		'h6' => array(),
 		'br'  => array(),
+		'ul'  => array(),
+		'li'  => array(),
 		'img' => array(
 			'src' => array(),
+			'height' => array(),
+			'width' => array(),
+			'style' => array()
 		 ),
-		'div'     => array(),
+		'div' => array(
+			'style' => array()
+		),
 		'input'    	=> array(
 			'height'	=> array(),
 			'name'		=> array(),
@@ -335,6 +345,11 @@ function tesseract_bloglist_sanitize_featimg_size( $value ) {if ( ! in_array( $v
 
 
 // WOOCOMMERCE BREADCRUMB RATINGS AND SINGLE BUTTON SIZE OPTION//
+function tesseract_woocommerce_shop_sanitize_breadcrumb( $value ) {	if ( ! in_array( $value, array( 'showbreadcrumb','hidebreadcrumb' ) ) ):
+		$value = 'showbreadcrumb';	
+	endif;	
+	return $value;	}
+
 function tesseract_woocommerce_product_sanitize_breadcrumb( $value ) {	if ( ! in_array( $value, array( 'showbreadcrumb','hidebreadcrumb' ) ) ):
 		$value = 'showbreadcrumb';	
 	endif;	

@@ -2197,7 +2197,7 @@ article.comment-body {
 	border-top: #eee solid 1px;
 }
 #colophon ul {
-	list-style-type: none;
+	/*list-style-type: none;*/
 	padding-left: 0;
 	list-style-position: inside;
 }
@@ -2432,10 +2432,10 @@ button, .button, input[type="reset"], input[type="submit"], input[type="button"]
 	padding-right: 30px;
 	width: 100%;
 }
-#secondary {
+/*#secondary {
 	padding: 0 !important;
 	width: auto !important;
-}
+}*/
 .woocommerce.woocommerce-page #secondary.sidebar-default {
 	width: 25% !important;
 	padding: 0 40px 0 0 !important;
@@ -2984,13 +2984,39 @@ body {
 	line-height: normal\9 !important;
 }
 /*============================== Additional CSS 22.07.2016 =============================*/
-.site-footer {
+/*.site-footer {
 	width: 100%;
 }
 #footer-button-container-inner p {
 	display: block !important;
-	line-height:24px !important;
+	line-height: 24px !important;
 }
 #footer-button-container-inner br {
 	display: none !important;
+}*/
+/*
+==============================
+Additional CSS 26.07.2016
+*/
+.site-main article:last-child {
+	margin-bottom: 50px;
+}
+/*.site-footer img {
+	max-height: 300px;
+	width: auto;
+}*/
+.woocommerce #primary.content-area.woo-cont.with-sidebar.sidebar-right {
+	width: 75%;
+	float: left;
+}
+.woocommerce #primary.content-area.woo-cont.with-sidebar.sidebar-left {
+	width: 75%;
+	float: right;
+}
+.woocommerce .shop_table.shop_table_responsive.cart .cart_item .product-quantity input.minus, .woocommerce .shop_table.shop_table_responsive.cart .cart_item .product-quantity input.plus {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.woocommerce .shop_table.shop_table_responsive.cart .cart_item .product-quantity input.qty {
+	margin-top: 0px !important;
 }
