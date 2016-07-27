@@ -2998,7 +2998,7 @@ body {
 ==============================
 Additional CSS 26.07.2016
 */
-.site-main article:last-child {
+.blog .site-main article:last-child {
 	margin-bottom: 50px;
 }
 /*.site-footer img {

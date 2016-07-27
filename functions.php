@@ -1110,7 +1110,7 @@ function display_notice() {
         $("a").each(function(){
             strhref = $(this).attr("href");
             if(typeof strhref != "undefined" && strhref.toLowerCase().indexOf("wpbeaverbuilder.com") >= 0){
-                $(this).attr("href","https://www.wpbeaverbuilder.com/pricing/?fla=50&campaign=tesseracttheme");
+                $(this).attr("href","http://tesseracttheme.com/plus/");
             }
         });
     });
