@@ -13,7 +13,7 @@
 function tesseract_jetpack_setup() {
     add_theme_support( 'infinite-scroll', array(
         'container'      => 'main',
-		'footer'         => 'colophon',
+		'footer'         => 'colophon_TesseractTheme',
 		'wrapper'        => false,
 		'posts_per_page' => 9,
 	) );

@@ -1437,7 +1437,7 @@ a:hover {
 	margin-right: auto;
 	width: 100%;
 }
-.site-info, .site-content, #colophon > .menu, #footer-banner {
+.site-info, .site-content, #colophon_TesseractTheme > .menu, #footer-banner {
 	max-width: 980px;
 }
 .fl-builder .site-content {
@@ -1445,7 +1445,7 @@ a:hover {
 	padding: 0;
 	margin: 0;
 }
-.site-info, .site-content, #colophon > .menu, #footer-banner {
+.site-info, .site-content, #colophon_TesseractTheme > .menu, #footer-banner {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1932,7 +1932,7 @@ figure {
 /*.page-template-blog #content, .blog #content {
 	max-width: 720px;
 }*/
-.fl-builder.page-template-blog #content, .fl-builder.blog #content {
+.fl-builder.page-template-blog #content_TesseractTheme, .fl-builder.blog #content_TesseractTheme {
 	max-width: none;
 }
 .navigation.post-navigation {
@@ -1948,7 +1948,7 @@ figure {
 .page-template-blog-php #primary article:last-of-type {
 	border-bottom: none;
 }
-.page-template-blog-php #colophon {
+.page-template-blog-php #colophon_TesseractTheme {
 	border-top: 1px solid #ddd;
 }
 h1.entry-title, .blog .page-title {
@@ -2196,7 +2196,7 @@ article.comment-body {
 	margin-top: 10px;
 	border-top: #eee solid 1px;
 }
-#colophon ul {
+#colophon_TesseractTheme ul {
 	/*list-style-type: none;*/
 	padding-left: 0;
 	list-style-position: inside;
@@ -2267,10 +2267,10 @@ article.comment-body {
 
 /*Added CSS 06072016*/
 @media screen and (max-width: 980px) {
-#sidebar-footer, #content {
+#sidebar-footer, #content_TesseractTheme {
 	padding: 0 20px;
 }
-.fl-builder #content {
+.fl-builder #content_TesseractTheme {
 	padding: 0;
 }
 #sidebar-footer aside {

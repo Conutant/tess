@@ -19,7 +19,7 @@
 	?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer <?php echo $footpos; ?>" role="contentinfo">
+	<footer id="colophon_TesseractTheme" class="site-footer <?php echo $footpos; ?>" role="contentinfo">
 
 		<?php $additional = get_theme_mod('tesseract_footer_additional_content') ? true : false;
 

@@ -79,7 +79,7 @@ $headpos = ( is_front_page() && ( $header_bckOpacity && ( intval($opValue) < 100
 $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 100 ) ) ) ? 'pos-absolute' : 'pos-relative';
 ?>
 <div id="page" class="hfeed site">
-<a class="skip-link screen-reader-text" href="#content">
+<a class="skip-link screen-reader-text" href="#content_TesseractTheme">
 <?php _e( 'Skip to content', 'tesseract' ); ?>
 </a>
 <?php $logoImg = get_theme_mod('tesseract_header_logo_image');
@@ -96,7 +96,7 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
     if ( !$logoImg && !$blogname ) $brand_content = 'no-brand';
 
     ?>
-<header id="masthead" class="site-header <?php echo $rightclass . $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+<header id="masthead_TesseractTheme" class="site-header <?php echo $rightclass . $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
@@ -133,4 +133,4 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 </header>
 <!-- #masthead -->
 
-<div id="content" class="cf site-content">
+<div id="content_TesseractTheme" class="cf site-content">

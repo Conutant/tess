@@ -505,8 +505,8 @@ function tesseract_scripts() {
 	.site-header h6,
     .site-header h2 a{ color: " . $header_textColor . "!important; }
 
-	#masthead .search-field { color: " . $header_textColor . "; }
-	#masthead .search-field.watermark { color: #ccc; }
+	#masthead_TesseractTheme .search-field { color: " . $header_textColor . "; }
+	#masthead_TesseractTheme .search-field.watermark { color: #ccc; }
 
 	.site-header a,
 	.main-navigation ul ul a,
@@ -530,7 +530,7 @@ function tesseract_scripts() {
 		height: " . $header_logoHeight . "px;
 		}
 
-	#masthead {
+	#masthead_TesseractTheme {
 		padding-top: " . $headerHeight . "px;
 		padding-bottom: " . $headerHeight . "px;
 		}
@@ -604,15 +604,15 @@ function tesseract_scripts() {
 	.home .site-footer { background-color: " . $footer_bckColor_home . "; }
 	
 
-	#colophon .search-field { color: " . $footer_textColor . "; }
-	#colophon .search-field.watermark { color: #ccc; }
+	#colophon_TesseractTheme .search-field { color: " . $footer_textColor . "; }
+	#colophon_TesseractTheme .search-field.watermark { color: #ccc; }
 
-	#colophon h1,
-	#colophon h2,
-	#colophon h3,
-	#colophon h4,
-	#colophon h5,
-	#colophon h6 { color: " . $footer_headingColor . "; }
+	#colophon_TesseractTheme h1,
+	#colophon_TesseractTheme h2,
+	#colophon_TesseractTheme h3,
+	#colophon_TesseractTheme h4,
+	#colophon_TesseractTheme h5,
+	#colophon_TesseractTheme h6 { color: " . $footer_headingColor . "; }
 	
 	
 	#bloglist_title h1.entry-title,
@@ -639,9 +639,9 @@ function tesseract_scripts() {
 	
 	
 
-	#colophon a { color: " . $footer_linkColor . "; }
+	#colophon_TesseractTheme a { color: " . $footer_linkColor . "; }
 
-	#colophon a:hover { color: " . $footer_linkHoverColor . "; }
+	#colophon_TesseractTheme a:hover { color: " . $footer_linkHoverColor . "; }
 
 	#horizontal-menu-before,
 	#horizontal-menu-after { border-color: rgba(" . $add_content_borderColor . ", 0.25); }
@@ -650,7 +650,7 @@ function tesseract_scripts() {
 
 	#footer-banner .site-logo img { height: " . $footer_logoHeight . "px; }
 
-	#colophon {
+	#colophon_TesseractTheme {
 		padding-top: " . $footerHeight . "px;
 		padding-bottom: " . $footerHeight . "px;
 		}
@@ -1200,14 +1200,14 @@ function example_admin_notice() {
         $user_id = $current_user->ID;
         /* Check that the user hasn't already clicked to ignore the message */
 	if ( ! get_user_meta($user_id, 'example_ignore_notice') ) {
-		/*if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) && is_plugin_active( 'beaver-builder-lite-version/fl-builder.php' ) ) {
+		if ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) && is_plugin_active( 'beaver-builder-lite-version/fl-builder.php' ) ) {
 			echo '<div class="error notice"><p>'; 
 			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
 			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
 			echo "</p></div>";
-		} */
+		} 
 
-		 $installedPlugins = get_plugins();
+		/* $installedPlugins = get_plugins();
 		// echo '<pre>';
 	    // print_r($installedPlugins); 
 		// echo '</pre>';
@@ -1221,7 +1221,7 @@ function example_admin_notice() {
 			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
 			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
 			echo "</p></div>";
-		}	
+		} */	
 	}
 }
 

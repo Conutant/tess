@@ -27,7 +27,7 @@
 		} );
 	} );
 
-	$('#content').unbind('load');
+	$('#content_TesseractTheme').unbind('load');
 
 	function hexToRgb(hex) {
 		var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -121,11 +121,11 @@
 
 			$( '.site-header, .site-header h1, .site-header h2, .site-header h3, .site-header h4, .site-header h5, .site-header h6' ).css('color', to);
 
-			$( '#masthead .search-field' ).focus(function() {
+			$( '#masthead_TesseractTheme .search-field' ).focus(function() {
 				var color = $(this).hasClass('watermark') ? '#ccc' : to;
 				$(this).css('color', color);
 			})
-			$( '#masthead .search-field' ).blur(function() {
+			$( '#masthead_TesseractTheme .search-field' ).blur(function() {
 				var color = $(this).hasClass('watermark') ? '#ccc' : to;
 				$(this).css('color', color);
 			})
@@ -160,18 +160,18 @@
 
 	wp.customize( 'tesseract_footer_colors_bck_color', function( value ) {
 		value.bind( function( to ) {
-			$( '#colophon' ).css('background-color', to);
+			$( '#colophon_TesseractTheme' ).css('background-color', to);
 		} );
 	} );
 
 	wp.customize( 'tesseract_footer_colors_text_color', function( value ) {
 		value.bind( function( to ) {
-			$( '#colophon' ).css('color', to);
-			$( '#colophon .search-field' ).focus(function() {
+			$( '#colophon_TesseractTheme' ).css('color', to);
+			$( '#colophon_TesseractTheme .search-field' ).focus(function() {
 				var color = $(this).hasClass('watermark') ? '#ccc' : to;
 				$(this).css('color', color);
 			})
-			$( '#colophon .search-field' ).blur(function() {
+			$( '#colophon_TesseractTheme .search-field' ).blur(function() {
 				var color = $(this).hasClass('watermark') ? '#ccc' : to;
 				$(this).css('color', color);
 			})
@@ -181,7 +181,7 @@
 
 	wp.customize( 'tesseract_footer_colors_heading_color', function( value ) {
 		value.bind( function( to ) {
-			$( '#colophon h1, #colophon h2, #colophon h3, #colophon h4, #colophon h5, #colophon h6' ).css('color', to);
+			$( '#colophon_TesseractTheme h1, #colophon_TesseractTheme h2, #colophon_TesseractTheme h3, #colophon_TesseractTheme h4, #colophon_TesseractTheme h5, #colophon_TesseractTheme h6' ).css('color', to);
 		} );
 	} );
 
@@ -192,7 +192,7 @@
 			blue = hexToRgb(to).b,
 			rgbArray = red + ', ' + green + ', ' + blue;
 
-			$( '#colophon a' ).css('color', to);
+			$( '#colophon_TesseractTheme a' ).css('color', to);
 
 			if ( $('#horizontal-menu-before').length > 0 ) {
 				$( '#horizontal-menu-before' ).css('border-right', 'rgba(' + rgbArray + ', 0.25) solid 1px');
@@ -206,8 +206,8 @@
 
 	wp.customize( 'tesseract_footer_colors_link_hover_color', function( value ) {
 		value.bind( function( to ) {
-			var origColor = $( '#colophon a' ).css('color');
-			$( '#colophon a' ).hover(
+			var origColor = $( '#colophon_TesseractTheme a' ).css('color');
+			$( '#colophon_TesseractTheme a' ).hover(
 				function() {
 					$(this).css('color', to);
 				}, function() {
@@ -430,7 +430,7 @@
 
 	wp.customize( 'tesseract_header_height', function( value ) {
 		value.bind( function( to ) {
-			$('#masthead').animate({
+			$('#masthead_TesseractTheme').animate({
 				'padding-top': to,
 				'padding-bottom': to
 			}, 50);
@@ -461,7 +461,7 @@
 
 	wp.customize( 'tesseract_footer_height', function( value ) {
 		value.bind( function( to ) {
-			$('#colophon').animate({
+			$('#colophon_TesseractTheme').animate({
 				'padding-top': to,
 				'padding-bottom': to
 			}, 50);

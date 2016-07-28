@@ -65,7 +65,7 @@
 	margin: 0;
 	}
 
-#masthead .site-branding {
+#masthead_TesseractTheme .site-branding {
 	display: table-cell;
 	width: 1px;
 	white-space: nowrap;
@@ -74,8 +74,8 @@
 	vertical-align: middle;
 	}
 
-#masthead .site-logo, /* Jetpack */
-#masthead .site-title {
+#masthead_TesseractTheme .site-logo, /* Jetpack */
+#masthead_TesseractTheme .site-title {
 	margin: 0;
 	margin-right: 20px;
 }
@@ -403,8 +403,8 @@
 		margin-right: 0;
 	}
 
-	#masthead .site-logo,
-	#masthead .site-title {
+	#masthead_TesseractTheme .site-logo,
+	#masthead_TesseractTheme .site-title {
 		margin-right: 0;
 	}
 

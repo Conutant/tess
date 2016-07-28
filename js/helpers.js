@@ -57,8 +57,8 @@
 			if ( $(window).height() > $('#page').height() ) {
 
 				var wheight = $(window).height(),
-				hheight = parseInt( $('#masthead').not('.pos-absolute').height() ),
-				fheight = parseInt( $('#colophon').not('.pos-absolute').height() );
+				hheight = parseInt( $('#masthead_TesseractTheme').not('.pos-absolute').height() ),
+				fheight = parseInt( $('#colophon_TesseractTheme').not('.pos-absolute').height() );
 
 				hpad = tesseract_vars.hpad ? tesseract_vars.hpad : 10;
 				fpad = tesseract_vars.fpad ? tesseract_vars.fpad : 10;
@@ -81,8 +81,8 @@
 					var offsetFinal = offset;
 				}
 
-				if ( $('#content').height() < offsetFinal ) {
-					$('#content').animate({
+				if ( $('#content_TesseractTheme').height() < offsetFinal ) {
+					$('#content_TesseractTheme').animate({
 						'height': offsetFinal
 					}, 500 )
 				}

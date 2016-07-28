@@ -1,7 +1,7 @@
 /* Header shop icon */
 
-.woocommerce #content,
-.woocommerce-page #content {
+.woocommerce #content_TesseractTheme,
+.woocommerce-page #content_TesseractTheme {
 	position: relative;
 	}
 
@@ -214,8 +214,8 @@
 -----------------------------------------------------------------------------------------------------------*/
 
 	
-.woocommerce #content a:hover,
-.woocommerce-page #content a:hover {
+.woocommerce #content_TesseractTheme a:hover,
+.woocommerce-page #content_TesseractTheme a:hover {
 	color: #1581b2;
 }
 
@@ -223,17 +223,17 @@
 .woocommerce button.button, 
 .woocommerce input.button, 
 .woocommerce #respond input#submit, 
-.woocommerce #content input.button, 
+.woocommerce #content_TesseractTheme input.button, 
 .woocommerce-page a.button, 
 .woocommerce-page button.button, 
 .woocommerce-page input.button, 
 .woocommerce-page #respond input#submit, 
-.woocommerce-page #content input.button,
+.woocommerce-page #content_TesseractTheme input.button,
 .woocommerce a.button.alt, 
 .woocommerce button.button.alt, 
 .woocommerce input.button.alt, 
 .woocommerce #respond input#submit.alt, 
-.woocommerce #content input.button.alt, 
+.woocommerce #content_TesseractTheme input.button.alt, 
 .woocommerce-page a.button.alt, 
 .woocommerce-page button.button.alt {
 	margin: auto;
@@ -270,17 +270,17 @@
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover, 
 .woocommerce #respond input#submit:hover, 
-.woocommerce #content input.button:hover, 
+.woocommerce #content_TesseractTheme input.button:hover, 
 .woocommerce-page a.button:hover, 
 .woocommerce-page button.button:hover, 
 .woocommerce-page input.button:hover, 
 .woocommerce-page #respond input#submit:hover, 
-.woocommerce-page #content input.button:hover,
+.woocommerce-page #content_TesseractTheme input.button:hover,
 .woocommerce a.button.alt:hover, 
 .woocommerce button.button.alt:hover, 
 .woocommerce input.button.alt:hover, 
 .woocommerce #respond input#submit.alt:hover, 
-.woocommerce #content input.button.alt:hover, 
+.woocommerce #content_TesseractTheme input.button.alt:hover, 
 .woocommerce-page a.button.alt:hover, 
 .woocommerce-page button.button.alt:hover {
     background: none;
@@ -294,17 +294,17 @@
 .woocommerce button.button:active, 
 .woocommerce input.button:active, 
 .woocommerce #respond input#submit:active, 
-.woocommerce #content input.button:active, 
+.woocommerce #content_TesseractTheme input.button:active, 
 .woocommerce-page a.button:active, 
 .woocommerce-page button.button:active, 
 .woocommerce-page input.button:active, 
 .woocommerce-page #respond input#submit:active, 
-.woocommerce-page #content input.button:active,
+.woocommerce-page #content_TesseractTheme input.button:active,
 .woocommerce a.button.alt:active, 
 .woocommerce button.button.alt:active, 
 .woocommerce input.button.alt:active, 
 .woocommerce #respond input#submit.alt:active, 
-.woocommerce #content input.button.alt:active, 
+.woocommerce #content_TesseractTheme input.button.alt:active, 
 .woocommerce-page a.button.alt:active, 
 .woocommerce-page button.button.alt:active {
     background: none;
@@ -365,18 +365,18 @@
 	}
 	
 .woocommerce div.product div.summary, 
-.woocommerce #content div.product div.summary, 
+.woocommerce #content_TesseractTheme div.product div.summary, 
 .woocommerce-page div.product div.summary, 
-.woocommerce-page #content div.product div.summary {
+.woocommerce-page #content_TesseractTheme div.product div.summary {
 	margin-top: 0;
 	}
 	
 /* Cart */
 
 .woocommerce table.cart input, 
-.woocommerce #content table.cart input, 
+.woocommerce #content_TesseractTheme table.cart input, 
 .woocommerce-page table.cart input, 
-.woocommerce-page #content table.cart input {
+.woocommerce-page #content_TesseractTheme table.cart input {
 	padding: 6px 6px 6px;
 	margin-top: -1px;
 	}
@@ -433,12 +433,12 @@
 	
 .widget-area ul.children a { font-size: .9em; }		
 
-.woocommerce #content table.shop_table.cart tbody tr:last-of-type input,
-.woocommerce-page #content table.shop_table.cart tbody tr:last-of-type input,
+.woocommerce #content_TesseractTheme table.shop_table.cart tbody tr:last-of-type input,
+.woocommerce-page #content_TesseractTheme table.shop_table.cart tbody tr:last-of-type input,
 .woocommerce table.cart td.actions .coupon .input-text, 
-.woocommerce #content table.cart td.actions .coupon .input-text, 
+.woocommerce #content_TesseractTheme table.cart td.actions .coupon .input-text, 
 .woocommerce-page table.cart td.actions .coupon .input-text, 
-.woocommerce-page #content table.cart td.actions .coupon .input-text {
+.woocommerce-page #content_TesseractTheme table.cart td.actions .coupon .input-text {
 	padding: 0 20px;
 	line-height: 40px;	
 	}
@@ -458,7 +458,7 @@ form.woocommerce-checkout {
 
 @media screen and (min-width: 932px) and (max-width: 940px) {			
 	.woocommerce table.cart td.actions input[name="proceed"],  
-	.woocommerce-page #content table.cart td.actions input[name="proceed"], 
+	.woocommerce-page #content_TesseractTheme table.cart td.actions input[name="proceed"], 
 	.woocommerce-page table.cart td.actions input[name="proceed"] {
 		margin: 6px 4px 0 0;
 		}	
@@ -471,13 +471,13 @@ form.woocommerce-checkout {
 		}	
 	*/
 	.woocommerce table.cart td.actions input[name="proceed"],  
-	.woocommerce-page #content table.cart td.actions input[name="proceed"], 
+	.woocommerce-page #content_TesseractTheme table.cart td.actions input[name="proceed"], 
 	.woocommerce-page table.cart td.actions input[name="proceed"] {
 		margin-top: 6px;
 		}
 		
 	.woocommerce table.cart td.actions input[name="update_cart"],  
-	.woocommerce-page #content table.cart td.actions input[name="update_cart"], 
+	.woocommerce-page #content_TesseractTheme table.cart td.actions input[name="update_cart"], 
 	.woocommerce-page table.cart td.actions input[name="update_cart"] {
 		float: right;
 		}	
