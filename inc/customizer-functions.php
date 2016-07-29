@@ -222,7 +222,13 @@ function tesseract_sanitize_textarea_html( $value ) {
 			'width' 	=> array(),
 			'class' 	=> array(),
 			'id'		=> array(),
-			'style' 	=> array()
+			'style' 	=> array(),
+			'img' => array(
+				'src' => array(),
+				'height' => array(),
+				'width' => array(),
+				'style' => array()
+			)
 		),
 		'button'   	=> array(
 			'name' 		=> array(),
