@@ -497,13 +497,15 @@ function tesseract_scripts() {
 	.home .site-header .cart-content-details:after { border-bottom-color: " . $header_bckColor_home . "; }
 
 	.site-header,
+	#header-button-container-inner,
+	#header-button-container-inner a,
 	.site-header h1,
 	.site-header h2,
 	.site-header h3,
 	.site-header h4,
 	.site-header h5,
 	.site-header h6,
-    .site-header h2 a{ color: " . $header_textColor . "!important; }
+    .site-header h2 a{ color: " . $header_textColor . "; }
 
 	#masthead_TesseractTheme .search-field { color: " . $header_textColor . "; }
 	#masthead_TesseractTheme .search-field.watermark { color: #ccc; }

@@ -146,6 +146,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	}
 	?>
 	
+	<div class="wooprod-button">
 	<?php $wooaddbutton = get_theme_mod('tesseract_woocommerce_product_morebutton'); ?>
 			<?php if($wooaddbutton == 'showcartbutton' ) { ?>
 				<?php //do_action( 'woocommerce_after_shop_loop_item' ); ?>
@@ -177,6 +178,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				<a class="shop_moredetails" href ="<?php echo get_permalink(); ?>">Show More Details</a>
 		    <?php } elseif ($wooaddbutton == 'hidecartbutton' ) {	
 			} ?>
+	</div>		
+			
 	</div>
 	<div class="oneColClear"></div>	
 </li>
