@@ -3026,3 +3026,5 @@ display:none;
 }
 .fl-builder-settings-lightbox{ display:none !important;}
 */
+#footer-banner-right.banner-right, #footer-banner-right.banner-right #footer-button-container{line-height:normal;}
+#footer-banner-right.banner-right h1, #footer-banner-right.banner-right h2, #footer-banner-right.banner-right h3, #footer-banner-right.banner-right h4, #footer-banner-right.banner-right h5, #footer-banner-right.banner-right h6, #footer-banner-right.banner-right p{display:block;line-height:normal;margin:0 0 10px 0;padding:0;}
