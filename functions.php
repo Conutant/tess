@@ -1117,7 +1117,7 @@ function display_notice() {
         });
     });
     </script>';
-	if ( ! class_exists( 'Tesseract_Remove_Branding' ) ) {
+	/*if ( ! class_exists( 'Tesseract_Remove_Branding' ) ) {
 		if ( false === ( $dismissed = get_transient( 'dismiss_unbranding' ) ) ) {
 ?>
 		<div id="unbranding-plugin-notice" class="updated notice">
@@ -1134,7 +1134,7 @@ function display_notice() {
 		</div>
 <?php
 		}
-	}
+	}*/
 }
 add_action( 'admin_notices', 'display_notice' );
 
@@ -1236,3 +1236,41 @@ function example_nag_ignore() {
              add_user_meta($user_id, 'example_ignore_notice', 'true', true);
 	}
 }*/
+
+function display_tesseractplusnotice() {
+	if ( ! is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
+		if ( false === ( $dismissed = get_transient( 'dismiss_tesseractpls' ) ) ) {
+?>
+		<div id="tesseractplus-plugin-notice" class="updated notice custom-notice">
+			
+            <div class="logo-notice">
+			<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src="http://tylers.s3.amazonaws.com/uploads/2016/08/08095352/upgrade.png" alt="Tesseract Team" /></a>
+            </div>
+            
+            <p>Upgrade to Tesseract <b>Plus</b> today to enjoy over 25+ website additions! </p>
+            
+            <div class="btn-group">	
+              <a id="get-unbranding" href="http://tesseracttheme.com/plus/" target="_blank">check it out</a> 
+              <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
+            </div> 
+			
+		</div>
+<?php
+		}	
+	}
+}
+add_action( 'admin_notices', 'display_tesseractplusnotice' );
+
+function dismiss_tesseractpls() {
+	set_transient( 'dismiss_tesseractpls', false, 0 * DAY_IN_SECONDS ); // dismissed for 3 days
+
+	die();
+}
+add_action( 'wp_ajax_dismiss_tesseractplus', 'dismiss_tesseractpls' );
+
+
+if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
+deactivate_plugins( 'beaver-builder-lite-version/fl-builder.php' );
+} else {
+activate_plugins( 'beaver-builder-lite-version/fl-builder.php' );
+}
