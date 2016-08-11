@@ -22,7 +22,7 @@ function tesseract_register_required_plugins() {
 
 	tgmpa( $tesseract_required_plugins, $config );
 }
-
+if ( ! is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 add_action( 'tgmpa_register', 'tesseract_register_required_plugins' );
-
+}
 require(dirname(__FILE__).'/../dismissible_notice/src/init.php');

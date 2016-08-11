@@ -1194,7 +1194,105 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 // My woocommerce customization //
 
-/* Display a notice that can be dismissed */
+/* Display a notice for tesseractplus when not active */
+
+function display_tesseractplusnotice() {
+global $pagenow;
+//echo $pagenow;
+	if ( ! is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) && $pagenow == 'about.php' ) {
+		if ( false === ( $dismissed = get_transient( 'dismiss_tesseractpls' ) ) ) {
+?>
+		<div id="tesseractplus-plugin-notice" class="updated notice custom-notice">
+			<?php
+			function readCSV($csvFile){
+			$file_handle = fopen($csvFile, 'r');
+			while (!feof($file_handle) ) {
+				$line_of_text[] = fgetcsv($file_handle, 1024);
+			}
+			fclose($file_handle);
+			return $line_of_text;
+			}
+			$adminmfile = get_template_directory() . '/admin_message.csv';
+			$csv = readCSV($adminmfile);
+			//echo '<pre>';
+			//print_r($csv);
+			//echo '</pre>';
+			?>
+			<div class="logo-notice">
+			<?php
+			echo $csvimg = '<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
+			</div>
+			<div class="right-cont-noice">
+				<?php echo $csvmsg = '<p>' .$csv[1][2] . '</p>'; ?>
+				<div class="btn-group">	
+				  <?php echo '<a id="get-unbranding" href=" ' . $csv[1][3] .  ' " target="_blank">check it out</a>'; ?> 
+				  <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
+				</div>
+			</div>
+            
+            <!--<div class="logo-notice">
+			
+			<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src="http://tylers.s3.amazonaws.com/uploads/2016/08/08095352/upgrade.png" alt="Tesseract Team" /></a>
+            </div>
+            
+            <p>Upgrade to Tesseract <b>Plus</b> today to enjoy over 25+ website additions! </p>
+            
+            <div class="btn-group">	
+              <a id="get-unbranding" href="http://tesseracttheme.com/plus/" target="_blank">check it out</a> 
+              <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
+            </div> -->
+			
+		</div>
+<?php
+		}	
+	} elseif ( ! is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
+		if ( false === ( $dismissed = get_transient( 'dismiss_tesseractpls' ) ) ) {
+?>
+		<div id="tesseractplus-plugin-notice" class="updated notice custom-notice">
+			<?php
+			function readCSV($csvFile){
+			$file_handle = fopen($csvFile, 'r');
+			while (!feof($file_handle) ) {
+				$line_of_text[] = fgetcsv($file_handle, 1024);
+			}
+			fclose($file_handle);
+			return $line_of_text;
+			}
+			$adminmfile = get_template_directory() . '/admin_message.csv';
+			$csv = readCSV($adminmfile);
+			//echo '<pre>';
+			//print_r($csv);
+			//echo '</pre>';
+			?>
+			<div class="logo-notice">
+			<?php
+			echo $csvimg = '<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
+			</div>
+			<div class="right-cont-noice">
+				<?php echo $csvmsg = '<p>' .$csv[1][2] . '</p>'; ?>
+				<div class="btn-group">	
+				  <?php echo '<a id="get-unbranding" href=" ' . $csv[1][3] .  ' " target="_blank">check it out</a>'; ?> 
+				  <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
+				</div>
+			</div>
+			
+		</div>
+<?php
+		}	
+	}	
+}
+add_action( 'admin_notices', 'display_tesseractplusnotice' );
+
+function dismiss_tesseractpls() {
+	set_transient( 'dismiss_tesseractpls', false, 0 * DAY_IN_SECONDS ); // dismissed for 3 days
+
+	die();
+}
+add_action( 'wp_ajax_dismiss_tesseractplus', 'dismiss_tesseractpls' );
+
+
+
+/* Display a notice when both plugin active */
 
 add_action('admin_notices', 'example_admin_notice');
 
@@ -1208,7 +1306,12 @@ function example_admin_notice() {
 			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
 			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
 			echo "</p></div>";
-		} 
+		} elseif ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) && is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
+			echo '<div class="error notice"><p>'; 
+			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
+			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
+			echo "</p></div>";
+		}
 
 		/* $installedPlugins = get_plugins();
 		// echo '<pre>';
@@ -1238,37 +1341,8 @@ function example_nag_ignore() {
 	}
 }*/
 
-function display_tesseractplusnotice() {
-	if ( ! is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
-		if ( false === ( $dismissed = get_transient( 'dismiss_tesseractpls' ) ) ) {
-?>
-		<div id="tesseractplus-plugin-notice" class="updated notice custom-notice">
-			
-            <div class="logo-notice">
-			<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src="http://tylers.s3.amazonaws.com/uploads/2016/08/08095352/upgrade.png" alt="Tesseract Team" /></a>
-            </div>
-            
-            <p>Upgrade to Tesseract <b>Plus</b> today to enjoy over 25+ website additions! </p>
-            
-            <div class="btn-group">	
-              <a id="get-unbranding" href="http://tesseracttheme.com/plus/" target="_blank">check it out</a> 
-              <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
-            </div> 
-			
-		</div>
-<?php
-		}	
-	}
-}
-add_action( 'admin_notices', 'display_tesseractplusnotice' );
 
-function dismiss_tesseractpls() {
-	set_transient( 'dismiss_tesseractpls', false, 0 * DAY_IN_SECONDS ); // dismissed for 3 days
-
-	die();
-}
-add_action( 'wp_ajax_dismiss_tesseractplus', 'dismiss_tesseractpls' );
-
+/* Deactive one plugin when other active */
 
 if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 deactivate_plugins( 'beaver-builder-lite-version/fl-builder.php' );

@@ -22,12 +22,14 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
-		//do_action( 'woocommerce_before_main_content' ); 
+		 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+		do_action( 'woocommerce_before_main_content' ); 
 	?>
 	
 	<?php $wooBreadcrumb = get_theme_mod('tesseract_woocommerce_product_breadcrumb'); ?>
 		<?php if( $wooBreadcrumb == 'showbreadcrumb' ) { ?>
-		<?php do_action( 'woocommerce_before_main_content' ); ?>
+		<?php //do_action( 'woocommerce_before_main_content' ); ?>
+		<?php woocommerce_breadcrumb(); ?>
 		<?php } ?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
