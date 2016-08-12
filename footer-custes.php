@@ -46,7 +46,11 @@
 			$rightContentClass = ' mother-branding';
 		} ?>
 
+    	<?php if ( class_exists( 'Tesseract_Remove_Branding' ) ){ ?>
+		<div id="footer-banner" class="cf<?php echo ' menu-' . $menuClass; echo $rightContentClass . $footerWidthClass; ?> with_unbrandinglogo">
+		<?php } else { ?>
     	<div id="footer-banner" class="cf<?php echo ' menu-' . $menuClass; echo $rightContentClass . $footerWidthClass; ?>">
+		<?php } ?>
             <div id="horizontal-menu-wrap" class="<?php echo $menuClass . ' ' . $footerNav_class; ?>">
 
                 <?php // SHOULD some additional content be added before the menu?
@@ -66,7 +70,13 @@
             </div><!-- EOF horizontal-menu-wrap -->
 
             <?php tesseract_footer_branding(); ?>
-
+			
+			<?php $my_unbrandinglogo = get_theme_mod('tesseract_footer_content_if_unbranding'); ?>
+			<?php if ( class_exists( 'Tesseract_Remove_Branding' ) ){ ?>
+			<div class="footer-extreme-right">
+			<?php echo $my_unbrandinglogo; ?>
+			</div>
+			<?php } ?>
       	</div><!-- EOF footer-banner -->
 
 	</footer><!-- #colophon -->

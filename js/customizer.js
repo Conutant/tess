@@ -500,6 +500,14 @@
 			}, 50);
 		} );
 	} );
+	
+	
+	wp.customize( 'tesseract_footer_content_if_unbranding', function( value ) {
+		value.bind( function( to ) {
+			$( '#footer-banner .footer-extreme-right' ).text( to );
+		} );
+	} )
+	
 
 	wp.customize( 'tesseract_footer_height', function( value ) {
 		value.bind( function( to ) {

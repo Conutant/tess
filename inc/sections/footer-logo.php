@@ -70,4 +70,26 @@
 				'priority' 			=> 3
 			) );
 			   
-			   
+		if ( class_exists( 'Tesseract_Remove_Branding' ) ) {
+		$unbrandinglogo = '<a href="http://tesseracttheme.com/unbranding-plugin-3/" target="_blank"><img src="https://s3.amazonaws.com/tesseracttheme/unlock.png" /></a>';
+
+		$wp_customize->add_setting( 'tesseract_footer_content_if_unbranding', array(
+			'sanitize_callback' => 'tesseract_sanitize_textarea_html',
+			'default' 			=> $unbrandinglogo
+		) );
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'tesseract_footer_content_if_unbranding_control',
+					array(
+						'label'          => __( 'Unbranding Logo', 'tesseract' ),
+						'section'        => 'tesseract_footer_logo',
+						'settings'       => 'tesseract_footer_content_if_unbranding',
+						'type'           => 'textarea',
+						'priority' 		 => 3,
+						'active_callback' 	=> ''
+					)
+				)
+			);
+        }			
