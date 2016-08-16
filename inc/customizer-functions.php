@@ -570,6 +570,17 @@ function tesseract_sanitize_select_blog_post_layout_types( $value ) {
 
 }
 
+function tesseract_sanitize_select_header_layout_types( $value ) {
+
+	if ( ! in_array( $value, array( 'none', 'navbottom', 'navright', 'navleft', 'navcentered', 'centered-inline-logo', 'vertical-left', 'vertical-right', 'defaultlayout' ) ) ) :
+        $value = 'default';
+	endif;
+
+    return $value;
+
+}
+
+
 function tesseract_sanitize_rgba( $value ) {
 
 	//Check if string is rgba
