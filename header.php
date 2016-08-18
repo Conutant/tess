@@ -97,6 +97,7 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 
     ?>
 <?php $tesheadr_layout = get_theme_mod('tesseract_header_layout_setting'); ?>
+<?php $tesheadr_inlinelogopos = get_theme_mod('inline-logo_side'); ?>
 <?php //echo $tesheadr_layout; ?>	
 <?php if ( $tesheadr_layout == 'none' ) { ?> 	
 <?php } elseif ( $tesheadr_layout == 'defaultlayout' ) { ?>
@@ -278,26 +279,26 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
 	
-		 <?php if ( $logoImg || $blogname ) { ?>
-          <div class="site-branding <?php if ( ! display_header_text() ) { echo 'hide-header-text'; } ?>">
-            <?php if ( $logoImg ) : ?>
-            <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logoImg; ?>" alt="logo" /></a></h1>
-            <?php else : ?>
-            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-              <?php bloginfo( 'name' ); ?>
-              </a></h1>
-            <?php endif; ?>
-          </div>
-          <!-- .site-branding -->
-          <?php } ?>
+		<?php if ( $logoImg || $blogname ) { ?>
+			<div class="site-branding <?php if ( ! display_header_text() ) { echo 'hide-header-text'; } ?><?php echo $tesheadr_inlinelogopos; ?>">
+				<?php if ( $logoImg ) : ?>
+					<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logoImg; ?>" alt="logo" /></a></h1>
+					<?php else : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					  <?php bloginfo( 'name' ); ?>
+					</a></h1>
+				<?php endif; ?>
+			</div>
+        <?php } ?>
+	
 	
           <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
 
           <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
 			if ( $menuSelected !== 'none' ) : ?>
-          <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
-            <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
-          </nav>
+				<nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
+					<?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
+				</nav>
           <!-- #site-navigation -->
           <?php endif; ?>
 
@@ -308,7 +309,7 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 <?php } elseif( $tesheadr_layout == 'vertical-left' ) { ?>
 
 <header id="masthead_TesseractTheme" class="site-header <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
-  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
+  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
 	
 		 <?php if ( $logoImg || $blogname ) { ?>
@@ -341,7 +342,7 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 <?php } elseif( $tesheadr_layout == 'vertical-right' ) { ?>
 
 <header id="masthead_TesseractTheme" class="site-header <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
-  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
+  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
 	
 		 <?php if ( $logoImg || $blogname ) { ?>

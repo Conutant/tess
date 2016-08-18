@@ -39,3 +39,74 @@
 					'priority'   => 1
 				) )
 			);
+		
+		$wp_customize->add_setting( 'inline-logo_side', array(
+				'sanitize_callback' => 'tesseract_sanitize_inline_logo_side',
+				'default' 			=> 'inlineright'
+		) );
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+				$wp_customize,
+				'tesseract_inline_logo_side_control',
+				array(
+					'label'      => __( 'Inline Logo Position', 'tesseract' ),
+					'section'    => 'tesseract_header_layouts',
+					'settings'   => 'inline-logo_side',
+					'type'          => 'select',
+					'default'       => 'inlineright',
+					'choices'		=> array(
+						'inlineleft'  	           => 	'Left',
+						'inlineright'        	   => 	'Right'
+						),
+					'priority'   => 1
+				) )
+			);
+		
+		
+		$wp_customize->add_setting( 'tesseract_vertical_header_width', array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'absint',
+			'default' 			=> 230
+		) );			
+		
+			$wp_customize->add_control( 'tesseract_vertical_header_width_control', array(
+				'type'        		=> 'range',
+				'priority'    		=> 1,
+				'section'     		=> 'tesseract_header_layouts',
+				'settings'     		=> 'tesseract_vertical_header_width',
+				'label'       		=> 'Vertical Nav Width',
+				'description' 		=> 'Use this range slider to set Vertical Nav Width',
+				'input_attrs' 		=> array(
+					'min'   => 200,
+					'max'   => 400,
+					'step'  => 1,
+					'class' => 'tesseract-header-height',
+					'style' => 'color: #0a0',
+				),
+				'priority' 			=> 1
+			) );
+			
+		
+		$wp_customize->add_setting( 'tesseract_header_height', array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'absint',
+			'default' 			=> 10
+		) );			
+		
+			$wp_customize->add_control( 'tesseract_header_height_control', array(
+				'type'        		=> 'range',
+				'priority'    		=> 2,
+				'section'     		=> 'tesseract_header_layouts',
+				'settings'     		=> 'tesseract_header_height',
+				'label'       		=> 'Header Padding',
+				'description' 		=> 'Use this range slider to set header height',
+				'input_attrs' 		=> array(
+					'min'   => 0,
+					'max'   => 50,
+					'step'  => 5,
+					'class' => 'tesseract-header-height',
+					'style' => 'color: #0a0',
+				),
+				'priority' 			=> 2
+			) );	

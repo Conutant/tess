@@ -581,6 +581,14 @@ function tesseract_sanitize_select_header_layout_types( $value ) {
 }
 
 
+function tesseract_sanitize_inline_logo_side( $value ) {
+	if ( ! in_array( $value, array( 'inlineleft', 'inlineright' ) ) ) :
+        $value = 'inlineright';
+	endif;
+    return $value;
+}
+
+
 function tesseract_sanitize_rgba( $value ) {
 
 	//Check if string is rgba

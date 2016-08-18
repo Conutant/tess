@@ -478,6 +478,16 @@
 			}, 50);
 		} );
 	} );
+	
+	
+	wp.customize( 'tesseract_vertical_header_width', function( value ) {
+		value.bind( function( to ) {
+			$('#masthead_TesseractTheme .site-banner vertical').animate({
+				'padding-left': to,+'px'
+				'padding-right': to+'px'
+			}, 50);
+		} );
+	} );
 
 	wp.customize( 'tesseract_header_blocks_width_prop', function( value ) {
 		value.bind( function( to ) {
