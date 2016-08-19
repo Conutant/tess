@@ -235,6 +235,7 @@
 		} );
 	} );
 	
+	
 	wp.customize( 'tesseract_woocommerce_pricecolor', function( value ) {
 		value.bind( function( to ) {
 			$( '.sales-price, .woocommerce div.product p.price, .woocommerce div.product span.price' ).css('color', to);
@@ -483,9 +484,9 @@
 	wp.customize( 'tesseract_vertical_header_width', function( value ) {
 		value.bind( function( to ) {
 			$('#masthead_TesseractTheme .site-banner vertical').animate({
-				'padding-left': to,+'px'
-				'padding-right': to+'px'
-			}, 50);
+				'padding-left': to, 
+				'padding-right': to
+			}, 400);
 		} );
 	} );
 

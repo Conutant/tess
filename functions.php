@@ -1309,7 +1309,7 @@ function example_admin_notice() {
 		} elseif ( is_plugin_active( 'siteorigin-panels/siteorigin-panels.php' ) && is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 			echo '<div class="error notice"><p>'; 
 			//printf(__('<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins installed, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>'), '?example_nag_ignore=0');
-			echo '<p><b>NOTICE</b>: It looks like you have both beaver builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
+			echo '<p><b>NOTICE</b>: It looks like you have beaver builder builder and site origins activated, note that these two conflict and cause errors. We recommend using beaver builder and deactivating site origins. This will ensure that your site runs smoothly.</p>';
 			echo "</p></div>";
 		}
 
