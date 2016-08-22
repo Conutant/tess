@@ -799,3 +799,21 @@ function tesseract_footer_widthProp_enable() {
 	return $bool;
 
 }
+
+function tesseract_inline_logo_side_enable() {
+
+	$pos_enable = get_theme_mod( 'tesseract_header_layout_setting' );
+	$bool = ( $pos_enable == 'centered-inline-logo' ) ? true : false;
+
+	return $bool;
+
+}
+
+function tesseract_vertical_header_width_enable() {
+
+	$vertwidth_enable = get_theme_mod( 'tesseract_header_layout_setting' );
+	$bool1 = ( ( $vertwidth_enable == 'vertical-left' ) || ( $vertwidth_enable == 'vertical-right' ) ) ? true : false;
+
+	return $bool1;
+
+}

@@ -2,7 +2,7 @@
 /*
  * section HEADER LAYOUT
  */
-
+//if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
    	$wp_customize->add_section( 'tesseract_header_layouts' , array(
     	'title'      => __('Header Layout', 'tesseract'),
     	'priority'   => 1,
@@ -40,7 +40,7 @@
 				) )
 			);
 		
-		$wp_customize->add_setting( 'inline-logo_side', array(
+		$wp_customize->add_setting( 'inline_logo_side', array(
 				'sanitize_callback' => 'tesseract_sanitize_inline_logo_side',
 				'default' 			=> 'inlineright'
 		) );
@@ -51,15 +51,17 @@
 				'tesseract_inline_logo_side_control',
 				array(
 					'label'      => __( 'Inline Logo Position', 'tesseract' ),
+					'description' 		=> 'The inline logo will appear on the left or right side of odd menu items.',
 					'section'    => 'tesseract_header_layouts',
-					'settings'   => 'inline-logo_side',
+					'settings'   => 'inline_logo_side',
 					'type'          => 'select',
 					'default'       => 'inlineright',
 					'choices'		=> array(
 						'inlineleft'  	           => 	'Left',
 						'inlineright'        	   => 	'Right'
 						),
-					'priority'   => 1
+					'priority'   => 1,
+					'active_callback' 	=> 'tesseract_inline_logo_side_enable'
 				) )
 			);
 		
@@ -84,7 +86,8 @@
 					'class' => 'tesseract-header-height',
 					'style' => 'color: #0a0',
 				),
-				'priority' 			=> 1
+				'priority' 			=> 1,
+				'active_callback' 	=> 'tesseract_vertical_header_width_enable'
 			) );
 			
 		
@@ -109,4 +112,5 @@
 					'style' => 'color: #0a0',
 				),
 				'priority' 			=> 2
-			) );	
+			) );
+//};			

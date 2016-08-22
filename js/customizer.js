@@ -114,6 +114,11 @@
 	
 	
 	
+	wp.customize( 'tesseract_vertical_header_width', function( value ) {
+		value.bind( function( to ) {
+			$( '.verticalLeftHeader, .verticalRightHeader' ).css('width', to+'px');
+		} );
+	} );
 	
 
 	wp.customize( 'tesseract_header_colors_text_color', function( value ) {
@@ -184,6 +189,7 @@
 			$( '#colophon_TesseractTheme h1, #colophon_TesseractTheme h2, #colophon_TesseractTheme h3, #colophon_TesseractTheme h4, #colophon_TesseractTheme h5, #colophon_TesseractTheme h6' ).css('color', to);
 		} );
 	} );
+	
 
 	wp.customize( 'tesseract_footer_colors_link_color', function( value ) {
 		value.bind( function( to ) {
@@ -234,7 +240,6 @@
 			$( '#prodlist_title h3, .summary h1' ).css('color', to);
 		} );
 	} );
-	
 	
 	wp.customize( 'tesseract_woocommerce_pricecolor', function( value ) {
 		value.bind( function( to ) {
@@ -484,7 +489,7 @@
 	wp.customize( 'tesseract_vertical_header_width', function( value ) {
 		value.bind( function( to ) {
 			$('#masthead_TesseractTheme .site-banner vertical').animate({
-				'padding-left': to, 
+				'padding-left': to,
 				'padding-right': to
 			}, 400);
 		} );

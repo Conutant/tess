@@ -97,7 +97,9 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 
     ?>
 <?php $tesheadr_layout = get_theme_mod('tesseract_header_layout_setting'); ?>
-<?php $tesheadr_inlinelogopos = get_theme_mod('inline-logo_side'); ?>
+<?php $tesheadr_inlinelogopos = get_theme_mod('inline_logo_side'); ?>
+<?php $tesheadr_vertpadding = get_theme_mod('tesseract_vertical_header_width'); ?>
+<?php //echo$tesheadr_vertpadding; ?>
 <?php //echo $tesheadr_layout; ?>
 <?php if ( $tesheadr_layout == 'none' ) { ?>
 <?php } elseif ( $tesheadr_layout == 'defaultlayout' ) { ?>
@@ -265,7 +267,11 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 </header>
 <?php } elseif( $tesheadr_layout == 'centered-inline-logo' ) { ?>
 <header id="masthead_TesseractTheme" class="site-header <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
-  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
+	<?php if ( $tesheadr_inlinelogopos == 'inlineleft' ) { ?>
+  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> logoInlineCenter left">
+    <?php } elseif ( $tesheadr_inlinelogopos == 'inlineright' ){ ?>
+  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> logoInlineCenter right">	
+	<?php } ?>
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <?php if ( $logoImg || $blogname ) { ?>
       <div class="site-branding <?php if ( ! display_header_text() ) { echo 'hide-header-text'; } ?><?php echo $tesheadr_inlinelogopos; ?>">
@@ -290,7 +296,8 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
   </div>
 </header>
 <?php } elseif( $tesheadr_layout == 'vertical-left' ) { ?>
-<header id="masthead_TesseractTheme" class="site-header <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+<div class="fl-page verticalNavLeftContainer">
+<header id="masthead_TesseractTheme" class="site-header verticalLeftHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <?php if ( $logoImg || $blogname ) { ?>
@@ -317,7 +324,8 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
   </div>
 </header>
 <?php } elseif( $tesheadr_layout == 'vertical-right' ) { ?>
-<header id="masthead_TesseractTheme" class="site-header <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+<div class="fl-page verticalNavRightContainer">
+<header id="masthead_TesseractTheme" class="site-header verticalRightHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <?php if ( $logoImg || $blogname ) { ?>

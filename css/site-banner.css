@@ -354,7 +354,7 @@
 	margin-top: -24px;
 }
 #mobile-menu-trigger-wrap {
-	margin-left: -20px;
+	margin-left: 0px;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -401,7 +401,7 @@
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-left: none;
 	border-right: none;
-	border-bottom:none;
+	border-bottom: none;
 }
 .top-navigation.rightNav ul {
 	text-align: right;
@@ -434,5 +434,312 @@
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-left: none;
 	border-right: none;
-	border-bottom:none;
+	border-bottom: none;
 }
+
+/*======================== CSS 20.08.2016 ========================*/
+/*======================== Logo Inline Centered Right ========================*/
+@media (min-width:840px) {
+#site-banner.logoInlineCenter.right #site-banner-main {
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+#site-banner.logoInlineCenter.right .site-branding {
+	width: 85px;
+	height: auto;
+	display: inline-table;
+	position: absolute;
+	left: 140px;
+	right: 0;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#site-banner.logoInlineCenter.right .site-branding .site-logo {
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+#site-banner.logoInlineCenter.right .site-branding .site-logo a {
+	display: inline-block;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+	z-index: 99;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation ul li:nth-child(4) {
+	margin-right: 50px;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation ul li:nth-child(5) {
+	margin-left: 50px;
+}
+.logoInlineCenter.right .site-logo {
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+.logoInlineCenter.right .site-logo img {
+	display: inline;
+}
+}
+
+@media (min-width:769px) and (max-width:839px) {
+#site-banner.logoInlineCenter.right #site-banner-main {
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#site-banner.logoInlineCenter.right .site-branding {
+	width: 85px;
+	height: auto;
+	display: inline-table;
+	position: absolute;
+	left: 132px;
+	right: 0;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#site-banner.logoInlineCenter.right .site-branding .site-logo {
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation ul li:nth-child(4) {
+	margin-right: 48px;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation ul li:nth-child(5) {
+	margin-left: 48px;
+}
+#site-banner.logoInlineCenter.right #site-banner-main .top-navigation ul li a {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+}
+
+/*======================== Logo Inline Centered Left ========================*/
+@media (min-width:840px) {
+#site-banner.logoInlineCenter.left #site-banner-main {
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+#site-banner.logoInlineCenter.left .site-branding {
+	width: 85px;
+	height: auto;
+	display: inline-table;
+	position: absolute;
+	left: -6px;
+	right: 0;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#site-banner.logoInlineCenter.left .site-branding .site-logo {
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+#site-banner.logoInlineCenter.left .site-branding .site-logo a {
+	display: inline-block;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+	z-index: 99;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation ul li:nth-child(3) {
+	margin-right: 50px;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation ul li:nth-child(4) {
+	margin-left: 50px;
+}
+.logoInlineCenter.left .site-logo {
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+.logoInlineCenter.left .site-logo img {
+	display: inline;
+}
+}
+
+@media (min-width:769px) and (max-width:839px) {
+#site-banner.logoInlineCenter.left #site-banner-main {
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#site-banner.logoInlineCenter.left .site-branding {
+	width: 85px;
+	height: auto;
+	display: inline-table;
+	position: absolute;
+	left: 0px;
+	right: 0;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#site-banner.logoInlineCenter.left .site-branding .site-logo {
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation ul li:nth-child(3) {
+	margin-right: 48px;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation ul li:nth-child(4) {
+	margin-left: 48px;
+}
+#site-banner.logoInlineCenter.left #site-banner-main .top-navigation ul li a {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+}
+
+/*======================== CSS 22.08.2016 ========================*/
+/*======================== Vertical Left Navigation ========================*/
+@media (min-width:769px) {
+.fl-page.verticalNavLeftContainer #masthead_TesseractTheme.verticalLeftHeader {
+	width: 230px;
+	float: left;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+.fl-page.verticalNavLeftContainer #content_TesseractTheme.site-content {
+	margin-left: 230px;
+	display: block;
+}
+.fl-page.verticalNavLeftContainer #colophon_TesseractTheme.site-footer.pos-relative {
+	float: left;
+	margin-left: 230px;
+}
+.verticalLeftHeader .site-banner-main .site-branding {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+#masthead_TesseractTheme.verticalLeftHeader #site-banner-main .site-branding {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+#masthead_TesseractTheme.verticalLeftHeader #site-banner-main .site-branding .site-logo {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+}
+.verticalLeftHeader #site-banner-main .main-navigation.top-navigation {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: left;
+}
+.verticalLeftHeader #site-banner-main .main-navigation.top-navigation ul li {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+.page .verticalNavLeftContainer #content_TesseractTheme.site-content .full-width-page .entry-header .entry-title {
+	padding-left: 30px;
+}
+.page .verticalNavLeftContainer #content_TesseractTheme.site-content .full-width-page .entry-content h1, h2, h3, h4, h5, h6, p {
+	padding-left: 30px;
+}
+.verticalNavLeftContainer .content-area.woo-cont {
+	padding-left: 30px;
+}
+}
+
+/*======================== Vertical Right Navigation ========================*/
+@media (min-width:769px) {
+.fl-page.verticalNavRightContainer #masthead_TesseractTheme.verticalRightHeader {
+	width: 230px;
+	float: right;
+	position: fixed;
+	left: auto;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+.fl-page.verticalNavRightContainer #content_TesseractTheme.site-content {
+	margin-right: 230px;
+	display: block;
+}
+.fl-page.verticalNavRightContainer #colophon_TesseractTheme.site-footer.pos-relative {
+	float: left;
+	margin-right: 230px;
+}
+.verticalLeftHeader .site-banner-main .site-branding {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+#masthead_TesseractTheme.verticalRightHeader #site-banner-main .site-branding {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+#masthead_TesseractTheme.verticalRightHeader #site-banner-main .site-branding .site-logo {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+}
+.verticalRightHeader #site-banner-main .main-navigation.top-navigation {
+	width: 100%;
+	margin: auto;
+	display: block;
+	text-align: left;
+}
+.verticalRightHeader #site-banner-main .main-navigation.top-navigation ul li {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+.page .verticalNavRightContainer #content_TesseractTheme.site-content .full-width-page .entry-header .entry-title {
+	padding-left: 30px;
+}
+.page .verticalNavRightContainer #content_TesseractTheme.site-content .full-width-page .entry-content h1, h2, h3, h4, h5, h6, p {
+	padding-left: 30px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
