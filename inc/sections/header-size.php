@@ -59,7 +59,7 @@ $wp_customize->add_section( 'tesseract_header_size' , array(
 		$wp_customize->add_setting( 'tesseract_header_blocks_width_prop', array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'absint',
-				'default' 			=> 20
+				'default' 			=> 60
 		) );			
 			
 			$wp_customize->add_control( 'tesseract_header_blocks_width_prop_control', array(

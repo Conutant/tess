@@ -2,7 +2,7 @@
 /*
  * section HEADER LAYOUT
  */
-//if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
+if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
    	$wp_customize->add_section( 'tesseract_header_layouts' , array(
     	'title'      => __('Header Layout', 'tesseract'),
     	'priority'   => 1,
@@ -113,4 +113,4 @@
 				),
 				'priority' 			=> 2
 			) );
-//};			
+};			

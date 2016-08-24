@@ -99,8 +99,10 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
 <?php $tesheadr_layout = get_theme_mod('tesseract_header_layout_setting'); ?>
 <?php $tesheadr_inlinelogopos = get_theme_mod('inline_logo_side'); ?>
 <?php $tesheadr_vertpadding = get_theme_mod('tesseract_vertical_header_width'); ?>
-<?php //echo$tesheadr_vertpadding; ?>
+<?php //echo $tesheadr_vertpadding; ?>
 <?php //echo $tesheadr_layout; ?>
+<?php
+if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) { ?>
 <?php if ( $tesheadr_layout == 'none' ) { ?>
 <?php } elseif ( $tesheadr_layout == 'defaultlayout' ) { ?>
 <header id="masthead_TesseractTheme" class="site-header <?php echo $rightclass . $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
@@ -121,15 +123,15 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
           </div>
           <!-- .site-branding -->
           <?php } ?>
-          <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
+          <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
 
-							if ( $menuSelected !== 'none' ) : ?>
+							//if ( $menuSelected !== 'none' ) : ?>
           <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
             <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
           </nav>
           <!-- #site-navigation -->
           
-          <?php endif; ?>
+          <?php //endif; ?>
         </div>
       </div>
       <?php get_template_part( 'content', 'header-rightcontent' ); ?>
@@ -159,13 +161,13 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
       </div>
       <?php get_template_part( 'content', 'header-rightcontent' ); ?>
     </div>
-    <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+    <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
     <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
       <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
     </nav>
     <!-- #site-navigation -->
-    <?php endif; ?>
+    <?php //endif; ?>
   </div>
 </header>
 <?php } elseif( $tesheadr_layout == 'navright' ) { ?>
@@ -187,15 +189,15 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
           </div>
           <!-- .site-branding -->
           <?php } ?>
-          <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
+          <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
 
-							if ( $menuSelected !== 'none' ) : ?>
+							//if ( $menuSelected !== 'none' ) : ?>
           <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation rightNav <?php echo $hmenusize_class; ?>" role="navigation">
             <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
           </nav>
           <!-- #site-navigation -->
           
-          <?php endif; ?>
+          <?php //endif; ?>
         </div>
       </div>
     </div>
@@ -208,13 +210,13 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
       <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
       <div id="site-banner-left">
         <div id="site-banner-left-inner">
-          <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+          <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
           <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
             <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
           </nav>
           <!-- #site-navigation -->
-          <?php endif; ?>
+          <?php //endif; ?>
           <?php if ( $logoImg || $blogname ) { ?>
           <div class="site-branding <?php if ( ! display_header_text() ) { echo 'hide-header-text'; } ?>">
             <?php if ( $logoImg ) : ?>
@@ -253,13 +255,13 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
         </div>
         <div class="col-md-12">
           <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
-          <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+          <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
           <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
             <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
           </nav>
           <!-- #site-navigation -->
-          <?php endif; ?>
+          <?php //endif; ?>
         </div>
       </div>
     </div>
@@ -285,19 +287,19 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
       </div>
       <?php } ?>
       <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
-      <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+      <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
       <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
         <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
       </nav>
       <!-- #site-navigation -->
-      <?php endif; ?>
+      <?php //endif; ?>
     </div>
   </div>
 </header>
 <?php } elseif( $tesheadr_layout == 'vertical-left' ) { ?>
 <div class="fl-page verticalNavLeftContainer">
-<header id="masthead_TesseractTheme" class="site-header verticalLeftHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+<header id="masthead_TesseractTheme" class="site-header verticalLeftHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" style="width:<?php echo $tesheadr_vertpadding; ?>px;" role="banner">
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <?php if ( $logoImg || $blogname ) { ?>
@@ -313,19 +315,19 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
       <!-- .site-branding -->
       <?php } ?>
       <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
-      <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+      <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
       <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
         <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
       </nav>
       <!-- #site-navigation -->
-      <?php endif; ?>
+      <?php //endif; ?>
     </div>
   </div>
 </header>
 <?php } elseif( $tesheadr_layout == 'vertical-right' ) { ?>
 <div class="fl-page verticalNavRightContainer">
-<header id="masthead_TesseractTheme" class="site-header verticalRightHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+<header id="masthead_TesseractTheme" class="site-header verticalRightHeader <?php echo $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" style="width:<?php echo $tesheadr_vertpadding; ?>px;" role="banner">
   <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?> vertical">
     <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
       <?php if ( $logoImg || $blogname ) { ?>
@@ -341,17 +343,57 @@ $footpos = ( is_front_page() && ( $footer_bckOpacity && ( intval($opValue1) < 10
       <!-- .site-branding -->
       <?php } ?>
       <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
-      <?php $menuSelected = get_theme_mod('tesseract_header_menu_select');
-			if ( $menuSelected !== 'none' ) : ?>
+      <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+			//if ( $menuSelected !== 'none' ) : ?>
       <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
         <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
       </nav>
       <!-- #site-navigation -->
-      <?php endif; ?>
+      <?php //endif; ?>
+    </div>
+  </div>
+</header>
+<?php } ?>
+<?php } else { ?>
+<header id="masthead_TesseractTheme" class="site-header <?php echo $rightclass . $headpos . ' ' . 'menusize-' . $hmenusize_class . ' '; echo get_header_image() ? 'is-header-image' : 'no-header-image'; ?>" role="banner">
+  <div id="site-banner" class="cf<?php echo ' ' . $headright_content . ' ' . $brand_content; ?>">
+    <div id="site-banner-main" class="<?php echo ( ( $headright_content  ) && ( $headright_content !== 'nothing' ) ) ?  'is-right' : 'no-right'; ?>">
+      <div id="mobile-menu-trigger-wrap" class="cf"><a class="<?php echo $rightclass; ?>menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div>
+      <div id="site-banner-left">
+        <div id="site-banner-left-inner">
+          <?php if ( $logoImg || $blogname ) { ?>
+          <div class="site-branding <?php if ( ! display_header_text() ) { echo 'hide-header-text'; } ?>">
+            <?php if ( $logoImg ) : ?>
+            <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logoImg; ?>" alt="logo" /></a></h1>
+            <?php else : ?>
+            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+              <?php bloginfo( 'name' ); ?>
+              </a></h1>
+            <?php endif; ?>
+          </div>
+          <!-- .site-branding -->
+          <?php } ?>
+          <?php //$menuSelected = get_theme_mod('tesseract_header_menu_select');
+
+							//if ( $menuSelected !== 'none' ) : ?>
+          <nav id="site-navigation" class="<?php echo $mmdClass; ?> main-navigation top-navigation <?php echo $hmenusize_class; ?>" role="navigation">
+            <?php tesseract_output_menu( FALSE, FALSE, 'primary', 0 ); ?>
+          </nav>
+          <!-- #site-navigation -->
+          
+          <?php //endif; ?>
+        </div>
+      </div>
+      <?php get_template_part( 'content', 'header-rightcontent' ); ?>
     </div>
   </div>
 </header>
 <?php } ?>
 <!-- #masthead -->
-
+<?php if ( $tesheadr_layout == 'vertical-left' ) { ?>
+<div id="content_TesseractTheme" class="cf site-content" style="margin-left:<?php echo $tesheadr_vertpadding; ?>px;">
+<?php } elseif ( $tesheadr_layout == 'vertical-right' ) { ?>
+<div id="content_TesseractTheme" class="cf site-content" style="margin-right:<?php echo $tesheadr_vertpadding; ?>px;">
+<?php } else { ?>
 <div id="content_TesseractTheme" class="cf site-content">
+<?php } ?>

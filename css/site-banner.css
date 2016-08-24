@@ -410,6 +410,8 @@
 	padding-left: 0px;
 	padding-right: 0px;
 }
+
+@media (min-width:769px) {
 #masthead_TesseractTheme .centeredNav .site-branding {
 	width: 100%;
 	margin-left: auto;
@@ -435,6 +437,35 @@
 	border-left: none;
 	border-right: none;
 	border-bottom: none;
+}
+}
+
+@media (max-width:768px) {
+#masthead_TesseractTheme .centeredNav .site-branding {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: inline-block;
+}
+#masthead_TesseractTheme .centeredNav .site-branding .site-logo {
+	width: auto;
+	margin: 0px auto;
+	text-align: center;
+	display: inline-block;
+}
+#masthead_TesseractTheme .centeredNav .site-branding .site-logo img {
+	display: inline;
+}
+#masthead_TesseractTheme .centeredNav .top-navigation {
+	width: auto;
+	margin: 0px auto;
+	text-align: center;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
 }
 
 /*======================== CSS 20.08.2016 ========================*/
@@ -620,7 +651,7 @@
 /*======================== Vertical Left Navigation ========================*/
 @media (min-width:769px) {
 .fl-page.verticalNavLeftContainer #masthead_TesseractTheme.verticalLeftHeader {
-	width: 230px;
+	/*width: 230px;*/
 	float: left;
 	position: fixed;
 	left: 0;
@@ -629,12 +660,12 @@
 	overflow: hidden;
 }
 .fl-page.verticalNavLeftContainer #content_TesseractTheme.site-content {
-	margin-left: 230px;
+	/*margin-left: 230px;*/
 	display: block;
 }
 .fl-page.verticalNavLeftContainer #colophon_TesseractTheme.site-footer.pos-relative {
 	float: left;
-	margin-left: 230px;
+	/*margin-left: 230px;*/
 }
 .verticalLeftHeader .site-banner-main .site-branding {
 	width: 100%;
@@ -679,7 +710,7 @@
 /*======================== Vertical Right Navigation ========================*/
 @media (min-width:769px) {
 .fl-page.verticalNavRightContainer #masthead_TesseractTheme.verticalRightHeader {
-	width: 230px;
+	/*width: 230px;*/
 	float: right;
 	position: fixed;
 	left: auto;
@@ -689,12 +720,12 @@
 	overflow: hidden;
 }
 .fl-page.verticalNavRightContainer #content_TesseractTheme.site-content {
-	margin-right: 230px;
+	/*margin-right: 230px;*/
 	display: block;
 }
 .fl-page.verticalNavRightContainer #colophon_TesseractTheme.site-footer.pos-relative {
 	float: left;
-	margin-right: 230px;
+	/*margin-right: 230px;*/
 }
 .verticalLeftHeader .site-banner-main .site-branding {
 	width: 100%;
@@ -732,14 +763,3 @@
 	padding-left: 30px;
 }
 }
-
-
-
-
-
-
-
-
-
-
-

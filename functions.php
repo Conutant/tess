@@ -512,7 +512,7 @@ function tesseract_scripts() {
 
 	.site-header a,
 	.main-navigation ul ul a,
-	#header-right-menu ul ul a,
+	#header-right-menu ul li a,
 	.menu-open,
 	.dashicons.menu-open,
 	.menu-close,
@@ -520,7 +520,7 @@ function tesseract_scripts() {
 
 	.site-header a:hover,
 	.main-navigation ul ul a:hover,
-	#header-right-menu ul ul a:hover,
+	#header-right-menu ul li a:hover,
 	.menu-open:hover,
 	.dashicons.menu-open:hover,
 	.menu-close:hover,
