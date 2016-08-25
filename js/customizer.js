@@ -117,6 +117,8 @@
 	wp.customize( 'tesseract_vertical_header_width', function( value ) {
 		value.bind( function( to ) {
 			$( '.verticalLeftHeader, .verticalRightHeader' ).css('width', to+'px');
+			$( '.verticalNavLeftContainer #content_TesseractTheme' ).css('margin-left', to+'px');
+			$( '.verticalNavRightContainer #content_TesseractTheme' ).css('margin-right', to+'px');
 		} );
 	} );
 	
