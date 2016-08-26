@@ -1258,7 +1258,7 @@ global $pagenow;
 			fclose($file_handle);
 			return $line_of_text;
 			}
-			$adminmfile = get_template_directory() . '/admin_message.csv';
+			$adminmfile = 'https://s3.amazonaws.com/tesseracttheme/banner/admin_message.csv';
 			$csv = readCSV($adminmfile);
 			//echo '<pre>';
 			//print_r($csv);
@@ -1266,7 +1266,7 @@ global $pagenow;
 			?>
 			<div class="logo-notice">
 			<?php
-			echo $csvimg = '<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
+			echo $csvimg = '<a target="_blank" href=" ' . $csv[1][3] .  ' " ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
 			</div>
 			<div class="right-cont-noice">
 				<?php echo $csvmsg = '<p>' .$csv[1][2] . '</p>'; ?>
