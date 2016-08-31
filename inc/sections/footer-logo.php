@@ -71,7 +71,7 @@
 			) );
 			   
 		if ( class_exists( 'Tesseract_Remove_Branding' ) ) {
-		$unbrandinglogo = '<a href="http://tesseracttheme.com/unbranding-plugin-3/" target="_blank"><img src="https://s3.amazonaws.com/tesseracttheme/unlock.png" /></a>';
+		$unbrandinglogo = '<a href="#" target="_blank"><img src="ttp://tylers.s3.amazonaws.com/uploads/2016/08/10071350/Tyler-designstyle-smoothie-m.png" /></a>';
 
 		$wp_customize->add_setting( 'tesseract_footer_content_if_unbranding', array(
 			'sanitize_callback' => 'tesseract_sanitize_textarea_html',
