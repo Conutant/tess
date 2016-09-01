@@ -12,7 +12,7 @@
 
 	<?php //if ( my_theme_show_page_header() ) : ?>
 		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<div id="blogpost_title"><h1 class="entry-title">', '</h1></div>' ); ?>
 			<?php
 			$postDate = get_theme_mod('tesseract_blog_date');
 			if ( $postDate == 'showdate' ) { ?>

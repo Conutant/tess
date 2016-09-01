@@ -227,7 +227,7 @@
 	
 	wp.customize( 'tesseract_blog_titlecolor', function( value ) {
 		value.bind( function( to ) {
-			$( '#bloglist_title h2.entry-title, #bloglist_title h2.entry-title a' ).css('color', to);
+			$( '#bloglist_title h2.entry-title, #bloglist_title h2.entry-title a, #blogpost_title h1.entry-title' ).css('color', to);
 		} );
 	} );
 	

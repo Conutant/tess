@@ -173,7 +173,7 @@
 			);
 		
 		$wp_customize->add_setting( 'tesseract_blog_titlecolor', array(
-				'transport'         => 'postMessage',
+				//'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );

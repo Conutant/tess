@@ -623,7 +623,8 @@ function tesseract_scripts() {
 	#bloglist_title h4.entry-title,
 	#bloglist_title h5.entry-title,
 	#bloglist_title h6.entry-title, 
-	#bloglist_title h2.entry-title a{ color: " . $bloglist_textColor . "; }
+	#bloglist_title h2.entry-title a,
+	#blogpost_title h1.entry-title{ color: " . $bloglist_textColor . "; }
 	
 
 	#bloglist_morebutton .blmore,
