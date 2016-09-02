@@ -1350,3 +1350,11 @@ deactivate_plugins( 'beaver-builder-lite-version/fl-builder.php' );
 } else {
 activate_plugins( 'beaver-builder-lite-version/fl-builder.php' );
 }
+
+function filter_plugin_updates( $value ) {
+    unset( $value->response['tesseractplus-plugin/fl-builder.php'] );
+	unset( $value->response['beaver-builder-lite-version/fl-builder.php'] );
+	unset( $value->response['siteorigin-panels/siteorigin-panels.php'] );
+    return $value;
+}
+add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );

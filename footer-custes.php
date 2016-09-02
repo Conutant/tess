@@ -72,11 +72,18 @@
             <?php tesseract_footer_branding(); ?>
 			
 			<?php $my_unbrandinglogo = get_theme_mod('tesseract_footer_content_if_unbranding'); ?>
-			<?php if ( class_exists( 'Tesseract_Remove_Branding' ) ){ ?>
+            
+			<?php if (class_exists( 'Tesseract_Remove_Branding' ) ){ 				
+			if(!empty($my_unbrandinglogo)){ 	?>
 			<div class="footer-extreme-right">
 			<?php echo $my_unbrandinglogo; ?>
 			</div>
-			<?php } ?>
+			<?php }else{ ?>					
+                  <style>.with_unbrandinglogo #footer-banner-right{width:40% !important;}
+				  #footer-banner-right.banner-right #footer-button-container{ width:100% !important; text-align:right;}</style>  
+			<?php }			
+			} ?>
+            
       	</div><!-- EOF footer-banner -->
 
 	</footer><!-- #colophon -->
