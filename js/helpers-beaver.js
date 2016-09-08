@@ -56,5 +56,18 @@
 		beaverVidbg();
 		
 	});	
-
+	$( document ).ready(function() {
+	$('.fl-builder-modules-cta').html('<a href="#" onclick="window.open(\'http://tesseracttheme.com/plus/\');" target="_blank"><i class="fa fa-external-link-square"></i> Get more time-saving features, modules, and expert support.</a>');
+	 
+	});
+    jQuery( document ).ready(function() {	
+	jQuery('.fl-builder-templates-button').hide();
+	  setTimeout(function(){
+	   jQuery('.fl-template-selector').hide();
+	   jQuery('.fl-template-selector').closest('.fl-builder-settings-lightbox').hide();
+	},300);
+	});
 })(jQuery);
+
+
+ 
