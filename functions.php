@@ -637,7 +637,7 @@ function tesseract_scripts() {
 	#prodlist_title h3 a{ color: " . $productlist_textColor . "; }
 	
 	.woocommerce div.product p.price, .woocommerce div.product span.price,
-	.wooshop-price .sales-price{ color: " . $shopprice_textColor . "; }
+	.wooshop-price .sales-price, .wooshop-price .regular-pricenew{ color: " . $shopprice_textColor . "; }
 	
 	
 	

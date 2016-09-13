@@ -245,7 +245,7 @@
 	
 	wp.customize( 'tesseract_woocommerce_pricecolor', function( value ) {
 		value.bind( function( to ) {
-			$( '.sales-price, .woocommerce div.product p.price, .woocommerce div.product span.price' ).css('color', to);
+			$( '.sales-price, .regular-pricenew, .woocommerce div.product p.price, .woocommerce div.product span.price' ).css('color', to);
 		} );
 	} );
 	
