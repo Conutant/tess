@@ -1087,10 +1087,10 @@ require get_template_directory() . '/inc/beaver-builder-modules/beaver-builder-m
 //Initialize the update checker.
 require 'theme-update-checker.php';
 $update_checker = new ThemeUpdateChecker(
-  //'TESSERACT', // This theme folder name (must match)
-  //'https://s3.amazonaws.com/tesseracttheme/version.json'
-  'tesseract',
-  'http://tesseractplus.com/ryantest16/info.json'
+  'TESSERACT', // This theme folder name (must match)
+  'https://s3.amazonaws.com/tesseracttheme/version.json'
+  //'tesseract',
+  //'http://tesseractplus.com/ryantest16/info.json'
 );
 if(false)
 {
