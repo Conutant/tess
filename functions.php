@@ -1087,11 +1087,8 @@ require get_template_directory() . '/inc/beaver-builder-modules/beaver-builder-m
 //Initialize the update checker.
 require 'theme-update-checker.php';
 $update_checker = new ThemeUpdateChecker(
-  //'TESSERACT', // This theme folder name (must match)
-  'tesseract',
+  'TESSERACT', // This theme folder name (must match)
   'https://s3.amazonaws.com/tesseracttheme/version.json'
-  //'tesseract',
-  //'http://tesseractplus.com/ryantest16/info.json'
 );
 if(false)
 {
@@ -1117,7 +1114,7 @@ function display_notice() {
         $("a").each(function(){
             strhref = $(this).attr("href");
             if(typeof strhref != "undefined" && strhref.toLowerCase().indexOf("wpbeaverbuilder.com") >= 0){
-                $(this).attr("href","http://tesseracttheme.com/plus/");
+                $(this).attr("href","https://www.wpbeaverbuilder.com/?fla=50");
             }
         });
     });
@@ -1224,7 +1221,7 @@ global $pagenow;
 			?>
 			<div class="logo-notice">
 			<?php
-			echo $csvimg = '<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
+			echo $csvimg = '<a target="_blank" href="https://www.wpbeaverbuilder.com/?fla=50" ><img width="300" src=" ' . $csv[1][1]. ' " alt="Tesseract Team" /></a>'; ?>
 			</div>
 			<div class="right-cont-noice">
 				<?php echo $csvmsg = '<p>' .$csv[1][2] . '</p>'; ?>
@@ -1236,13 +1233,13 @@ global $pagenow;
             
             <!--<div class="logo-notice">
 			
-			<a target="_blank" href="http://tesseracttheme.com/plus/" ><img width="300" src="http://tylers.s3.amazonaws.com/uploads/2016/08/08095352/upgrade.png" alt="Tesseract Team" /></a>
+			<a target="_blank" href="https://www.wpbeaverbuilder.com/?fla=50" ><img width="300" src="http://tylers.s3.amazonaws.com/uploads/2016/08/08095352/upgrade.png" alt="Tesseract Team" /></a>
             </div>
             
             <p>Upgrade to Tesseract <b>Plus</b> today to enjoy over 25+ website additions! </p>
             
             <div class="btn-group">	
-              <a id="get-unbranding" href="http://tesseracttheme.com/plus/" target="_blank">check it out</a> 
+              <a id="get-unbranding" href="https://www.wpbeaverbuilder.com/?fla=50" target="_blank">check it out</a> 
               <a id="dismiss-tesseractplus" href="javascript:void(0);">maybe later</a>                
             </div> -->
 			

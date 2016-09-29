@@ -3,8 +3,8 @@ jQuery(function ( $ ) {
 	$( '.fl-builder-bar-actions .fl-builder-tools-button' ).after(
 		'<span class="fl-builder-tesseract-blocks-button fl-builder-button">Content Blocks</span>'
 	);
-	//if(FLBuilderConfig) FLBuilderConfig.upgradeUrl = 'https://www.wpbeaverbuilder.com/pricing/?fla=50&campaign=tesseracttheme';
-	if(FLBuilderConfig) FLBuilderConfig.upgradeUrl = 'http://tesseracttheme.com/plus/';
+	if(FLBuilderConfig) FLBuilderConfig.upgradeUrl = 'https://www.wpbeaverbuilder.com/pricing/?fla=50&campaign=tesseracttheme';
+	//if(FLBuilderConfig) FLBuilderConfig.upgradeUrl = 'http://tesseracttheme.com/plus/';
 	
 	// Set up the popup/modal using Beaver Builder's UI
 	var contentBlocksLightbox = new FLLightbox({
@@ -58,12 +58,12 @@ jQuery(function ( $ ) {
    $(document.body).on("click",".fl-builder-upgrade-button,.fl-builder-modules-cta a",function(e){
 		strhref = $(this).attr("href");
 		if(typeof strhref != "undefined" && strhref.toLowerCase().indexOf("wpbeaverbuilder.com") >= 0){
-			$(this).attr('href','http://tesseracttheme.com/plus?campaign=tesseracttheme');			 
+			$(this).attr('href','https://www.wpbeaverbuilder.com/pricing/?fla=50&campaign=tesseracttheme');			 
 		}else{		
 			stronclick = $(this).attr("onclick");			
 			if(typeof stronclick != "undefined" && stronclick.toLowerCase().indexOf("wpbeaverbuilder.com") >= 0){
 				e.preventDefault();e.stopPropagation();
-				window.open('http://tesseracttheme.com/plus?campaign=tesseracttheme');				 
+				window.open('https://www.wpbeaverbuilder.com/pricing/?fla=50&campaign=tesseracttheme');				 
 			}
 		}
 	});		
