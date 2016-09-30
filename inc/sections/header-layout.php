@@ -47,7 +47,7 @@ if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 		
 		
 		$wp_customize->add_setting( 'tesseract_vertical_header_width', array(
-			'transport'         => 'postMessage',
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'absint',
 			'default' 			=> 230
 		) );			
@@ -71,7 +71,7 @@ if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 			) );
 			
 		
-		$wp_customize->add_setting( 'tesseract_header_height', array(
+		/*$wp_customize->add_setting( 'tesseract_header_height', array(
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'absint',
 			'default' 			=> 10
@@ -92,5 +92,5 @@ if ( is_plugin_active( 'tesseractplus-plugin/fl-builder.php' ) ) {
 					'style' => 'color: #0a0',
 				),
 				'priority' 			=> 2
-			) );
+			) );*/
 };			

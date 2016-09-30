@@ -9,8 +9,8 @@ $wp_customize->add_section( 'tesseract_header_size' , array(
 		'panel'      => 'tesseract_header_options'
 	) );	
 
-	/*$wp_customize->add_setting( 'tesseract_header_height', array(
-			'transport'         => 'postMessage',
+	$wp_customize->add_setting( 'tesseract_header_height', array(
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'absint',
 			'default' 			=> 10
 	) );			
@@ -31,7 +31,7 @@ $wp_customize->add_section( 'tesseract_header_size' , array(
 			),
 			'priority' 			=> 1
 		) );
-		*/
+	
 		
 	$wp_customize->add_setting( 'tesseract_header_width', array(
 		'sanitize_callback' => 'tesseract_sanitize_select_header_width',

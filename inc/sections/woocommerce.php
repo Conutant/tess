@@ -97,7 +97,7 @@
 			);
 		
 		$wp_customize->add_setting( 'tesseract_woocommerce_titlecolor', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );
@@ -138,7 +138,7 @@
 			);
 		
 		$wp_customize->add_setting( "tesseract_woocommerce_price_size", array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'esc_html'
 		));
 
@@ -157,7 +157,7 @@
 		);
 			
 		$wp_customize->add_setting( 'tesseract_woocommerce_pricecolor', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );
@@ -269,7 +269,7 @@
 		
 		
 		$wp_customize->add_setting( 'tesseract_woocommerce_buttonbgcolor', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'tesseract_sanitize_rgba',
 				'default' 			=> '#fffff'
 		) );
@@ -287,7 +287,7 @@
 		);
 		
 		$wp_customize->add_setting( "tesseract_woocommerce_button_radius", array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'esc_html'
 		));
 

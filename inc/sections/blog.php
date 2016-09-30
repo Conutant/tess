@@ -296,7 +296,7 @@
 		
 		
 		$wp_customize->add_setting( "tesseract_blog_button_radius", array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'esc_html'
 		));
 

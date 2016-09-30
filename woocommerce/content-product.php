@@ -102,7 +102,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 ?>
 	<?php	$prodregprice = $product->regular_price;	$prodsalesprice = $product->sale_price;	?>
 	 <div style="font-size: <?php echo $wooprice; ?>px;" class="wooshop-price <?php echo $wooprice_classbold; ?>">
-		<?php if( ($prodregprice != '') && ($prodsalesprice != '') ) { ?>		<span class="regular-price">$<?php echo $prodregprice; ?>.00</span>		<?php } elseif( ($prodregprice != '') && ($prodsalesprice == '') ) { ?>		<span class="regular-pricenew">$<?php echo $prodregprice; ?>.00</span>		<?php } ?>		<?php if($prodsalesprice != '') { ?>		<span class="sales-price">$<?php echo $prodsalesprice; ?>.00</span>			<?php } ?>
+		<?php if( ($prodregprice != '') && ($prodsalesprice != '') ) { ?>		<span class="regular-price"><?php echo get_woocommerce_currency_symbol(); ?><?php echo $prodregprice; ?>.00</span>		<?php } elseif( ($prodregprice != '') && ($prodsalesprice == '') ) { ?>		<span class="regular-pricenew"><?php echo get_woocommerce_currency_symbol(); ?><?php echo $prodregprice; ?>.00</span>		<?php } ?>		<?php if($prodsalesprice != '') { ?>		<span class="sales-price"><?php echo get_woocommerce_currency_symbol(); ?><?php echo $prodsalesprice; ?>.00</span>			<?php } ?>
 	 <?php //do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
 	 </div>
     <?php

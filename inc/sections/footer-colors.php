@@ -10,7 +10,7 @@
 	) );	
 	
 		$wp_customize->add_setting( 'tesseract_footer_colors_bck_color', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#1e73be'
 		) );
@@ -28,7 +28,7 @@
 			);
 		
 		$wp_customize->add_setting( 'tesseract_footer_colors_bck_color_opacity', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'esc_html',
 				'default' 			=> 100
 		) );
@@ -53,7 +53,7 @@
 
 		
 		$wp_customize->add_setting( 'tesseract_footer_colors_text_color', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );
@@ -71,7 +71,7 @@
 			);
 			
 		$wp_customize->add_setting( 'tesseract_footer_colors_heading_color', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );
@@ -89,7 +89,7 @@
 			);			
 			
 		$wp_customize->add_setting( 'tesseract_footer_colors_link_color', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#ffffff'
 		) );
@@ -107,7 +107,7 @@
 			);
 			
 		$wp_customize->add_setting( 'tesseract_footer_colors_link_hover_color', array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'default' 			=> '#d1ecff'
 		) );
